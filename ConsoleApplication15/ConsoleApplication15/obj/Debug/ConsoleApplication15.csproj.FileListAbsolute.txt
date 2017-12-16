@@ -1,0 +1,6 @@
+C:\Users\Druzhinin_Vasily\Documents\My_Project\Projects\StudyC#\ConsoleApplication15\ConsoleApplication15\bin\Debug\ConsoleApplication15.exe.config
+C:\Users\Druzhinin_Vasily\Documents\My_Project\Projects\StudyC#\ConsoleApplication15\ConsoleApplication15\bin\Debug\ConsoleApplication15.exe
+C:\Users\Druzhinin_Vasily\Documents\My_Project\Projects\StudyC#\ConsoleApplication15\ConsoleApplication15\bin\Debug\ConsoleApplication15.pdb
+C:\Users\Druzhinin_Vasily\Documents\My_Project\Projects\StudyC#\ConsoleApplication15\ConsoleApplication15\obj\Debug\ConsoleApplication15.csprojResolveAssemblyReference.cache
+C:\Users\Druzhinin_Vasily\Documents\My_Project\Projects\StudyC#\ConsoleApplication15\ConsoleApplication15\obj\Debug\ConsoleApplication15.exe
+C:\Users\Druzhinin_Vasily\Documents\My_Project\Projects\StudyC#\ConsoleApplication15\ConsoleApplication15\obj\Debug\ConsoleApplication15.pdb

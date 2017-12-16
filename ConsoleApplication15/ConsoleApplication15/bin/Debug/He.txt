@@ -1,0 +1,10 @@
+Data He
+
+Massa
+10
+PotEnergy
+11
+KinEnergy
+12
+Stepeny
+13
