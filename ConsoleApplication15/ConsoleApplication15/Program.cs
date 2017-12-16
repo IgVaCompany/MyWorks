@@ -123,6 +123,10 @@ namespace ConsoleApplication15
         {
 
         }
+        public virtual void calc()
+        {
+
+        }
 
         public void PrintRelut(string result)
         {
