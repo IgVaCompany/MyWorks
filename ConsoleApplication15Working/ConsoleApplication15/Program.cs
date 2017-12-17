@@ -13,14 +13,20 @@ namespace ConsoleApplication15
 
     public class CommandsWork
     {
-        string [] Commands = new string[7] { "Close","ShowC" ,"DLFF", "PrintDLFF" ,"CalcAtom", "CalcMolec","td" };
+
+        string [] Commands = new string[8] { "Close","ShowC" ,"DLFF", "PrintDLFF" ,"CalcAtom", "CalcMolec","td","calc" };
+        private bool atomFlag = false;
+        private bool molecFlag = false;
+
         Particle SomeBody = new Particle();
         
+
         public void Manager()
         {
             
             string Command = "Commad is wrong write again";          
             string InPutCommand =  Console.ReadLine();
+            
          
 
             for (int i = 0; i < Commands.Length; i++)
@@ -43,7 +49,7 @@ namespace ConsoleApplication15
                     SomeBody.ShowDownLoadData();
                     break;
                 case "Commad is wrong write again":
-                    Console.WriteLine(InPutCommand + Command);
+                    Console.WriteLine(InPutCommand +" "+ Command);
                     break;
                 case "ShowC":
                     foreach (string com in Commands)
@@ -52,35 +58,21 @@ namespace ConsoleApplication15
                     }
                     break;
                 case "CalcAtom":
-                    if (Particle.DLFF == true)
-                    {
-                        Atom He = new Atom();
-                        He.CalcEnergy();
-                        He.PrintRelut(Convert.ToString(He.Totalenergy));
-                    }
-                    else
-                    {
-                        Command = "No Download data";
-                        SomeBody.PrintRelut(Command);                       
-                    }
+                    atomFlag = true;
+                    molecFlag = false;
+                    Atom He = new Atom();                
                    
                     break;
                 case "CalcMolec":
-                    if (Particle.DLFF == true)
-                    {
-                        Molecule C = new Molecule();
-                        C.CalcEnergy();
-                        C.PrintRelut(Convert.ToString(C.Totalenergy));
-                    }
-                    else
-                    {
-                        Command = "No Download data";
-                        SomeBody.PrintRelut(Command);
-                    }
+                    atomFlag = false;
+                    molecFlag = true;
+                    Molecule C = new Molecule();
+                    C.DL();
+                   
                     break;
                 case "td":
                 {
-                    SomeBody.NewDL();
+                    SomeBody.DL();
                 }
                     break;
 
@@ -94,6 +86,11 @@ namespace ConsoleApplication15
 
         public string[] DataParamsNames = new string[4] { "Massa", "PotEnergy", "KinEnergy", "Stepeny" };
         public static  double[] DataProgram = new double[4];
+
+        public string[] DataFile;
+        private string NameFile;
+     //   public string[] nameParams;
+        public List<string> nameParams = new List<string>();
 
         public static bool DLFF = false;
 
@@ -124,35 +121,11 @@ namespace ConsoleApplication15
             }
         }
 
-        public void NewDL()
+        public virtual void DL()
         {
-            Console.WriteLine("Input the file name" + "\n");
-            List<string> nameParams = new List<string>();        
-            string NameFile = Console.ReadLine();
-            string[] DataFile = File.ReadAllLines(NameFile);
-
-
-            //foreach (string str  in DataFile)
-            //{
-            //    //Console.WriteLine(str + "\n");
-            //    string nowStr = str;
-            //    string[] split = nowStr.Split(new Char[] { ' ', ',', '.', ':', '\t' });
-            //    if (s.Trim() != "")
-            //        Console.WriteLine(s);
-            //}
-
-            string nowStr = DataFile[0];
-            string[] split = nowStr.Split(new Char[] { ' ', ',', '.', ':', '\t' });
-
-            foreach (string s in split)
-            {
-
-                if (s.Trim() != "")
-                    Console.WriteLine(s);
-            }
-
-
-            Console.WriteLine("DownLload is OK");
+            Console.WriteLine("Input the file name" + "\n");                   
+            NameFile = Console.ReadLine();
+            DataFile = File.ReadAllLines(NameFile);
         }
 
         public virtual void CalcEnergy()
@@ -182,6 +155,28 @@ namespace ConsoleApplication15
 
     public class Molecule : Particle
     {
+
+        public override void DL()
+        {           
+            base.DL();
+            string nowStr = DataFile[0];
+            string[] split = nowStr.Split(new Char[] { ' ', ',', '.', ':' });
+            int i = 0;
+            foreach (string s in split)
+            {             
+                nameParams.Add(s);              
+            }
+            foreach (string s in nameParams)
+            {
+                Console.WriteLine(s);
+            }
+            string[] nameParamsAr = nameParams.ToArray();
+            Console.WriteLine("DownLload is OK");
+
+            Console.WriteLine(nameParamsAr.Length);
+           
+        }
+
         public override void CalcEnergy()
         {
             base.CalcEnergy();

@@ -17,3 +17,9 @@ C:\Users\лш\Documents\GitHub\GAM\ConsoleApplication15\ConsoleApplication15\obj
 C:\Users\лш\Documents\GitHub\GAM\ConsoleApplication15\ConsoleApplication15\bin\Debug\ConsoleApplication15.exe
 C:\Users\лш\Documents\GitHub\GAM\ConsoleApplication15\ConsoleApplication15\bin\Debug\ConsoleApplication15.pdb
 C:\Users\лш\Documents\GitHub\GAM\ConsoleApplication15\ConsoleApplication15\obj\Debug\ConsoleApplication15.csprojResolveAssemblyReference.cache
+C:\Users\лш\Documents\GitHub\GAM\ConsoleApplication15Working\ConsoleApplication15\bin\Debug\ConsoleApplication15.exe.config
+C:\Users\лш\Documents\GitHub\GAM\ConsoleApplication15Working\ConsoleApplication15\obj\Debug\ConsoleApplication15.exe
+C:\Users\лш\Documents\GitHub\GAM\ConsoleApplication15Working\ConsoleApplication15\obj\Debug\ConsoleApplication15.pdb
+C:\Users\лш\Documents\GitHub\GAM\ConsoleApplication15Working\ConsoleApplication15\bin\Debug\ConsoleApplication15.exe
+C:\Users\лш\Documents\GitHub\GAM\ConsoleApplication15Working\ConsoleApplication15\bin\Debug\ConsoleApplication15.pdb
+C:\Users\лш\Documents\GitHub\GAM\ConsoleApplication15Working\ConsoleApplication15\obj\Debug\ConsoleApplication15.csprojResolveAssemblyReference.cache
