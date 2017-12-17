@@ -89,8 +89,8 @@ namespace ConsoleApplication15
 
         public string[] DataFile;
         private string NameFile;
-     //   public string[] nameParams;
-        public List<string> nameParams = new List<string>();
+      // public string[] nameParams;
+      //  public List<string> nameParams = new List<string>();
 
         public static bool DLFF = false;
 
@@ -155,26 +155,42 @@ namespace ConsoleApplication15
 
     public class Molecule : Particle
     {
+        string[] paramNamesAvalibal = new string[19] { "te", "gi",   "omegaE",  "omegaExE",    "omegaEyE",    "omegaEzE",
+            "omegaEkE",    "Ediss",   "Be",  "alfaE",   "gammaE",  "deltaE",  "ksiE",    "De",  "bettaE",  "gE",  "Hnu0",    "Hnu1",    "Re" };
+        List<double> te = new List<double>();
+        List<double> gi = new List<double>();
 
         public override void DL()
         {           
             base.DL();
-            string nowStr = DataFile[0];
-            string[] split = nowStr.Split(new Char[] { ' ', ',', '.', ':' });
-            int i = 0;
-            foreach (string s in split)
-            {             
-                nameParams.Add(s);              
-            }
-            foreach (string s in nameParams)
+            String valueName = DataFile[0];
+            String[] valueNames = valueName.Split('\t');                
+            Console.WriteLine(valueNames.Length);
+            for (int i = 1; i < DataFile.Length; i++)
             {
-                Console.WriteLine(s);
+                String value = DataFile[i];
+                String[] vaslues = value.Split('\t');                
+                for (int j = 0; j < vaslues.Length; j++)
+                {
+                    switch (valueNames[j])
+                    {
+                        case "te":
+                            te.Add(Convert.ToDouble(vaslues[j]));
+                            break;
+                        case "gi":
+                            gi.Add(Convert.ToDouble(vaslues[j]));
+                            break;
+                    }
+                }              
             }
-            string[] nameParamsAr = nameParams.ToArray();
-            Console.WriteLine("DownLload is OK");
+            foreach (var tei in te)
+            {
+                Console.WriteLine(tei);
+            }
+            Console.WriteLine(te.ToArray().Length);
+            Console.WriteLine(gi.ToArray().Length);
+            Console.WriteLine(DataFile.Length);
 
-            Console.WriteLine(nameParamsAr.Length);
-           
         }
 
         public override void CalcEnergy()
