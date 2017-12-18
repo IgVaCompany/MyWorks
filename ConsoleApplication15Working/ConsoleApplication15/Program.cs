@@ -14,12 +14,14 @@ namespace ConsoleApplication15
     public class CommandsWork
     {
 
-        string [] Commands = new string[8] { "Close","ShowC" ,"DLFF", "PrintDLFF" ,"CalcAtom", "CalcMolec","td","calc" };
+        string [] Commands = new string[8] { "Close","ShowC" ,"DLFF", "PDFF" ,"CalcAtom", "CalcMolec","td","calc" };
         private bool atomFlag = false;
         private bool molecFlag = false;
 
         Particle SomeBody = new Particle();
-        
+        Atom He = new Atom();
+        Molecule CC = new Molecule();
+
 
         public void Manager()
         {
@@ -38,15 +40,29 @@ namespace ConsoleApplication15
             }            
             switch (Command)
             {
+                case "CalcAtom":
+                    atomFlag = true;
+                    molecFlag = false;  
+                    He.DL();                 
+                    break;
+                case "CalcMolec":
+                    atomFlag = false;
+                    molecFlag = true;                  
+                    CC.DL();
+                    break;
                 case "Close":
                    Environment.Exit(0);
                     break;
                 case "DLFF":
-                    SomeBody.DownLoadDataFromFile();
-                    SomeBody.ShowDownLoadData();
+                    SomeBody.DownLoadDataFromFile();                 
                     break;
-                case "PrintDLFF":
-                    SomeBody.ShowDownLoadData();
+                case "PDFF":
+                    if (atomFlag && !molecFlag)
+                        He.PrintDL();
+                    else if(!atomFlag && molecFlag)
+                        CC.PrintDataDL();
+                    else
+                        Console.WriteLine("DownLoad data please");
                     break;
                 case "Commad is wrong write again":
                     Console.WriteLine(InPutCommand +" "+ Command);
@@ -57,19 +73,7 @@ namespace ConsoleApplication15
                         Console.WriteLine(com);
                     }
                     break;
-                case "CalcAtom":
-                    atomFlag = true;
-                    molecFlag = false;
-                    Atom He = new Atom();                
-                   
-                    break;
-                case "CalcMolec":
-                    atomFlag = false;
-                    molecFlag = true;
-                    Molecule C = new Molecule();
-                    C.DL();
-                   
-                    break;
+                
                 case "td":
                 {
                     SomeBody.DL();
@@ -89,8 +93,6 @@ namespace ConsoleApplication15
 
         public string[] DataFile;
         private string NameFile;
-      // public string[] nameParams;
-      //  public List<string> nameParams = new List<string>();
 
         public static bool DLFF = false;
 
@@ -112,20 +114,12 @@ namespace ConsoleApplication15
             Console.WriteLine("DownLload is OK");
         }
 
-
-        public void ShowDownLoadData()
-        {
-            for (int i = 0; i < DataProgram.Length; i++)
-            {
-                Console.WriteLine(DataParamsNames[i]+" "+DataProgram[i]);
-            }
-        }
-
         public virtual void DL()
         {
             Console.WriteLine("Input the file name" + "\n");                   
             NameFile = Console.ReadLine();
             DataFile = File.ReadAllLines(NameFile);
+          
         }
 
         public virtual void CalcEnergy()
@@ -145,6 +139,63 @@ namespace ConsoleApplication15
 
     public class Atom : Particle
     {
+        List<double> config = new List<double>();
+        List<double> jj = new List<double>();
+        List<double> level = new List<double>();
+
+        public override void DL()
+        {
+            base.DL();
+            String valueName = DataFile[0];
+            String[] valueNames = valueName.Split('\t', ' ', '-', '|');
+            Console.WriteLine(valueNames.Length);
+
+            foreach (var vals in valueNames)
+            {
+                Console.WriteLine(vals);
+            }
+            for (int i = 1; i < DataFile.Length; i++)
+            {
+                String value = DataFile[i];
+                String[] vaslues = value.Split('\t', ' ', '-', '|','[',']');
+                for (int j = 0; j < vaslues.Length; j++)
+                {
+                    switch (valueNames[j])
+                    {
+                        case "Configuration":
+                            config.Add(Convert.ToDouble(vaslues[j]));
+                            break;
+                        case "J":
+                            jj.Add(Convert.ToDouble(vaslues[j]));
+                            break;
+                        case "Level":
+                            level.Add(Convert.ToDouble(vaslues[j]));
+                            break;
+
+                    }
+                }
+            }
+        }
+
+        public void PrintDL()
+        {
+            Console.Write("Configuration\t");
+            foreach (var S in config)
+            {
+                Console.Write(S + " ");
+            }
+            Console.Write("\n" + "J\t");
+            foreach (var S in jj)
+            {
+                Console.Write(S + " ");
+            }
+            Console.Write("\n" + "Level\t");
+            foreach (var S in level)
+            {
+                Console.Write(S + " ");
+            }
+        }
+
         public override void CalcEnergy()
         {
             base.CalcEnergy();
@@ -169,7 +220,7 @@ namespace ConsoleApplication15
         {           
             base.DL();
             String valueName = DataFile[0];
-            String[] valueNames = valueName.Split('\t');                
+            String[] valueNames = valueName.Split('\t', ' ');
             Console.WriteLine(valueNames.Length);
             for (int i = 1; i < DataFile.Length; i++)
             {
@@ -195,52 +246,61 @@ namespace ConsoleApplication15
                             bE.Add(Convert.ToDouble(vaslues[j]));
                             break;
                         case "alfaE":
-                            alfaE.Add((Convert.ToDouble(vaslues[j]))*(10^2));
+                            alfaE.Add((Convert.ToDouble(vaslues[j]))*Math.Pow(10,2));
                             break;
                         case "dE":
-                            dE.Add((Convert.ToDouble(vaslues[j]))*(10^6));
+                            dE.Add((Convert.ToDouble(vaslues[j]))*Math.Pow(10,6));
                             break;
                         case "bettaE":
-                            bettaE.Add((Convert.ToDouble(vaslues[j]))*(10^6));
+                            bettaE.Add((Convert.ToDouble(vaslues[j]))*Math.Pow(10,6));
                             break;
                     }
                 }              
-            }
-            
-            Console.WriteLine(valueNames.ToString());
+            }                   
+        }
 
-            for (int i = 0; i < DataFile.Length-1; i++)
+        public void PrintDataDL()
+        {
+            Console.Write("te\t");
+            foreach (var S in te)
             {
-                switch (valueNames[i])
-                {
-                    case "te":
-                        Console.WriteLine(te.ToArray()[i]);
-                        break;
-                    //case "gi":
-                    //    gi.Add(Convert.ToDouble(valueNames[i]));
-                    //    break;
-                    //case "omegaE":
-                    //    omegaE.Add(Convert.ToDouble(valueNames[i]));
-                    //    break;
-                    //case "omegaExE":
-                    //    omegaExE.Add(Convert.ToDouble(valueNames[i]));
-                    //    break;
-                    //case "bE":
-                    //    bE.Add(Convert.ToDouble(valueNames[i]));
-                    //    break;
-                    //case "alfaE":
-                    //    alfaE.Add(Convert.ToDouble(valueNames[i]));
-                    //    break;
-                    //case "dE":
-                    //    dE.Add(Convert.ToDouble(valueNames[i]));
-                    //    break;
-                    //case "bettaE":
-                    //    bettaE.Add(Convert.ToDouble(valueNames[i]));
-                    //    break;
-                }
+                Console.Write(S + " ");
             }
-
-
+            Console.Write("\n" + "gi\t");
+            foreach (var S in gi)
+            {
+                Console.Write(S + " ");
+            }
+            Console.Write("\n" + "omegaE\t");
+            foreach (var S in omegaE)
+            {
+                Console.Write(S + " ");
+            }
+            Console.Write("\n" + "omegaExE\t");
+            foreach (var S in omegaExE)
+            {
+                Console.Write(S + " ");
+            }
+            Console.Write("\n" + "bE\t");
+            foreach (var S in bE)
+            {
+                Console.Write(S + " ");
+            }
+            Console.Write("\n" + "alfaE\t");
+            foreach (var S in alfaE)
+            {
+                Console.Write(S + " ");
+            }
+            Console.Write("\n" + "dE\t");
+            foreach (var S in dE)
+            {
+                Console.Write(S + " ");
+            }
+            Console.Write("\n" + "bettaE\t");
+            foreach (var S in bettaE)
+            {
+                Console.Write(S + " ");
+            }
         }
 
         public override void CalcEnergy()
