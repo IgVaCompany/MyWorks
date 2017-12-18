@@ -155,10 +155,15 @@ namespace ConsoleApplication15
 
     public class Molecule : Particle
     {
-        string[] paramNamesAvalibal = new string[19] { "te", "gi",   "omegaE",  "omegaExE",    "omegaEyE",    "omegaEzE",
-            "omegaEkE",    "Ediss",   "Be",  "alfaE",   "gammaE",  "deltaE",  "ksiE",    "De",  "bettaE",  "gE",  "Hnu0",    "Hnu1",    "Re" };
         List<double> te = new List<double>();
         List<double> gi = new List<double>();
+        List<double> omegaE = new List<double>();
+        List<double> omegaExE = new List<double>();
+        List<double> bE = new List<double>();
+        List<double> alfaE = new List<double>();
+        List<double> dE = new List<double>();
+        List<double> bettaE = new List<double>();
+
 
         public override void DL()
         {           
@@ -180,16 +185,61 @@ namespace ConsoleApplication15
                         case "gi":
                             gi.Add(Convert.ToDouble(vaslues[j]));
                             break;
+                        case "omegaE":
+                            omegaE.Add(Convert.ToDouble(vaslues[j]));
+                            break;
+                        case "omegaExE":
+                            omegaExE.Add(Convert.ToDouble(vaslues[j]));
+                            break;
+                        case "bE":
+                            bE.Add(Convert.ToDouble(vaslues[j]));
+                            break;
+                        case "alfaE":
+                            alfaE.Add((Convert.ToDouble(vaslues[j]))*(10^2));
+                            break;
+                        case "dE":
+                            dE.Add((Convert.ToDouble(vaslues[j]))*(10^6));
+                            break;
+                        case "bettaE":
+                            bettaE.Add((Convert.ToDouble(vaslues[j]))*(10^6));
+                            break;
                     }
                 }              
             }
-            foreach (var tei in te)
+            
+            Console.WriteLine(valueNames.ToString());
+
+            for (int i = 0; i < DataFile.Length-1; i++)
             {
-                Console.WriteLine(tei);
+                switch (valueNames[i])
+                {
+                    case "te":
+                        Console.WriteLine(te.ToArray()[i]);
+                        break;
+                    //case "gi":
+                    //    gi.Add(Convert.ToDouble(valueNames[i]));
+                    //    break;
+                    //case "omegaE":
+                    //    omegaE.Add(Convert.ToDouble(valueNames[i]));
+                    //    break;
+                    //case "omegaExE":
+                    //    omegaExE.Add(Convert.ToDouble(valueNames[i]));
+                    //    break;
+                    //case "bE":
+                    //    bE.Add(Convert.ToDouble(valueNames[i]));
+                    //    break;
+                    //case "alfaE":
+                    //    alfaE.Add(Convert.ToDouble(valueNames[i]));
+                    //    break;
+                    //case "dE":
+                    //    dE.Add(Convert.ToDouble(valueNames[i]));
+                    //    break;
+                    //case "bettaE":
+                    //    bettaE.Add(Convert.ToDouble(valueNames[i]));
+                    //    break;
+                }
             }
-            Console.WriteLine(te.ToArray().Length);
-            Console.WriteLine(gi.ToArray().Length);
-            Console.WriteLine(DataFile.Length);
+
 
         }
 
