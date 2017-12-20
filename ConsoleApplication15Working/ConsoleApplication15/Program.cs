@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Linq.Expressions;
+using System.Security.Claims;
 using System.Security.Cryptography.X509Certificates;
 
 
@@ -17,7 +18,7 @@ namespace ConsoleApplication15
     public class CommandsWork
     {
 
-        string [] Commands = new string[8] { "Close","ShowC" ,"DLFF", "PDFF" ,"CalcAtom", "CalcMolec","td","calc" };
+        string [] Commands = new string[8] { "Close","ShowC" ,"FP", "PDFF" ,"CalcAtom", "CalcMolec","td","calc" };
         private bool atomFlag = false;
         private bool molecFlag = false;
         public static bool dlff = false;
@@ -25,7 +26,6 @@ namespace ConsoleApplication15
         Particle SomeBody = new Particle();
         Atom He = new Atom();
         Molecule CC = new Molecule();
-
 
         public void Manager()
         {
@@ -69,8 +69,8 @@ namespace ConsoleApplication15
                 case "Close":
                    Environment.Exit(0);
                     break;
-                case "DLFF":
-                                  
+                case "FP":
+                    CC.ToFile();  
                     break;
                 case "PDFF":
                     if (atomFlag && !molecFlag)
@@ -102,18 +102,26 @@ namespace ConsoleApplication15
 
     public class Particle
     {
-        public double Totalenergy;
-
         public string[] DataFile;
-        private string NameFile; 
-        
+        private string NameFile;
+
+        public List<double> gi = new List<double>();
+
         public const double h = 6.626070040e-34;
         public const double R = 1.38064852e-23;
         public const double vC = 299792458;
         public const int temper = 300;
+        public const double m = 4.002602;
 
+        public double tEi_n;
+        public double tEj_i;
         public double tEkin;
+        public double tEn;
         public double tE;
+        public double Z;
+        public double Cv;
+
+
         public static int numOfLevels;
 
         public virtual void DL()
@@ -142,39 +150,131 @@ namespace ConsoleApplication15
             return(numOfLevels);
         }
 
-        public virtual void CalcEi_n()
+        public virtual void CalcEi_n() // VirationalEnergy
         {         
 
         }
-        public virtual void CalcEj_i()
+
+        public virtual void CalcEj_i() // RotationalEnergy
         {
          
         }
 
-        public virtual void CalcEkin()
+        public virtual void CalcEkin() // Kinetick
         {
             tEkin = (3/2)*R*temper;           
         }
 
-        public virtual void CalcEn()
+        public virtual void CalcEn() // Electronic
         {
 
         }
 
-        public virtual void TotalCalc()
+        public virtual void TotalCalc() // Total
         {
             Console.WriteLine("Total Energy");
             Console.WriteLine(tE);
         }
 
-        public virtual void CalcZ()
+        public virtual void CalcZ() // Statick Sum
         {
             
         }
 
-        public void PrintRelut(string result)
+        public virtual void HeatСapacity() //HeatСapacity
         {
-            Console.WriteLine(result);
+            double mSum1 = 0;
+            double mSum2 = 0;
+            for (int i = 0; i < numOfLevels; i++)
+            {
+                mSum1 = Math.Pow((tEn/(Particle.R*Particle.temper)), 2)*gi.ToArray()[i]*
+                        Math.Exp(-1/(Particle.R*Particle.temper));
+                mSum2 = Math.Pow((tEn / (Particle.R * Particle.temper)), 1) * gi.ToArray()[i] *
+                       Math.Exp(-1 / (Particle.R * Particle.temper)) + 3/2 ;
+            }
+            Cv = (Particle.R/Particle.m)*(Math.Pow(Z, -1)*mSum1 - Math.Pow(Z, -1)*mSum2);
+        }
+
+        public  void WriteToFile(string nameFile, string namePrintVar, List<double> data)
+        {
+            try
+            {
+                string path =
+               @"C:\Users\лш\Documents\GitHub\GAM\ConsoleApplication15Working\ConsoleApplication15\bin\Debug\" + nameFile;
+                if (!File.Exists(path))
+                {
+                    // Create a file to write to.
+                    using (StreamWriter sw = File.CreateText(path))
+                    {
+                        sw.WriteLine(namePrintVar);
+                        int i = 1;
+                        foreach (var s in data)
+                        {
+                            sw.WriteLine("Level " + i + " " + s);
+                            i++;
+                        }
+                    }
+                }
+                else
+                {
+                    using (StreamWriter sw = File.CreateText(path))
+                    {
+                        sw.WriteLine(namePrintVar);
+                        int i = 1;
+                        foreach (var s in data)
+                        {
+                            sw.WriteLine("Level " + i + " " + s);
+                            i++;
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public void WriteToFileEndData(string nameFile, string[] names, double[] data)
+        {
+            try
+            {
+                string path =
+               @"C:\Users\лш\Documents\GitHub\GAM\ConsoleApplication15Working\ConsoleApplication15\bin\Debug\" + nameFile;
+                if (!File.Exists(path))
+                {
+                    // Create a file to write to.
+                    using (StreamWriter sw = File.CreateText(path))
+                    {
+                        sw.WriteLine(names);
+                        int i = 0;
+                        foreach (var s in data)
+                        {
+                            sw.WriteLine(names[i] + "\t" +  data[i]);
+                            i++;
+                        }
+                    }
+                }
+                else
+                {
+                    using (StreamWriter sw = File.CreateText(path))
+                    {
+                        sw.WriteLine(names);
+                        int i = 0;
+                        foreach (var s in data)
+                        {
+                            sw.WriteLine(names[i] + data[i]);
+                            i++;
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 
@@ -184,40 +284,63 @@ namespace ConsoleApplication15
         List<string> config = new List<string>();
         List<int> jj = new List<int>();
         List<double> level = new List<double>();
-        List<double> g = new List<double>();
+      //  List<double> g = new List<double>();
 
+        List<string> dlData = new List<string>();
+        List<double> En = new List<double>();
         public override void DL()
         {
             base.DL();
             String valueName = DataFile[0];
             String[] valueNames = valueName.Split(new char[] {'\t', ' ', '-', '|', '[', ']'},StringSplitOptions.RemoveEmptyEntries);
-
-            foreach (var vals in valueNames)
+            for (int i = 0; i < valueNames.Length; i++)
             {
-                Console.WriteLine(vals);
-            }
-            for (int i = 1; i < DataFile.Length; i++)
-            {
-                String value = DataFile[i];
-                String[] vaslues = value.Split(new char[] { '\t', ' ', '-', '|', '[', ']' }, StringSplitOptions.RemoveEmptyEntries);
-                for (int j = 0; j < vaslues.Length; j++)
+                for (int j = 0; j < needDataForAtom.Length; j++)
                 {
-                    switch (valueNames[j])
+                    if (valueNames[i] == needDataForAtom[j])
                     {
-                        case "Configuration":
-                            config.Add(vaslues[j]);
-                            break;
-                        case "J":
-                            jj.Add(Convert.ToInt16(vaslues[j]));
-                            break;
-                        case "Level":
-                            level.Add(Convert.ToDouble(vaslues[j]));
-                            break;
-
+                        dlData.Add(needDataForAtom[j]);
                     }
                 }
-            }
-            CommandsWork.dlff = true;
+            }                         
+                if (dlData.ToArray().Length == needDataForAtom.Length)
+                {
+                    for (int i = 1; i < DataFile.Length; i++)
+                    {
+                        String value = DataFile[i];
+                        String[] vaslues = value.Split(new char[] { '\t', ' ', '-', '|', '[', ']' }, StringSplitOptions.RemoveEmptyEntries);
+                        for (int j = 0; j < vaslues.Length; j++)
+                        {
+                            switch (valueNames[j])
+                            {
+                                case "Configuration":
+                                    config.Add(vaslues[j]);
+                                    break;
+                                case "J":
+                                    jj.Add(Convert.ToInt16(vaslues[j]));
+                                    break;
+                                case "Level":
+                                    level.Add(Convert.ToDouble(vaslues[j]));
+                                    break;
+
+                            }
+                        }
+                    }
+                    CommandsWork.dlff = true;
+                    Console.WriteLine("DownLoad OK");
+
+                }
+                else
+                {
+                    Console.WriteLine("Data is not correct" + "\nDownLoad please");
+                    foreach (var s in needDataForAtom)
+                    {
+                        Console.Write(s + " ");
+                    }
+                    Console.WriteLine("Input the file name" + "\n");
+                }
+            
+           
         }
 
         public void PrintDL()
@@ -237,13 +360,7 @@ namespace ConsoleApplication15
             {
                 Console.Write(S + " ");
             }
-        }
-
-        public override void CalcEn()
-        {
-            base.CalcEn();
-
-        }
+        }       
 
         public override void CalcEi_n()
         {
@@ -257,29 +374,66 @@ namespace ConsoleApplication15
             {
                 try
                 {
-                    g.Add(2 * jj.ToArray()[i] + 1);
+                    gi.Add(2 * jj.ToArray()[i] + 1);                    
                 }
-                catch (Exception)
+                catch (IndexOutOfRangeException)
                 {
                     Console.WriteLine("Load more Data of Lelels & Calc Again");
                     break;
                 }
                             
             }
-            foreach (var s in g)
+            for (int i = 0; i < numOfLevels; i++)
+            {
+                try
+                {
+                    double sumZ = 0;
+                    foreach (var var in gi)
+                    {
+                        sumZ += var * Math.Exp((-1) / (Particle.R * Particle.temper));
+                    }
+                    Z = (gi.ToArray()[i] * Math.Exp((-1) / (Particle.R * Particle.temper))) / (sumZ);
+                }
+                catch (IndexOutOfRangeException)
+                {                  
+                    Console.WriteLine("Load more Data of Lelels & Calc Again");
+                    break;
+                }
+            }
+            foreach (var s in gi)
             {
                 Console.WriteLine(s);
             }
             Console.WriteLine("OK");
         }
+
+        public override void CalcEn()
+        {
+            base.CalcEn();
+            for (int i = 0; i < numOfLevels; i++)
+            {
+                try
+                {
+                    En.Add((1 / (Particle.m * Z)) * gi.ToArray()[i] * 1 * Math.Exp(-1 / (Particle.R * Particle.temper)));
+                }
+                catch (IndexOutOfRangeException)
+                {
+                    Console.WriteLine("Load more Data of Lelels & Calc Again");
+                    break;
+                }
+              
+            }
+        }
+
     }
 
     public class Molecule : Particle
     {
         private string[] needDataForMolec = new string[8] { "te", "gi", "omegaE", "omegaExE", "bE", "alfaE", "dE", "bettaE" };
+
         List<string> dlData =new List<string>();
         List<double> te = new List<double>();
-        List<double> gi = new List<double>();
+      //  List<double> gi = new List<double>();
         List<double> omegaE = new List<double>();
         List<double> omegaExE = new List<double>();
         List<double> bE = new List<double>();
@@ -287,8 +441,6 @@ namespace ConsoleApplication15
         List<double> dE = new List<double>();
         List<double> bettaE = new List<double>();
 
-        public double tEi_n;
-        public double tEj_i;
         List<double> Ei = new List<double>();
         List<double> Ej_i = new List<double>();
        
@@ -431,6 +583,7 @@ namespace ConsoleApplication15
             }            
            
         }
+
         public override void CalcEj_i()
         {
             base.CalcEj_i();
@@ -471,6 +624,15 @@ namespace ConsoleApplication15
             tE = tEi_n + tEj_i + tEkin;
             base.TotalCalc();
         }
+
+        public  void ToFile()
+        {          
+            WriteToFile("EiMolec.txt", "Ei - VirationalEnergy : ",Ei);
+            WriteToFile("Ej_iMolec.txt", "Ej_i - RotationalEnergy : ", Ej_i);     
+            WriteToFileEndData("EndData.txt",new string[4] { "tEi_n", "tEj_i", "tEkin", "tE" }, new double[4] { tEi_n , tEj_i, tEkin, tE });       
+            Console.WriteLine("OK");                       
+        }
+
     }
     class Program
     {
