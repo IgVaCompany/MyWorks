@@ -18,7 +18,7 @@ namespace ConsoleApplication15
     public class CommandsWork
     {
 
-        string [] Commands = new string[8] { "Close","ShowC" ,"FP", "PDFF" ,"CalcAtom", "CalcMolec","td","calc" };
+        string [] Commands = new string[8] { "Close","ShowC" ,"pf", "PDFF" ,"CalcAtom", "CalcMolec","cl","calc" };
         private bool atomFlag = false;
         private bool molecFlag = false;
         public static bool dlff = false;
@@ -43,6 +43,13 @@ namespace ConsoleApplication15
             }            
             switch (Command)
             {
+                case "cl":
+                    atomFlag = false;
+                    molecFlag = false;
+                    He.Clear();
+                    CC.Clear();
+                    dlff = false;
+                    break;  
                 case "CalcAtom":
                     atomFlag = true;
                     molecFlag = false;
@@ -51,7 +58,9 @@ namespace ConsoleApplication15
                         He.DL();
                     } while (!dlff);
                     He.NumLevels();
-                    He.CalcZ();                  
+                    He.CalcEkin();                    
+                    He.CalcZ();  
+                    He.TotalCalc();                
                     break;
                 case "CalcMolec":
                     atomFlag = false;
@@ -69,7 +78,7 @@ namespace ConsoleApplication15
                 case "Close":
                    Environment.Exit(0);
                     break;
-                case "FP":
+                case "pf":
                     CC.ToFile();  
                     break;
                 case "PDFF":
@@ -88,13 +97,7 @@ namespace ConsoleApplication15
                     {
                         Console.WriteLine(com);
                     }
-                    break;
-                
-                case "td":
-                {
-                    SomeBody.DL();
-                }
-                    break;
+                    break;                            
 
             }
         }
@@ -106,7 +109,6 @@ namespace ConsoleApplication15
         private string NameFile;
 
         public List<double> gi = new List<double>();
-
         public const double h = 6.626070040e-34;
         public const double R = 1.38064852e-23;
         public const double vC = 299792458;
@@ -123,6 +125,19 @@ namespace ConsoleApplication15
 
 
         public static int numOfLevels;
+
+        public virtual void Clear()
+        {
+            tE = 0;
+            tEi_n = 0;
+            tEj_i = 0;
+            tEkin = 0;
+            tEn = 0;
+            Z = 0;
+            Cv = 0;
+            gi.Clear();
+            Console.WriteLine("Clear OK!");
+        }
 
         public virtual void DL()
         {
@@ -193,6 +208,11 @@ namespace ConsoleApplication15
                        Math.Exp(-1 / (Particle.R * Particle.temper)) + 3/2 ;
             }
             Cv = (Particle.R/Particle.m)*(Math.Pow(Z, -1)*mSum1 - Math.Pow(Z, -1)*mSum2);
+        }
+
+        public virtual void ToFile()
+        {
+            Console.WriteLine("OK");
         }
 
         public  void WriteToFile(string nameFile, string namePrintVar, List<double> data)
@@ -288,6 +308,15 @@ namespace ConsoleApplication15
 
         List<string> dlData = new List<string>();
         List<double> En = new List<double>();
+
+        public override void Clear()
+        {
+            base.Clear();
+            config.Clear();
+            jj.Clear();
+            level.Clear();
+        }
+
         public override void DL()
         {
             base.DL();
@@ -425,6 +454,22 @@ namespace ConsoleApplication15
             }
         }
 
+        public override void TotalCalc()
+        {           
+            tE = tEkin + tEn;
+            base.TotalCalc();
+        }
+
+        public override void HeatСapacity()
+        {
+            base.HeatСapacity();
+        }
+
+        public override void ToFile()
+        {
+            base.ToFile();
+
+        }
     }
 
     public class Molecule : Particle
@@ -443,7 +488,21 @@ namespace ConsoleApplication15
 
         List<double> Ei = new List<double>();
         List<double> Ej_i = new List<double>();
-       
+
+        public override void Clear()
+        {
+            base.Clear();
+            dlData.Clear();
+            te.Clear();
+            omegaE.Clear();
+            omegaExE.Clear();
+            bE.Clear();
+            alfaE.Clear();
+            dE.Clear();
+            bettaE.Clear();
+            Ei.Clear();
+            Ej_i.Clear();
+        }
 
         public override void DL()
         {           
@@ -580,8 +639,7 @@ namespace ConsoleApplication15
             {
                 Console.WriteLine(f+" "+s);
                 f++;
-            }            
-           
+            }                     
         }
 
         public override void CalcEj_i()
@@ -625,14 +683,19 @@ namespace ConsoleApplication15
             base.TotalCalc();
         }
 
-        public  void ToFile()
-        {          
-            WriteToFile("EiMolec.txt", "Ei - VirationalEnergy : ",Ei);
-            WriteToFile("Ej_iMolec.txt", "Ej_i - RotationalEnergy : ", Ej_i);     
-            WriteToFileEndData("EndData.txt",new string[4] { "tEi_n", "tEj_i", "tEkin", "tE" }, new double[4] { tEi_n , tEj_i, tEkin, tE });       
-            Console.WriteLine("OK");                       
+        public override void HeatСapacity()
+        {
+            base.HeatСapacity();
         }
 
+        public override void ToFile()
+        {
+            base.ToFile();
+            WriteToFile("EiMolec.txt", "Ei - VirationalEnergy : ", Ei);
+            WriteToFile("Ej_iMolec.txt", "Ej_i - RotationalEnergy : ", Ej_i);
+            WriteToFileEndData("EndData.txt", new string[4] { "tEi_n", "tEj_i", "tEkin", "tE" }, new double[4] { tEi_n, tEj_i, tEkin, tE });
+            
+        }
     }
     class Program
     {
