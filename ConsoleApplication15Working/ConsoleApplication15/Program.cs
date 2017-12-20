@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Linq.Expressions;
 using System.Security.Cryptography.X509Certificates;
 
 
@@ -48,7 +50,8 @@ namespace ConsoleApplication15
                     {
                         He.DL();
                     } while (!dlff);
-                                      
+                    He.NumLevels();
+                    He.CalcZ();                  
                     break;
                 case "CalcMolec":
                     atomFlag = false;
@@ -164,6 +167,11 @@ namespace ConsoleApplication15
             Console.WriteLine(tE);
         }
 
+        public virtual void CalcZ()
+        {
+            
+        }
+
         public void PrintRelut(string result)
         {
             Console.WriteLine(result);
@@ -176,6 +184,7 @@ namespace ConsoleApplication15
         List<string> config = new List<string>();
         List<int> jj = new List<int>();
         List<double> level = new List<double>();
+        List<double> g = new List<double>();
 
         public override void DL()
         {
@@ -208,6 +217,7 @@ namespace ConsoleApplication15
                     }
                 }
             }
+            CommandsWork.dlff = true;
         }
 
         public void PrintDL()
@@ -238,6 +248,29 @@ namespace ConsoleApplication15
         public override void CalcEi_n()
         {
             base.CalcEi_n();
+        }
+
+        public override void CalcZ()
+        {
+            base.CalcZ();
+            for (int i = 0; i < numOfLevels; i++)
+            {
+                try
+                {
+                    g.Add(2 * jj.ToArray()[i] + 1);
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Load more Data of Lelels & Calc Again");
+                    break;
+                }
+                            
+            }
+            foreach (var s in g)
+            {
+                Console.WriteLine(s);
+            }
+            Console.WriteLine("OK");
         }
     }
 
