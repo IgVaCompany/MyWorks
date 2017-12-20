@@ -57,6 +57,7 @@ namespace ConsoleApplication15
                     {
                         CC.DL();                       
                     } while (!dlff);
+                    CC.NumLevels();
                     CC.CalcEi_n();
                     CC.CalcEj_i();
                     CC.CalcEkin();
@@ -128,28 +129,33 @@ namespace ConsoleApplication15
             }                   
         }
 
-        public virtual void CalcEi_n()
+        public virtual int NumLevels()
         {
             if (numOfLevels == 0) ;
             {
                 Console.WriteLine("Put level numbers");
                 numOfLevels = Convert.ToInt32(Console.ReadLine());
             }
+            return(numOfLevels);
+        }
+
+        public virtual void CalcEi_n()
+        {         
 
         }
         public virtual void CalcEj_i()
         {
-            if (numOfLevels == 0)
-            {
-                Console.WriteLine("Put level numbers");
-                numOfLevels = Convert.ToInt32(Console.ReadLine());
-            }
-            
+         
         }
 
         public virtual void CalcEkin()
         {
             tEkin = (3/2)*R*temper;           
+        }
+
+        public virtual void CalcEn()
+        {
+
         }
 
         public virtual void TotalCalc()
@@ -221,6 +227,12 @@ namespace ConsoleApplication15
             {
                 Console.Write(S + " ");
             }
+        }
+
+        public override void CalcEn()
+        {
+            base.CalcEn();
+
         }
 
         public override void CalcEi_n()
