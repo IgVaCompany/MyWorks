@@ -61,7 +61,8 @@ namespace ConsoleApplication15
                     He.NumLevels();
                     He.CalcEkin();                    
                     He.CalcZ();  
-                    He.TotalCalc();                
+                    He.TotalCalc();  
+                    He.HeatСapacity();              
                     break;
                 case "CalcMolec":
                     atomFlag = false;
@@ -75,6 +76,7 @@ namespace ConsoleApplication15
                     CC.CalcEj_i();
                     CC.CalcEkin();
                     CC.TotalCalc();
+                    CC.HeatСapacity();
                     break;
                 case "Close":
                    Environment.Exit(0);
@@ -208,7 +210,7 @@ namespace ConsoleApplication15
                 mSum2 = Math.Pow((tEn / (Particle.R * Particle.temper)), 1) * gi.ToArray()[i] *
                        Math.Exp(-1 / (Particle.R * Particle.temper)) + 3/2 ;
             }
-            Cv = (Particle.R/Particle.m)*(Math.Pow(Z, -1)*mSum1 - Math.Pow(Z, -1)*mSum2);
+            Cv = (Particle.R/Particle.m)*(Math.Pow(Z, -1)*mSum1 - Math.Pow(Z, -1)*mSum2);            
         }
 
         public virtual void ToFile()
@@ -464,6 +466,7 @@ namespace ConsoleApplication15
         public override void HeatСapacity()
         {
             base.HeatСapacity();
+            Console.WriteLine("HeatСapacity Atom: " + Cv);
         }
 
         public override void ToFile()
@@ -687,6 +690,7 @@ namespace ConsoleApplication15
         public override void HeatСapacity()
         {
             base.HeatСapacity();
+            Console.WriteLine("HeatСapacity Molec: " + Cv);
         }
 
         public override void ToFile()
