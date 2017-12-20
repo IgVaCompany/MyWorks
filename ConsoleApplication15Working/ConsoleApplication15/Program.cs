@@ -18,7 +18,8 @@ namespace ConsoleApplication15
     public class CommandsWork
     {
 
-        string [] Commands = new string[8] { "Close","ShowC" ,"pf", "PDFF" ,"CalcAtom", "CalcMolec","cl","calc" };
+        private string[] Commands = new string[9]
+        {"Close", "ShowC", "pf", "PDFF", "CalcAtom", "CalcMolec", "cl", "calc", "test"};
         private bool atomFlag = false;
         private bool molecFlag = false;
         public static bool dlff = false;
