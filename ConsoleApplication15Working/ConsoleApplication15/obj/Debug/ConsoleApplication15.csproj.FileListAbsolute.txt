@@ -32,3 +32,6 @@ C:\Users\Druzhinin_Vasily\Documents\GitHub\GAM\ConsoleApplication15Working\Conso
 D:\C#\trunk\ConsoleApplication15Working\ConsoleApplication15\bin\Debug\ConsoleApplication15.exe.config
 D:\C#\trunk\ConsoleApplication15Working\ConsoleApplication15\obj\Debug\ConsoleApplication15.exe
 D:\C#\trunk\ConsoleApplication15Working\ConsoleApplication15\obj\Debug\ConsoleApplication15.pdb
+D:\C#\trunk\ConsoleApplication15Working\ConsoleApplication15\bin\Debug\ConsoleApplication15.exe
+D:\C#\trunk\ConsoleApplication15Working\ConsoleApplication15\bin\Debug\ConsoleApplication15.pdb
+D:\C#\trunk\ConsoleApplication15Working\ConsoleApplication15\obj\Debug\ConsoleApplication15.csprojResolveAssemblyReference.cache

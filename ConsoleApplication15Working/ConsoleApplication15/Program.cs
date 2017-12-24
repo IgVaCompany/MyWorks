@@ -72,11 +72,12 @@ namespace ConsoleApplication15
                         CC.DL();                       
                     } while (!dlff);
                     CC.NumLevels();
-                    CC.CalcEi_n();
-                    CC.CalcEj_i();
+                    CC.CalcEnergy();                   
                     CC.CalcEkin();
                     CC.TotalCalc();
+                    CC.CalcZ();
                     CC.HeatСapacity();
+                 //   CC.HeatСapacity();
                     break;
                 case "Close":
                    Environment.Exit(0);
@@ -112,11 +113,12 @@ namespace ConsoleApplication15
         private string NameFile;
 
         public List<double> gi = new List<double>();
+
         public const double h = 6.626070040e-34;
         public const double R = 1.38064852e-23;
-        public const double vC = 299792458;
+        public const double vC = 3e+8;
         public const int temper = 300;
-        public const double m = 4.002602;
+        public const double m = 1.661e-27;
 
         public double tEi_n;
         public double tEj_i;
@@ -126,9 +128,11 @@ namespace ConsoleApplication15
         public double Z;
         public double Cv;
 
+        public double mSum1;
+        public double mSum2;
 
         public static int numOfLevels;
-
+        
         public virtual void Clear()
         {
             tE = 0;
@@ -190,32 +194,29 @@ namespace ConsoleApplication15
 
         public virtual void TotalCalc() // Total
         {
-            Console.WriteLine("Total Energy");
-            Console.WriteLine(tE);
+            Console.WriteLine("Total Energy: "+tE);
         }
 
         public virtual void CalcZ() // Statick Sum
         {
-            
+            Console.WriteLine("Statistic Sum: " + Z);
         }
 
         public virtual void HeatСapacity() //HeatСapacity
         {
-            double mSum1 = 0;
-            double mSum2 = 0;
-            for (int i = 0; i < numOfLevels; i++)
-            {
-                mSum1 = Math.Pow((tEn/(Particle.R*Particle.temper)), 2)*gi.ToArray()[i]*
-                        Math.Exp(-1/(Particle.R*Particle.temper));
-                mSum2 = Math.Pow((tEn / (Particle.R * Particle.temper)), 1) * gi.ToArray()[i] *
-                       Math.Exp(-1 / (Particle.R * Particle.temper)) + 3/2 ;
-            }
-            Cv = (Particle.R/Particle.m)*(Math.Pow(Z, -1)*mSum1 - Math.Pow(Z, -1)*mSum2);            
+                       
+            Cv = (Particle.R/Particle.m)*(Math.Pow(Z, -1)*mSum1 + Math.Pow(Z, -1)*mSum2);
+            Console.WriteLine("HeatСapacity: " + Cv);
         }
 
         public virtual void ToFile()
         {
             Console.WriteLine("OK");
+        }
+
+        public virtual void CalcEnergy()
+        {
+            
         }
 
         public  void WriteToFile(string nameFile, string namePrintVar, List<double> data)
@@ -303,7 +304,7 @@ namespace ConsoleApplication15
 
     public class Atom : Particle
     {
-        private string[] needDataForAtom = new string[3] { "Configuration", "J", "Level"};
+        private string[] needDataForAtom = new string[2] { "J", "Level"};
         List<string> config = new List<string>();
         List<int> jj = new List<int>();
         List<double> level = new List<double>();
@@ -345,16 +346,12 @@ namespace ConsoleApplication15
                         {
                             switch (valueNames[j])
                             {
-                                case "Configuration":
-                                    config.Add(vaslues[j]);
-                                    break;
                                 case "J":
                                     jj.Add(Convert.ToInt16(vaslues[j]));
                                     break;
                                 case "Level":
                                     level.Add(Convert.ToDouble(vaslues[j]));
                                     break;
-
                             }
                         }
                     }
@@ -376,12 +373,7 @@ namespace ConsoleApplication15
         }
 
         public void PrintDL()
-        {
-            Console.Write("Configuration\t");
-            foreach (var S in config)
-            {
-                Console.Write(S + " ");
-            }
+        {           
             Console.Write("\n" + "J\t");
             foreach (var S in jj)
             {
@@ -401,7 +393,6 @@ namespace ConsoleApplication15
 
         public override void CalcZ()
         {
-            base.CalcZ();
             for (int i = 0; i < numOfLevels; i++)
             {
                 try
@@ -410,7 +401,7 @@ namespace ConsoleApplication15
                 }
                 catch (IndexOutOfRangeException)
                 {
-                    Console.WriteLine("Load more Data of Lelels & Calc Again");
+                  //  Console.WriteLine("Load more Data of Lelels & Calc Again");
                     break;
                 }
                             
@@ -419,24 +410,15 @@ namespace ConsoleApplication15
             {
                 try
                 {
-                    double sumZ = 0;
-                    foreach (var var in gi)
-                    {
-                        sumZ += var * Math.Exp((-1) / (Particle.R * Particle.temper));
-                    }
-                    Z = (gi.ToArray()[i] * Math.Exp((-1) / (Particle.R * Particle.temper))) / (sumZ);
+                    Z += gi.ToArray()[i] * Math.Exp((-level.ToArray()[i]) / (Particle.R * Particle.temper));
                 }
                 catch (IndexOutOfRangeException)
                 {                  
-                    Console.WriteLine("Load more Data of Lelels & Calc Again");
+                    Console.WriteLine("Load more Data of Lelels & Calc Again" + " Calc Only for: " + i);
                     break;
                 }
             }
-            foreach (var s in gi)
-            {
-                Console.WriteLine(s);
-            }
-            Console.WriteLine("OK");
+            base.CalcZ();
         }
 
         public override void CalcEn()
@@ -446,14 +428,14 @@ namespace ConsoleApplication15
             {
                 try
                 {
-                    En.Add((1 / (Particle.m * Z)) * gi.ToArray()[i] * 1 * Math.Exp(-1 / (Particle.R * Particle.temper)));
+                    En.Add((1 / (Particle.m * Z)) * gi.ToArray()[i] * level.ToArray()[i] * Math.Exp(-level.ToArray()[i] / (Particle.R * Particle.temper)));
+                    tEn += En.ToArray()[i];
                 }
                 catch (IndexOutOfRangeException)
                 {
                     Console.WriteLine("Load more Data of Lelels & Calc Again");
                     break;
-                }
-              
+                }              
             }
         }
 
@@ -465,8 +447,14 @@ namespace ConsoleApplication15
 
         public override void HeatСapacity()
         {
-            base.HeatСapacity();
-            Console.WriteLine("HeatСapacity Atom: " + Cv);
+            for (int i = 0; i < numOfLevels; i++)
+            {
+                mSum1 = Math.Pow((level.ToArray()[i] / (Particle.R * Particle.temper)), 2) * gi.ToArray()[i] *
+                        Math.Exp(-level.ToArray()[i]/ (Particle.R * Particle.temper));
+                mSum2 = Math.Pow((level.ToArray()[i] / (Particle.R * Particle.temper)), 1) * gi.ToArray()[i] *
+                       Math.Exp(-level.ToArray()[i]/ (Particle.R * Particle.temper)) + 3 / 2;
+            }
+            base.HeatСapacity();                       
         }
 
         public override void ToFile()
@@ -478,20 +466,27 @@ namespace ConsoleApplication15
 
     public class Molecule : Particle
     {
-        private string[] needDataForMolec = new string[8] { "te", "gi", "omegaE", "omegaExE", "bE", "alfaE", "dE", "bettaE" };
+        private string[] needDataForMolec = new string[9] { "te", "gi", "omegaE", "omegaExE", "bE", "alfaE", "dE", "bettaE", "Ediss" };
 
         List<string> dlData =new List<string>();
         List<double> te = new List<double>();
-      //  List<double> gi = new List<double>();
         List<double> omegaE = new List<double>();
         List<double> omegaExE = new List<double>();
         List<double> bE = new List<double>();
         List<double> alfaE = new List<double>();
         List<double> dE = new List<double>();
         List<double> bettaE = new List<double>();
+        List<double> Ediss = new List<double>();
+        
+        List<double> gn =new List<double>();
+        List<double> gii =   new List<double>();
+        List<double> gj = new List<double>();
 
+        List<double> En = new List<double>();
         List<double> Ei = new List<double>();
         List<double> Ej_i = new List<double>();
+        private bool first = false;
+        private bool second = false; 
 
         public override void Clear()
         {
@@ -535,34 +530,44 @@ namespace ConsoleApplication15
                             switch (valueNames[j])
                             {
                                 case "te":
-                                    te.Add(Convert.ToDouble(vaslues[j]));
+                                    te.Add(Convert.ToDouble(vaslues[j])*Particle.h*Particle.vC*100);
                                     break;
                                 case "gi":
                                     gi.Add(Convert.ToDouble(vaslues[j]));
                                     break;
                                 case "omegaE":
-                                    omegaE.Add(Convert.ToDouble(vaslues[j]));
+                                    omegaE.Add(Convert.ToDouble(vaslues[j])*100);
                                     break;
                                 case "omegaExE":
-                                    omegaExE.Add(Convert.ToDouble(vaslues[j]));
+                                    omegaExE.Add(Convert.ToDouble(vaslues[j])*100);
                                     break;
                                 case "bE":
-                                    bE.Add(Convert.ToDouble(vaslues[j]));
+                                    bE.Add(Convert.ToDouble(vaslues[j])*100);//
                                     break;
                                 case "alfaE":
-                                    alfaE.Add((Convert.ToDouble(vaslues[j]))*Math.Pow(10, 2));
+                                    alfaE.Add((Convert.ToDouble(vaslues[j]))*100*);//
                                     break;
                                 case "dE":
-                                    dE.Add((Convert.ToDouble(vaslues[j]))*Math.Pow(10, 6));
+                                    dE.Add((Convert.ToDouble(vaslues[j])));//
                                     break;
                                 case "bettaE":
-                                    bettaE.Add((Convert.ToDouble(vaslues[j]))*Math.Pow(10, 6));
+                                    bettaE.Add((Convert.ToDouble(vaslues[j])));//
                                     break;
-                            }
+                                case "Ediss":    
+                                    if  (Convert.ToDouble(vaslues[j])==0)
+                                    Ediss.Add(Ediss.ToArray()[i-2]+ (Convert.ToDouble(vaslues[j])) * Particle.h * Particle.vC * 100);
+                                    else                         
+                                    Ediss.Add((Convert.ToDouble(vaslues[j])) * Particle.h * Particle.vC * 100);                              
+                                break;
+                        }
                         }
                     }
                   CommandsWork.dlff = true;
                   Console.WriteLine("DownLoad OK");
+                    foreach (var s in Ediss)
+                    {
+                    Console.WriteLine(s);
+                }
             }
                 else
                 {
@@ -620,60 +625,58 @@ namespace ConsoleApplication15
             }
         }
 
-        public override void CalcEi_n()
+        public override void CalcEnergy()
         {
-            base.CalcEi_n();
-            for (int i = 0; i < numOfLevels; i++)
+            base.CalcEnergy();
+            for (int n = 0; n < numOfLevels; n++)
             {
-                try
-                {
-                    Ei.Add(Particle.h * Particle.vC * (omegaE.ToArray()[i] * (i + 0.5f) - omegaExE.ToArray()[i] * Math.Pow((i + 0.5f), 2)));
-                    tEi_n += Ei.ToArray()[i];
-                }
-                catch (IndexOutOfRangeException)
-                {
-                    Console.WriteLine("Load more Data of Lelels & Calc Again");
-                    //throw;
-                    break;
-                }               
-            }
-            Console.WriteLine("Total Ei: "+ tEi_n);
-            int f = 1;
-            foreach (var s in Ei)
-            {
-                Console.WriteLine(f+" "+s);
-                f++;
-            }                     
-        }
+                En.Add(Math.Abs(te.ToArray()[n]));
+                tEn += En.ToArray()[n];
+                gn.Add(Math.Abs(gi.ToArray()[n]));
+                int i = 1;
+                second = false;
+                do
+                {                    
+                        Ei.Add(Math.Abs(Particle.h * Particle.vC * (omegaE.ToArray()[n] * (i + 0.5f) - omegaExE.ToArray()[n] * Math.Pow((i + 0.5f), 2))));
+                        tEi_n += Ei.ToArray()[i-1];
+                        gii.Add(1);
+                       
+                    int j = 1;           
+                    do
+                    {                   
+                        double Bcn = bE.ToArray()[n] - alfaE.ToArray()[n] * (i + 0.5f);
+                        double Dcn = dE.ToArray()[n] - bettaE.ToArray()[n] * (i + 0.5f);
+                        double mEj_i = Math.Abs(Particle.h * Particle.vC * (Bcn * j * (j + 1) - Dcn * Math.Pow(j, 2) * Math.Pow((j + 1), 2)));
+                        double sE = En.ToArray()[n] + Ei.ToArray()[i-1] + mEj_i;
+                        Console.WriteLine(sE + " "+ Ediss[n]);
+                        if (sE > Ediss[n] && !first)
+                        {
+                            first = true;
+                            i++;
+                        }
+                        else if (sE > Ediss[n] && first)
+                        {
+                            second = true;
+                        }
+                        else
+                        {
+                            Ej_i.Add(mEj_i);
+                            tEj_i += Ej_i.ToArray()[j - 1];
+                            gj.Add(2*j+1);
+                            j++;
+                            first = false;
 
-        public override void CalcEj_i()
-        {
-            base.CalcEj_i();
-            for (int i = 0; i < numOfLevels; i++)
-            {
-                try
-                {
-                    double Bcn = bE.ToArray()[i] - alfaE.ToArray()[i] * (i + 0.5f);
-                    double Dcn = dE.ToArray()[i] - bettaE.ToArray()[i] * (i + 0.5f);
-                    Ej_i.Add(Particle.h * Particle.R * (Bcn * i * (i + 1) - Dcn * Math.Pow(i, 2) * Math.Pow((i + 1), 2)));
-                    tEj_i += Ej_i.ToArray()[i];
-                }
-                catch (IndexOutOfRangeException)
-                {
-                    Console.WriteLine("Load more Data of Lelels & Calc Again");
-                    //throw;
-                    break;
-                }
-               
+                        }                                        
+                    } while (!first);
+                } while (!second);
+                
             }
-            Console.WriteLine("Total Eji: " + tEj_i);
-            int f = 1;
-            foreach (var s in Ej_i)
-            {
-                Console.WriteLine(f + " " + s);
-                f++;
-            }
+            Console.WriteLine("En Total: "+ tEn + "\nEi Total: " + tEi_n + "\nEj Total: " + tEj_i );
+            Console.WriteLine(Ej_i.ToArray().Length);
+            Console.WriteLine(Ei.ToArray().Length);
+            Console.WriteLine(En.ToArray().Length);
         }
+      
 
         public override void CalcEkin()
         {
@@ -683,14 +686,45 @@ namespace ConsoleApplication15
 
         public override void TotalCalc()
         {           
-            tE = tEi_n + tEj_i + tEkin;
+            tE = tEi_n + tEn + tEj_i + tEkin;
             base.TotalCalc();
         }
 
+        public override void CalcZ()
+        {           
+            for (int i = 0; i < gn.ToArray().Length; i++)
+            {
+                for (int j = 0; j < gii.ToArray().Length; j++)
+                {
+                    for (int k = 0; k < gj.ToArray().Length; k++)
+                    {
+                        Z +=gn.ToArray()[i]*gii.ToArray()[j]*gj.ToArray()[k]*Math.Exp((-(En.ToArray()[i]+Ei.ToArray()[j]+Ej_i.ToArray()[k]))/(Particle.R*Particle.temper)); 
+                      //  Console.WriteLine(j+": "+Z);                      
+                    }
+                }
+            }
+            Console.WriteLine(Z);
+            base.CalcZ();
+        }
+      
+
         public override void HeatСapacity()
         {
+            for (int i = 0; i < gn.ToArray().Length; i++)
+            {
+                for (int j = 0; j < gii.ToArray().Length; j++)
+                {
+                    for (int k = 0; k < gj.ToArray().Length; k++)
+                    {
+                        mSum1 += Math.Pow(((En.ToArray()[i] + Ei.ToArray()[j] + Ej_i.ToArray()[k]) / (Particle.R * Particle.temper)), 2) * gn.ToArray()[i] * gii.ToArray()[j] * gj.ToArray()[k] *
+                       Math.Exp(-(En.ToArray()[i] + Ei.ToArray()[j] + Ej_i.ToArray()[k]) / (Particle.R * Particle.temper));
+                        mSum2 += Math.Pow(((En.ToArray()[i] + Ei.ToArray()[j] + Ej_i.ToArray()[k]) / (Particle.R * Particle.temper)), 1) * gn.ToArray()[i] * gii.ToArray()[j] * gj.ToArray()[k] *
+                       Math.Exp(-(En.ToArray()[i] + Ei.ToArray()[j] + Ej_i.ToArray()[k]) / (Particle.R * Particle.temper))+1.5f;
+                    }
+                }
+               
+            }
             base.HeatСapacity();
-            Console.WriteLine("HeatСapacity Molec: " + Cv);
         }
 
         public override void ToFile()
