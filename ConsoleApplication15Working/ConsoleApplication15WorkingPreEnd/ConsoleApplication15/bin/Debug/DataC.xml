@@ -1,0 +1,1032 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Irina_Novokhatskay</Author>
+  <LastAuthor>лш</LastAuthor>
+  <Created>2017-12-17T18:13:45Z</Created>
+  <LastSaved>2017-12-17T18:14:23Z</LastSaved>
+  <Version>15.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>8445</WindowHeight>
+  <WindowWidth>21690</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s39">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s40">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"/>
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s41">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:Indent="1"/>
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s42">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:Indent="2"/>
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s43">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s44">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="2"/>
+   <Borders>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s45">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s46">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s47">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:Indent="1"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s48">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s49">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="2"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s50">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:Indent="2"/>
+   <Borders/>
+  </Style>
+  <Style ss:ID="s51">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:Indent="2"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s52">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s53">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:Indent="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s54">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s55">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s56">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="2"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s117">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+   <Font ss:FontName="Courier New" x:CharSet="204" x:Family="Modern" ss:Size="12"/>
+  </Style>
+  <Style ss:ID="s118">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+   <Font ss:FontName="Courier New" x:CharSet="204" x:Family="Modern" ss:Size="12"/>
+  </Style>
+  <Style ss:ID="s119">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:Indent="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss"/>
+  </Style>
+  <Style ss:ID="s123">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:Indent="2"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss"/>
+  </Style>
+  <Style ss:ID="s126">
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss"/>
+  </Style>
+  <Style ss:ID="s127">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+   <Font ss:FontName="Cambria" x:CharSet="204" x:Family="Roman" ss:Size="14"/>
+  </Style>
+  <Style ss:ID="s128">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="2"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+   <Font ss:FontName="Cambria" x:CharSet="204" x:Family="Roman" ss:Size="14"/>
+  </Style>
+  <Style ss:ID="s129">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="2"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+   <Font ss:FontName="Courier New" x:CharSet="204" x:Family="Modern" ss:Size="12"/>
+  </Style>
+  <Style ss:ID="s130">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+   <Font ss:FontName="Cambria" x:CharSet="204" x:Family="Roman" ss:Size="14"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="DataC">
+  <Table ss:ExpandedColumnCount="19" ss:ExpandedRowCount="14" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:AutoFitWidth="0" ss:Width="115.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="47.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="105"/>
+   <Column ss:AutoFitWidth="0" ss:Width="94.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="99.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="94.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="73.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="115.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="105"/>
+   <Column ss:AutoFitWidth="0" ss:Width="99.75" ss:Span="1"/>
+   <Column ss:Index="12" ss:AutoFitWidth="0" ss:Width="69"/>
+   <Column ss:AutoFitWidth="0" ss:Width="52.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="105"/>
+   <Column ss:AutoFitWidth="0" ss:Width="99.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="52.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="68.25" ss:Span="1"/>
+   <Column ss:Index="19" ss:AutoFitWidth="0" ss:Width="94.5"/>
+   <Row ss:Height="18" ss:StyleID="s126">
+    <Cell ss:StyleID="s130"><Data ss:Type="String">Те</Data></Cell>
+    <Cell ss:StyleID="s117"><Data ss:Type="String">gi</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="String">omegaE</Data></Cell>
+    <Cell ss:StyleID="s119"><Data ss:Type="String">omegaExE</Data></Cell>
+    <Cell ss:StyleID="s119"><Data ss:Type="String">omegaEyE</Data></Cell>
+    <Cell ss:StyleID="s119"><Data ss:Type="String">omegaEzE</Data></Cell>
+    <Cell ss:StyleID="s119"><Data ss:Type="String">omegaEkE</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="String">Ediss</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="String">Be</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">alfaE</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">gammaE</Data></Cell>
+    <Cell ss:StyleID="s128"><Data ss:Type="String">deltaE</Data></Cell>
+    <Cell ss:StyleID="s123"><Data ss:Type="String">ksiE</Data></Cell>
+    <Cell ss:StyleID="s117"><Data ss:Type="String">De</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">bettaE</Data></Cell>
+    <Cell ss:StyleID="s129"><Data ss:Type="String">gE</Data></Cell>
+    <Cell ss:StyleID="s117"><Data ss:Type="String">Hnu0</Data></Cell>
+    <Cell ss:StyleID="s117"><Data ss:Type="String">Hnu1</Data></Cell>
+    <Cell ss:StyleID="s130"><Data ss:Type="String">Re</Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:StyleID="s39"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font><Font html:Face="Courier New" html:Size="9">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s40"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s41"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1854.71</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s41"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">13.34</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s42"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">-0.172</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s39"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s39"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s41"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">50086.62</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s41"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.81984</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s43"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.765</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s43"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">-2.3</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s44"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s44"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s43"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">6.92</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s39"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0.081</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s44"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s39"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s39"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s41"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.2425</Font></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">716.24</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s46"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">6</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1641.35</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">11.67</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.63246</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.661</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">6.44</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.3119</Font></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:StyleID="s50"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">6434.27</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">3</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1470.45</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">11.19</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0.028</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.49852</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.634</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">-0.87</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">6.22</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.3693</Font></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">8391.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s46"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">2</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1608.35</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">12.078</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">-0.01</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.61634</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.686</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">-0.54</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">6.44</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0.036</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.3184</Font></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">13312.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">3</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1961.6</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">13.7</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.87</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font><Font html:Face="Courier New" html:Size="9">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.23</Font></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">20022.5</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s46"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">6</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1788.22</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">16.44</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">-0.5067</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.7527</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.608</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s50"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">-12.74</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">6.74</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0.103</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s46"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.2661</Font></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:StyleID="s50"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">34261.3</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s46"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">2</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1809.1</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">15.81</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.7834</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.8</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">6.8</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.2552</Font></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">40796.65</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s46"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">6</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1106.56</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">39.26</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">2.805</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">-0.1271</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.1922</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">2.42</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">6.3</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0.29</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.5351</Font></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">43239.44</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s46"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1829.57</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">13.94</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.8332</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.96</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">7.32</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0.03</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.238</Font></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:StyleID="s50"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">55034.7</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s46"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1671.5</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">40.02</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0.248</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.7897</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">3.87</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">-5.5</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">8.3</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0.6</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.2529</Font></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:StyleID="s50"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">71045.8</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">3</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1360.5</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">14.8</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.448</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">4.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">60.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">10.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.393</Font></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:StyleID="s50"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">73183.6</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s46"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">6</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1458.06</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0.0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.5238</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s45"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.7</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">6.6</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s49"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s48"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s47"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.3579</Font></ss:Data></Cell>
+   </Row>
+   <Row ss:Height="18">
+    <Cell ss:StyleID="s51"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">75456.9</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s52"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">2</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s53"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1557.5</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s54"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0.0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s54"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s54"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s54"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s54"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s55"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.645</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s55"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.9</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s54"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s56"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s56"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s54"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">6.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s54"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s56"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s54"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s54"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">0</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s53"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Cambria"
+       html:Size="14">1.307</Font></ss:Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>1200</HorizontalResolution>
+    <VerticalResolution>1200</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>20</ActiveRow>
+     <ActiveCol>18</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
