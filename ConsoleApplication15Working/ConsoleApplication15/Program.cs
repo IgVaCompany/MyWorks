@@ -22,7 +22,7 @@ namespace ConsoleApplication15
             CommandsWork Application = new CommandsWork();
             do
             {
-                Console.WriteLine("Input the command" + "\n Write the command ShowC for see all available comands");
+                Console.WriteLine("Input the command" + "\n Write the command 'help' for see all available commands");
                 Application.Manager();             
                 command = Console.ReadLine();
             } while (command != null && !command.Equals("Close"));

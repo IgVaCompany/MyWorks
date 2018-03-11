@@ -7,6 +7,8 @@ namespace ConsoleApplication15
 
         private string[] Commands = new string[9]
         {"Close", "help", "pf", "PDFF", "CalcAtom", "CalcMolec", "cl", "calc", "test"};
+        private string[] CommandsShow = new string[9]
+       {"Close - close the application", "help - show commands in window", "pf", "PDFF", "CalcAtom - Calc data for atom", "CalcMolec - Calc data for molec", "cl - clear data in memory", "calc", "test"};
         private bool atomFlag = false;
         private bool molecFlag = false;
         public static bool dlff = false;
@@ -22,7 +24,6 @@ namespace ConsoleApplication15
             string Command = "Commad is wrong write again";          
             string InPutCommand =  Console.ReadLine();
                      
-
             for (int i = 0; i < Commands.Length; i++)
             {
                 if (InPutCommand == Commands[i])
@@ -85,7 +86,7 @@ namespace ConsoleApplication15
                     Console.WriteLine(InPutCommand +" "+ Command);
                     break;
                 case "help":
-                    foreach (string com in Commands)
+                    foreach (string com in CommandsShow)
                     {
                         Console.WriteLine(com);
                     }
