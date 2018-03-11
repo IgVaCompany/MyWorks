@@ -73,9 +73,9 @@ namespace ConsoleApplication15
                     } while (!dlff);
                     CC.NumLevels();
                     CC.CalcEnergy();                   
-                    CC.CalcEkin();
-                    CC.TotalCalc();
+                    CC.CalcEkin();                   
                     CC.CalcZ();
+                    CC.TotalCalc();
                     CC.HeatСapacity();
                  //   CC.HeatСapacity();
                     break;
@@ -545,7 +545,7 @@ namespace ConsoleApplication15
                                     bE.Add(Convert.ToDouble(vaslues[j])*100);//
                                     break;
                                 case "alfaE":
-                                    alfaE.Add((Convert.ToDouble(vaslues[j]))*100*);//
+                                    alfaE.Add((Convert.ToDouble(vaslues[j]))*100);//
                                     break;
                                 case "dE":
                                     dE.Add((Convert.ToDouble(vaslues[j])));//
@@ -555,10 +555,10 @@ namespace ConsoleApplication15
                                     break;
                                 case "Ediss":    
                                     if  (Convert.ToDouble(vaslues[j])==0)
-                                    Ediss.Add(Ediss.ToArray()[i-2]+ (Convert.ToDouble(vaslues[j])) * Particle.h * Particle.vC * 100);
+                                        Ediss.Add(Ediss.ToArray()[i-2]+ (Convert.ToDouble(vaslues[j])) * Particle.h * Particle.vC * 100);
                                     else                         
-                                    Ediss.Add((Convert.ToDouble(vaslues[j])) * Particle.h * Particle.vC * 100);                              
-                                break;
+                                        Ediss.Add((Convert.ToDouble(vaslues[j])) * Particle.h * Particle.vC * 100);                              
+                                    break;
                         }
                         }
                     }
@@ -623,6 +623,11 @@ namespace ConsoleApplication15
             {
                 Console.Write(S + " ");
             }
+            Console.Write("\n" + "EDiss\t");
+            foreach (var S in Ediss)
+            {
+                Console.Write(S + " ");
+            }
         }
 
         public override void CalcEnergy()
@@ -633,21 +638,22 @@ namespace ConsoleApplication15
                 En.Add(Math.Abs(te.ToArray()[n]));
                 tEn += En.ToArray()[n];
                 gn.Add(Math.Abs(gi.ToArray()[n]));
-                int i = 1;
+                int i = 0;
                 second = false;
+                first = false;
                 do
                 {                    
-                        Ei.Add(Math.Abs(Particle.h * Particle.vC * (omegaE.ToArray()[n] * (i + 0.5f) - omegaExE.ToArray()[n] * Math.Pow((i + 0.5f), 2))));
-                        tEi_n += Ei.ToArray()[i-1];
-                        gii.Add(1);
+                    Ei.Add(Math.Abs(Particle.h * Particle.vC * (omegaE.ToArray()[n] * (i + 0.5f) - omegaExE.ToArray()[n] * Math.Pow((i + 0.5f), 2))));
+                    tEi_n += Ei.ToArray()[i];
+                    double Bcn = bE.ToArray()[n] - alfaE.ToArray()[n] * (i + 0.5f);
+                    double Dcn = dE.ToArray()[n] - bettaE.ToArray()[n] * (i + 0.5f);
+                    gii.Add(1);
                        
-                    int j = 1;           
+                    int j = 0;           
                     do
-                    {                   
-                        double Bcn = bE.ToArray()[n] - alfaE.ToArray()[n] * (i + 0.5f);
-                        double Dcn = dE.ToArray()[n] - bettaE.ToArray()[n] * (i + 0.5f);
+                    {                                         
                         double mEj_i = Math.Abs(Particle.h * Particle.vC * (Bcn * j * (j + 1) - Dcn * Math.Pow(j, 2) * Math.Pow((j + 1), 2)));
-                        double sE = En.ToArray()[n] + Ei.ToArray()[i-1] + mEj_i;
+                        double sE = En.ToArray()[n] + Ei.ToArray()[i] + mEj_i;
                         Console.WriteLine(sE + " "+ Ediss[n]);
                         if (sE > Ediss[n] && !first)
                         {
@@ -657,11 +663,12 @@ namespace ConsoleApplication15
                         else if (sE > Ediss[n] && first)
                         {
                             second = true;
+                            first = true;
                         }
                         else
                         {
                             Ej_i.Add(mEj_i);
-                            tEj_i += Ej_i.ToArray()[j - 1];
+                            tEj_i += Ej_i.ToArray()[j];
                             gj.Add(2*j+1);
                             j++;
                             first = false;
@@ -672,11 +679,16 @@ namespace ConsoleApplication15
                 
             }
             Console.WriteLine("En Total: "+ tEn + "\nEi Total: " + tEi_n + "\nEj Total: " + tEj_i );
+        
+            Console.WriteLine("EKin"+tEkin);
+
             Console.WriteLine(Ej_i.ToArray().Length);
             Console.WriteLine(Ei.ToArray().Length);
             Console.WriteLine(En.ToArray().Length);
+            Console.WriteLine(gj.ToArray().Length);
+
         }
-      
+
 
         public override void CalcEkin()
         {
@@ -685,21 +697,35 @@ namespace ConsoleApplication15
         }
 
         public override void TotalCalc()
-        {           
-            tE = tEi_n + tEn + tEj_i + tEkin;
-            base.TotalCalc();
-        }
-
-        public override void CalcZ()
-        {           
+        {
+            double T = 0.0f;
             for (int i = 0; i < gn.ToArray().Length; i++)
             {
                 for (int j = 0; j < gii.ToArray().Length; j++)
                 {
                     for (int k = 0; k < gj.ToArray().Length; k++)
                     {
-                        Z +=gn.ToArray()[i]*gii.ToArray()[j]*gj.ToArray()[k]*Math.Exp((-(En.ToArray()[i]+Ei.ToArray()[j]+Ej_i.ToArray()[k]))/(Particle.R*Particle.temper)); 
-                      //  Console.WriteLine(j+": "+Z);                      
+                        T += (1 / (Particle.m * Z)) * gn.ToArray()[i] * 1 * (2 * k + 1) * (En.ToArray()[i] + Ei.ToArray()[j] + Ej_i.ToArray()[k]) * Math.Exp((-(En.ToArray()[i] + Ei.ToArray()[j] + Ej_i.ToArray()[k])) / (Particle.R * Particle.temper));                      
+                        //  Console.WriteLine(j+": "+Z);                      
+                    }
+                }
+            }
+
+            tE = T+tEkin;
+            base.TotalCalc();
+        }
+
+        public override void CalcZ()
+        {
+           
+            for (int i = 0; i < gn.ToArray().Length; i++)
+            {
+                for (int j = 0; j < gii.ToArray().Length; j++)
+                {
+                    for (int k = 0; k < gj.ToArray().Length; k++)
+                    {
+                        Z += gn.ToArray()[i] *1 * (2*k+1)* Math.Exp(-(En.ToArray()[i] + Ei.ToArray()[j] + Ej_i.ToArray()[k]) / (Particle.R * Particle.temper));
+                        //  Console.WriteLine(j+": "+Z);                      
                     }
                 }
             }
