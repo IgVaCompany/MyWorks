@@ -35,3 +35,9 @@ D:\C#\trunk\ConsoleApplication15Working\ConsoleApplication15\obj\Debug\ConsoleAp
 D:\C#\trunk\ConsoleApplication15Working\ConsoleApplication15\bin\Debug\ConsoleApplication15.exe
 D:\C#\trunk\ConsoleApplication15Working\ConsoleApplication15\bin\Debug\ConsoleApplication15.pdb
 D:\C#\trunk\ConsoleApplication15Working\ConsoleApplication15\obj\Debug\ConsoleApplication15.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\GAM\trunk\ConsoleApplication15Working\ConsoleApplication15\bin\Debug\ConsoleApplication15.exe.config
+C:\Users\User\Documents\GAM\trunk\ConsoleApplication15Working\ConsoleApplication15\obj\Debug\ConsoleApplication15.exe
+C:\Users\User\Documents\GAM\trunk\ConsoleApplication15Working\ConsoleApplication15\obj\Debug\ConsoleApplication15.pdb
+C:\Users\User\Documents\GAM\trunk\ConsoleApplication15Working\ConsoleApplication15\bin\Debug\ConsoleApplication15.exe
+C:\Users\User\Documents\GAM\trunk\ConsoleApplication15Working\ConsoleApplication15\bin\Debug\ConsoleApplication15.pdb
+C:\Users\User\Documents\GAM\trunk\ConsoleApplication15Working\ConsoleApplication15\obj\Debug\ConsoleApplication15.csprojResolveAssemblyReference.cache

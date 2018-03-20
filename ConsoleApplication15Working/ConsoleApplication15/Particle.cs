@@ -63,8 +63,8 @@ namespace ConsoleApplication15
         {
             if (numOfLevels == 0) ;
             {
-                Console.WriteLine("Put level numbers");
-                numOfLevels = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("\n" + "\n Put level numbers");
+               numOfLevels = Convert.ToInt32(Console.ReadLine());
             }
             return(numOfLevels);
         }

@@ -60,6 +60,7 @@ namespace ConsoleApplication15
                     {
                         CC.DL();                       
                     } while (!dlff);
+                    CC.PrintDataDL();
                     CC.NumLevels();
                     CC.CalcEnergy();                   
                     CC.CalcEkin();                   

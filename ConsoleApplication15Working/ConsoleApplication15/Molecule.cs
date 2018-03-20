@@ -5,9 +5,9 @@ namespace ConsoleApplication15
 {
     public class Molecule : Particle
     {
-        private string[] needDataForMolec = new string[9] { "te", "gi", "omegaE", "omegaExE", "bE", "alfaE", "dE", "bettaE", "Ediss" };
+        private string[] needDataForMolec = new string[9] { "te", "gi", "omegaE", "omegaExE", "bE", "alfaE", "dE", "bettaE", "Ediss" };        
 
-        List<string> dlData =new List<string>();
+        List<string> dlData =new List<string>();                     
         List<double> te = new List<double>();
         List<double> omegaE = new List<double>();
         List<double> omegaExE = new List<double>();
@@ -25,7 +25,8 @@ namespace ConsoleApplication15
         List<double> Ei = new List<double>();
         List<double> Ej_i = new List<double>();
         private bool first = false;
-        private bool second = false; 
+        private bool second = false;
+     
 
         public override void Clear()
         {
@@ -103,10 +104,10 @@ namespace ConsoleApplication15
                 }
                 CommandsWork.dlff = true;
                 Console.WriteLine("DownLoad OK");
-                foreach (var s in Ediss)
-                {
-                    Console.WriteLine(s);
-                }
+                //foreach (var s in Ediss)
+                //{
+                //    Console.WriteLine(s);
+                //}
             }
             else
             {
@@ -125,47 +126,47 @@ namespace ConsoleApplication15
             Console.Write("te\t");
             foreach (var S in te)
             {
-                Console.Write(S + " ");
+                Console.Write("\n" + S + " ");
             }
-            Console.Write("\n" + "gi\t");
+            Console.Write("\n" + "\n" + "gi\t");
             foreach (var S in gi)
             {
-                Console.Write(S + " ");
+                Console.Write("\n" + S + " ");
             }
-            Console.Write("\n" + "omegaE\t");
+            Console.Write("\n" + "\n" + "omegaE\t");
             foreach (var S in omegaE)
             {
-                Console.Write(S + " ");
+                Console.Write("\n" + S + " ");
             }
-            Console.Write("\n" + "omegaExE\t");
+            Console.Write("\n" + "\n" + "omegaExE\t");
             foreach (var S in omegaExE)
             {
-                Console.Write(S + " ");
+                Console.Write("\n" + S + " ");
             }
-            Console.Write("\n" + "bE\t");
+            Console.Write("\n" + "\n" + "bE\t");
             foreach (var S in bE)
             {
-                Console.Write(S + " ");
+                Console.Write("\n" + S + " ");
             }
-            Console.Write("\n" + "alfaE\t");
+            Console.Write("\n" + "\n" + "alfaE\t");
             foreach (var S in alfaE)
             {
-                Console.Write(S + " ");
+                Console.Write("\n" + S + " ");
             }
-            Console.Write("\n" + "dE\t");
+            Console.Write("\n" + "\n" + "dE\t");
             foreach (var S in dE)
             {
-                Console.Write(S + " ");
+                Console.Write("\n" + S + " ");
             }
-            Console.Write("\n" + "bettaE\t");
+            Console.Write("\n" + "\n" + "bettaE\t");
             foreach (var S in bettaE)
             {
-                Console.Write(S + " ");
+                Console.Write("\n" + S + " ");
             }
-            Console.Write("\n" + "EDiss\t");
+            Console.Write("\n" + "\n" + "EDiss\t");
             foreach (var S in Ediss)
             {
-                Console.Write(S + " ");
+                Console.Write("\n" + S + " ");
             }
         }
 
