@@ -56,8 +56,13 @@ namespace ConsoleApplication15
                         }
                     }
                 }
+                Console.WriteLine("J" + "\t" + "Level");
+                for (int i = 0; i < jj.ToArray().Length; i++)
+                {
+                    Console.WriteLine("\n"+jj.ToArray()[i] + "\t" + level.ToArray()[i]);
+                }              
                 CommandsWork.dlff = true;
-                Console.WriteLine("DownLoad OK");
+                Console.WriteLine("\n"+"DownLoad OK");
 
             }
             else
