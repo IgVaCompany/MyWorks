@@ -5,9 +5,9 @@ namespace ConsoleApplication15
 {
     public class Molecule : Particle
     {
-        private string[] needDataForMolec = new string[9] { "te", "gi", "omegaE", "omegaExE", "bE", "alfaE", "dE", "bettaE", "Ediss" };        
+        private string[] needDataForMolec = new string[9] { "te", "gi", "omegaE", "omegaExE", "bE", "alfaE", "dE", "bettaE", "Ediss" };
 
-        List<string> dlData =new List<string>();                     
+        List<string> dlData = new List<string>();
         List<double> te = new List<double>();
         List<double> omegaE = new List<double>();
         List<double> omegaExE = new List<double>();
@@ -16,9 +16,9 @@ namespace ConsoleApplication15
         List<double> dE = new List<double>();
         List<double> bettaE = new List<double>();
         List<double> Ediss = new List<double>();
-        
-        List<double> gn =new List<double>();
-        List<double> gii =   new List<double>();
+
+        List<double> gn = new List<double>();
+        List<double> gii = new List<double>();
         List<double> gj = new List<double>();
 
         List<double> En = new List<double>();
@@ -62,14 +62,17 @@ namespace ConsoleApplication15
             {
                 for (int i = 1; i < DataFile.Length; i++)
                 {
+                    
                     String value = DataFile[i];
                     String[] vaslues = value.Split('\t');
 
                     for (int j = 0; j < vaslues.Length; j++)
                     {
+                        
                         switch (valueNames[j])
                         {
                             case "te":
+                                numLines++;
                                 te.Add(Convert.ToDouble(vaslues[j])*Particle.h*Particle.vC*100);
                                 break;
                             case "gi":
@@ -172,7 +175,8 @@ namespace ConsoleApplication15
 
         public override void CalcEnergy()
         {
-            base.CalcEnergy();
+            base.CalcEnergy();          
+
             for (int n = 0; n < numOfLevels; n++)
             {
                 En.Add(Math.Abs(te.ToArray()[n]));
@@ -226,7 +230,6 @@ namespace ConsoleApplication15
             Console.WriteLine(Ei.ToArray().Length);
             Console.WriteLine(En.ToArray().Length);
             Console.WriteLine(gj.ToArray().Length);
-
         }
 
 

@@ -9,7 +9,7 @@ namespace ConsoleApplication15
         List<string> config = new List<string>();
         List<int> jj = new List<int>();
         List<double> level = new List<double>();
-        //  List<double> g = new List<double>();
+        List<double> g = new List<double>();
 
         List<string> dlData = new List<string>();
         List<double> En = new List<double>();
@@ -41,14 +41,17 @@ namespace ConsoleApplication15
             {
                 for (int i = 1; i < DataFile.Length; i++)
                 {
+                    
                     String value = DataFile[i];
                     String[] vaslues = value.Split(new char[] { '\t', ' ', '-', '|', '[', ']' }, StringSplitOptions.RemoveEmptyEntries);
                     for (int j = 0; j < vaslues.Length; j++)
                     {
+                     
                         switch (valueNames[j])
                         {
                             case "J":
                                 jj.Add(Convert.ToInt16(vaslues[j]));
+                                numLines++;
                                 break;
                             case "Level":
                                 level.Add(Convert.ToDouble(vaslues[j]));

@@ -8,6 +8,7 @@ namespace ConsoleApplication15
     {
         public string[] DataFile;
         private string NameFile;
+        public static int numLines=0;
 
         public List<double> gi = new List<double>();
 
@@ -16,6 +17,12 @@ namespace ConsoleApplication15
         public const double vC = 3e+8;
         public const int temper = 300;
         public const double m = 1.661e-27;
+
+
+
+        List<double> gn = new List<double>();
+        List<double> gii = new List<double>();
+        List<double> gj = new List<double>();
 
         public double tEi_n;
         public double tEj_i;
@@ -39,7 +46,8 @@ namespace ConsoleApplication15
             tEn = 0;
             Z = 0;
             Cv = 0;
-            gi.Clear();
+            gi.Clear();          
+
             Console.WriteLine("Clear OK!");
         }
 
@@ -58,13 +66,24 @@ namespace ConsoleApplication15
                 throw;
             }                   
         }
-
+       
         public virtual int NumLevels()
         {
-            if (numOfLevels == 0) ;
+            if (numOfLevels == 0) 
             {
+                again:
                 Console.WriteLine("\n" + "\n Put level numbers");
-               numOfLevels = Convert.ToInt32(Console.ReadLine());
+                try
+                {                 
+                    numOfLevels = Convert.ToInt32(Console.ReadLine());                   
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("YOU HAVE MISTAKE IN LEVEL NUMBER");
+                    goto again;
+                }
+                //Console.WriteLine("\n" + "\n Put level numbers");                                 
+                //numOfLevels = Convert.ToInt32(Console.ReadLine());
             }
             return(numOfLevels);
         }
