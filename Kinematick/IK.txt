@@ -1,0 +1,73 @@
+﻿function [q1,q2,q3,q4,q5,q6] = fcn(rx,ry,rz,ax,ay,az,bx,by,bz)
+
+    % ОЗК для 6ти степенного ММ. 
+    pi = 3.14159265358979;
+    % Длины звеньев.
+    L1 = 0.4;
+    L2 = 0.7;
+    L3 = 0.7;
+    L4 = 0.1;
+    
+    % Ограничения по степеням подвижности. 
+    % -pi/2 < qi < pi/2
+    % -pi/2 < fi < pi/2, где fi=q2+q3
+    
+    Rx = rx-ax*L4;
+    Ry = ry-ay*L4;
+    Rz = rz-az*L4;
+ 
+  if (Ry==0) Ry = 0.0000001; end;  
+  q1 = -atan(Rx/Ry);
+  
+    f1 = (Rz-L1)/L3;
+    f2 = -L2/L3;
+    f3 = Ry/(L3*cos(q1));
+    
+    g1 = 2*f1*f2;
+    g2 = 2*f2*f3;
+    g3 = 1-f1*f1-f2*f2-f3*f3;
+           
+  q2 = asin(g3/sqrt(g1*g1+g2*g2)) - atan(f3/f1); 
+    if (q2<-pi/2) q2 = q2+pi; end; % 
+  q3 = asin(f1+f2*sin(q2)) - q2;   
+  
+    fi  = q2+q3;  
+    sfi = sin(fi);
+    cfi = cos(fi);
+    if (ay==0) ay = 0.0000001; end;  
+    alfa = -q1 - atan(ax/ay); 
+    if (abs(alfa)<0.0000001) alfa = 0; end;
+
+  if (alfa >= 0) q5 =  acos(-ax*sin(q1)*cfi + ay*cos(q1)*cfi + az*sfi); 
+  else           q5 = -acos(-ax*sin(q1)*cfi + ay*cos(q1)*cfi + az*sfi);
+  end;                                                                 
+  
+    k = az - sfi*cos(q5);
+
+  if (q5==0) q5 = 0.0000001; end;
+  q4 = acos((-ax*cos(q1)-ay*sin(q1))/sin(q5));
+  if (k  < 0) q4 = -q4; end; 
+  if (q5 < 0) q4 = -q4; end; 
+    
+    gammax =  bz*(sin(q1)*sin(q4) - cos(q1)*sfi*cos(q4)) - by*cfi*cos(q4);
+    gammay = -bz*(cos(q1)*sin(q4) + sin(q1)*sfi*cos(q4)) + bx*cfi*cos(q4);
+    
+    betta = gammax*ax + gammay*ay;
+    
+  q6 = acos(  bx*(cos(q1)*sin(q4)+sin(q1)*sfi*cos(q4))  +  by*(sin(q1)*sin(q4)-cos(q1)*sfi*cos(q4))  +  bz*(cfi*cos(q4))  );
+  if (betta<0)  q6 = -q6; end; 
+  
+  if (q1<-pi/2) q1 = -pi/2; end; 
+  if (q1> pi/2) q1 =  pi/2; end;
+  if (q2<-pi/2) q2 = -pi/2; end; 
+  if (q2> pi/2) q2 =  pi/2; end;
+  if (q3<-pi/2) q3 = -pi/2; end; 
+  if (q3> pi/2) q3 =  pi/2; end;
+  if (q4<-pi/2) q4 = -pi/2; end; 
+  if (q4> pi/2) q4 =  pi/2; end;
+  if (q5<-pi/2) q5 = -pi/2; end; 
+  if (q5> pi/2) q5 =  pi/2; end;
+  if (q6<-pi/2) q6 = -pi/2; end; 
+  if (q6> pi/2) q6 =  pi/2; end;
+  
+end
