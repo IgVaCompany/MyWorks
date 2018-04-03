@@ -1,0 +1,326 @@
+#VRML V2.0 utf8
+
+DEF q7_block1 Transform {
+  children [
+    Shape {
+      geometry Box {
+        size 0.1 0.1 0
+      }
+      appearance Appearance {
+        material Material {
+        }
+      }
+    }
+    DEF q8_block2 Transform {
+      children Shape {
+        geometry Box {
+          size 0 0.1 0.1
+        }
+        appearance Appearance {
+          material Material {
+          }
+        }
+      }
+    }
+    DEF q1_block3 Transform {
+      translation 0 0.025 0
+      rotation 0 1 0 0
+      children [
+        Shape {
+          geometry Cylinder {
+            radius 0.15
+            height 0.15
+          }
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.6 0.6 0.6
+            }
+          }
+        }
+        DEF q1_block4 Transform {
+          translation 0 0.15 0
+          children [
+            Shape {
+              geometry Box {
+                size 0.14 0.4 0.14
+              }
+              appearance Appearance {
+                material Material {
+                }
+              }
+            }
+            DEF link4_5 Transform {
+              translation 0 0.225 0
+              rotation 1 0 0 1.5708
+              children DEF q2_block5 Transform {
+                scaleOrientation 0 1 0 0
+                rotation 0 1 0 0
+                children [
+                  Shape {
+                    geometry Cylinder {
+                      radius 0.12
+                      height 0.15
+                    }
+                    appearance Appearance {
+                      material Material {
+                        diffuseColor 0.6 0.6 0.6
+                      }
+                    }
+                  }
+                  DEF q2_block6 Transform {
+                    translation 0.35 0 0
+                    rotation 0 0 1 1.5708
+                    children [
+                      Shape {
+                        geometry Box {
+                          size 0.14 0.7 0.14
+                        }
+                        appearance Appearance {
+                          material Material {
+                          }
+                        }
+                      }
+                      DEF link6_7 Transform {
+                        translation -0.35 -0.35 0
+                        rotation 0 0 1 1.5708
+                        children DEF q3_block7 Transform {
+                          translation 0 -0.35 0
+                          rotation 0 1 0 0
+                          children [
+                            Shape {
+                              geometry Cylinder {
+                                radius 0.12
+                                height 0.15
+                              }
+                              appearance Appearance {
+                                material Material {
+                                  diffuseColor 0.6 0.6 0.6
+                                }
+                              }
+                            }
+                            DEF link7_8 Transform {
+                              translation -0.15 0 0
+                              rotation 0 0 1 1.5708
+                              children DEF q4_block8 Transform {
+                                rotation 0 1 0 0
+                                children [
+                                  Shape {
+                                    geometry Cylinder {
+                                      radius 0.08
+                                      height 0.1
+                                    }
+                                    appearance Appearance {
+                                      material Material {
+                                        diffuseColor 0.6 0.6 0.6
+                                      }
+                                    }
+                                  }
+                                  DEF q4_block9 Transform {
+                                    translation 0 0.2 0
+                                    rotation 1 0 0 1.5708
+                                    children [
+                                      Shape {
+                                        geometry Box {
+                                          size 0.09 0.09 0.7
+                                        }
+                                        appearance Appearance {
+                                          material Material {
+                                          }
+                                        }
+                                      }
+                                      DEF link9_10 Transform {
+                                        rotation 0 0 1 1.5708
+                                        children DEF q5_block10 Transform {
+                                          translation 0 0 -0.35
+                                          rotation 0 1 0 0
+                                          children [
+                                            Shape {
+                                              geometry Cylinder {
+                                                radius 0.08
+                                                height 0.1
+                                              }
+                                              appearance Appearance {
+                                                material Material {
+                                                  diffuseColor 0.6 0.6 0.6
+                                                }
+                                              }
+                                            }
+                                            DEF link10_11 Transform {
+                                              translation 0 0 -0.12
+                                              rotation 1 0 0 1.5708
+                                              children DEF q6_block11 Transform {
+                                                rotation 0 1 0 0
+                                                children [
+                                                  Shape {
+                                                    geometry Cylinder {
+                                                      radius 0.05
+                                                      height 0.15
+                                                    }
+                                                    appearance Appearance {
+                                                      material Material {
+                                                        diffuseColor 0.6 0.6 0.6
+                                                      }
+                                                    }
+                                                  }
+                                                  DEF q6_block12 Transform {
+                                                    translation 0.05 -0.15 0
+                                                    rotation 0 0 1 3.14159
+                                                    children Shape {
+                                                      geometry Cone {
+                                                        height 0.15
+                                                        bottomRadius 0.05
+                                                      }
+                                                      appearance Appearance {
+                                                        material Material {
+                                                          diffuseColor 0.4 0.4 0.4
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+DEF axis_abs_x Transform {
+  rotation 1 0 0 1.57
+  children [
+    Shape {
+      geometry Cylinder {
+        radius 0.01
+      }
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 1
+        }
+      }
+    }
+    DEF axis_abs_x_vector Transform {
+      translation 0 1 0
+      children Shape {
+        geometry Cone {
+          height 0.07
+          bottomRadius 0.04
+        }
+        appearance Appearance {
+          material Material {
+            diffuseColor 1 1 1
+          }
+        }
+      }
+    }
+  ]
+}
+DEF axis_abs_y Transform {
+  rotation 0 0 1 -1.57
+  children [
+    Shape {
+      geometry Cylinder {
+        radius 0.01
+      }
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 1
+        }
+      }
+    }
+    Transform {
+      translation 0 1 0
+      children Shape {
+        geometry Cone {
+          height 0.07
+          bottomRadius 0.04
+        }
+        appearance Appearance {
+          material Material {
+            diffuseColor 1 1 1
+          }
+        }
+      }
+    }
+  ]
+}
+DEF axis_abs_z Transform {
+  translation 0 0.5 0
+  children [
+    Shape {
+      geometry Cylinder {
+        radius 0.01
+        height 1
+      }
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 1
+        }
+      }
+    }
+    Transform {
+      translation 0 0.5 0
+      children Shape {
+        geometry Cone {
+          height 0.07
+          bottomRadius 0.04
+        }
+        appearance Appearance {
+          material Material {
+            diffuseColor 1 1 1
+          }
+        }
+      }
+    }
+  ]
+}
+DEF Circle_Path Transform {
+  translation 1.4 0.5 88
+  children DEF Circle Transform {
+    rotation 0 0 1 1.37
+    children Shape {
+      geometry Cylinder {
+        top FALSE
+        radius 0.38
+        height 0.03
+        bottom FALSE
+      }
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 1
+        }
+      }
+    }
+  }
+}
+Background {
+}
+DEF Line_Path Transform {
+  translation 1.3 0.5 99
+  children Shape {
+    geometry Cylinder {
+      radius 0.007
+      height 1
+    }
+    appearance Appearance {
+      material Material {
+      }
+    }
+  }
+}
