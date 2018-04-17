@@ -10,7 +10,7 @@ Q  = m*g;
 q  = Q/maxL;
 iIxs = ((maxL)*((d^3) - (dIn^3)))/12;
 
-yBs  = (q*(maxL^4))/(8*E*iIxs);
+yBs  = 1000*(q*(maxL^4))/(8*E*iIxs);
 
 
 
