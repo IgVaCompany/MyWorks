@@ -11,6 +11,9 @@ q  = Q/maxL;
 iIxs = ((maxL)*((d^3) - (dIn^3)))/12;
 
 yBs  = 1000*(q*(maxL^4))/(8*E*iIxs);
+tetaR = (q*(maxL^3))/(6*E*iIxs);
+tetaG = tetaR*(180/pi);
+
 
 
 

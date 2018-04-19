@@ -1,4 +1,4 @@
-m = 0.000221;
+%m = 0.000221;
 pi = 3.1415926535;
 alfaG = 45;
 gammaG = 90-alfaG;
@@ -7,7 +7,7 @@ E = 2*(10^11);
 d = 0.001;
 dIn = 0.0008;
 %s = pi*(d/2)*(d/2);
-rho = 130000;
+rho = 150000;
 
 vIn = 0.003; %0.018
 numPoint = 10000000;
@@ -24,7 +24,7 @@ for i=1:length(pointsL)
     s(1,i) = pi*(d/2)*(d/2)*pointsL(1,i);
 end
 
-cF =0.82;%1.15;
+cF = 0.84;%0.82;%1.15;
 envF  = zeros(1,length(pointsL));
 envFp =  zeros(1,length(pointsL));
 for i=1:length(pointsL)
@@ -42,12 +42,6 @@ iIx = zeros(1,length(pointsL));
 iIx(1,1)   = ((pointsL(1,1))*((d^3) - (dIn^3)))/12;
 yB(1,1)    = 1000*(envFp(1,1)*((pointsL(1,1))^3))/(3*E*iIx(1,1));
 tetaBr(1,1) = (envFp(1,1)*((pointsL(1,1))^2))/(2*E*iIx(1,1));
-
-% for i=2:length(t)
-% iIx(1,i) = (L(1,i)*(d^3))/12;
-% yB(1,i) = yB(1,i-1) + (F *((L(1,i))^3))/(3*(E*iIx(1,i)));
-% tetaB(1,i) = (F*((L(1,i))^2))/(2*E*iIx(1,i));
-% end
 
 for i=2:length(pointsL)
     iIx(1,i)   = (pointsL(1,i)*((d^3) - (dIn^3)))/12;
