@@ -1,13 +1,13 @@
 %m = 0.000221;
 pi = 3.1415926535;
-alfaG = 45;
+alfaG = 30;
 gammaG = 90-alfaG;
 gammaR = (gammaG*pi)/180;
 E = 2*(10^11);
 d = 0.001;
 dIn = 0.0008;
 %s = pi*(d/2)*(d/2);
-rho = 150000;
+rho = 130000;
 
 vIn = 0.003; %0.018
 numPoint = 10000000;
