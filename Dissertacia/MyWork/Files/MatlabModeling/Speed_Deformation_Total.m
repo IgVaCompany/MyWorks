@@ -1,6 +1,6 @@
 %m = 0.000221;
 pi = 3.1415926535;
-alfaG = 60;
+alfaG = 45;
 gammaG = 90-alfaG;
 gammaR = (gammaG*pi)/180;
 E = 2*(10^11);
