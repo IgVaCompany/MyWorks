@@ -1,0 +1,10 @@
+C:\Users\Druzhinin_Vasily\Documents\My_Project\GAM\trunk\TcpIp\Client\Client\Client\bin\Debug\Client.exe.config
+C:\Users\Druzhinin_Vasily\Documents\My_Project\GAM\trunk\TcpIp\Client\Client\Client\bin\Debug\Client.exe
+C:\Users\Druzhinin_Vasily\Documents\My_Project\GAM\trunk\TcpIp\Client\Client\Client\bin\Debug\Client.pdb
+C:\Users\Druzhinin_Vasily\Documents\My_Project\GAM\trunk\TcpIp\Client\Client\Client\obj\Debug\Client.exe
+C:\Users\Druzhinin_Vasily\Documents\My_Project\GAM\trunk\TcpIp\Client\Client\Client\obj\Debug\Client.pdb
+C:\Users\Druzhinin_Vasily\Documents\My_Project\GAM\trunk\TcpIp\Client\Client\bin\Debug\Client.exe.config
+C:\Users\Druzhinin_Vasily\Documents\My_Project\GAM\trunk\TcpIp\Client\Client\obj\Debug\Client.exe
+C:\Users\Druzhinin_Vasily\Documents\My_Project\GAM\trunk\TcpIp\Client\Client\obj\Debug\Client.pdb
+C:\Users\Druzhinin_Vasily\Documents\My_Project\GAM\trunk\TcpIp\Client\Client\bin\Debug\Client.exe
+C:\Users\Druzhinin_Vasily\Documents\My_Project\GAM\trunk\TcpIp\Client\Client\bin\Debug\Client.pdb
