@@ -2,7 +2,7 @@
 ## Makefile generated for Simulink model 'Test'. 
 ## 
 ## Makefile     : Test.mk
-## Generated on : Tue Jul 17 19:07:26 2018
+## Generated on : Tue Aug 07 22:47:31 2018
 ## MATLAB Coder version: 3.0 (R2015b)
 ## 
 ## Build Info:
@@ -29,7 +29,7 @@ MATLAB_ROOT               = C:/PROGRA~1/MATLAB/R2015b
 MATLAB_BIN                = C:/PROGRA~1/MATLAB/R2015b/bin
 MATLAB_ARCH_BIN           = C:/PROGRA~1/MATLAB/R2015b/bin/win64
 MASTER_ANCHOR_DIR         = 
-START_DIR                 = C:/Users/Druzhinin_Vasily/Documents/My_Project/DinamicChair
+START_DIR                 = C:/Users/User/Documents/MyWorks/trunk/WorkDinamChair/ArduinoEthernet
 ARCH                      = win64
 SOLVER                    = 
 SOLVER_OBJ                = 
