@@ -14,14 +14,29 @@ namespace Server
 
         static void Main(string[] args)
         {
-            socket.Bind(new IPEndPoint(IPAddress.Any, 80));
+            socket.Bind(new IPEndPoint(IPAddress.Any, 11111));
             socket.Listen(2);
             Socket client = socket.Accept();
             Console.WriteLine("New Connection");
-            byte[] buffer = new byte[1024];
-            client.Receive(buffer);
-            Console.WriteLine(Encoding.ASCII.GetString(buffer));
-            Console.ReadLine();
+            byte[] buffer = new byte[256];
+            bool stop = false;
+            do
+            {
+                client.Receive(buffer);
+                //string messege = Encoding.ASCII.GetString(buffer);
+                //if (messege == "stop")
+                //    stop = true;
+                //Console.WriteLine(messege);
+                //client.Receive(buffer);
+                string messege =Encoding.BigEndianUnicode.GetString(buffer);                           
+                if (messege == "stop")
+                    stop = true;
+                Console.WriteLine(messege);
+
+            } while (!stop);
+            //client.Receive(buffer);
+            //Console.WriteLine(Encoding.ASCII.GetString(buffer));
+            //Console.ReadLine();
         }
     }
 }
