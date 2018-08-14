@@ -2,7 +2,7 @@ Test.o: Test.c Test.h rtwtypes.h \
  C:/MATLAB/SupportPackages/R2015b/arduinobase/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include/arduino_digitaloutput_lct.h \
  C:/MATLAB/SupportPackages/R2015b/arduinobase/toolbox/target/supportpackages/arduinobase/include/io_wrappers.h \
  C:/MATLAB/SupportPackages/R2015b/arduinobase/toolbox/target/supportpackages/arduinobase/blocks/sfcn/include/arduino_blocks_abstraction.h \
- C:/Users/User/Documents/MyWorks/trunk/WorkDinamChair/ArduinoEthernet/Test_ert_rtw/rtwtypes.h \
+ C:/Users/Druzhinin_Vasily/Documents/My_Project/GAM/trunk/WorkDinamChair/ArduinoEthernet/Test_ert_rtw/rtwtypes.h \
  C:/MATLAB/SupportPackages/R2015b/arduino-1.6.1/hardware/arduino/avr/cores/arduino/Arduino.h \
  C:/MATLAB/SupportPackages/R2015b/arduino-1.6.1/hardware/arduino/avr/cores/arduino/binary.h \
  C:/MATLAB/SupportPackages/R2015b/arduino-1.6.1/hardware/arduino/avr/variants/mega/pins_arduino.h \
