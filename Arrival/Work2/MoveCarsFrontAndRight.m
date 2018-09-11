@@ -4,9 +4,9 @@ function [ QtyMove ] = MoveCarsFrontAndRight( TotalQtyInQueue,ParamToMove )
 if TotalQtyInQueue == 0
     QtyMove = 0;
 elseif ParamToMove>TotalQtyInQueue && TotalQtyInQueue>0
-    QtyMove = 0;
+    QtyMove = TotalQtyInQueue;
 else
-    QtyMove = TotalQtyInQueue - ParamToMove;
+    QtyMove = ParamToMove;
 end
     
 
