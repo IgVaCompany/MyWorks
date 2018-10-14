@@ -40,15 +40,21 @@ namespace Rectangles
 		{
 		    if (AreIntersected(r1, r2) && IndexOfInnerRectangle(r1, r2) == -1)
 		    {
-		        int heightSum = r1.Height + r2.Height;
-		        int distBetweenTopDown = r2.Top - r1.Top;
-		        int heightNew = heightSum - distBetweenTopDown;
+                //int heightSum = r1.Height + r2.Height;
+                //int distBetweenTopDown = r2.Top - r1.Top;
+                //int heightNew = heightSum - distBetweenTopDown;
 
-		        int withSum = r1.Width + r2.Width;
-		        int distBetweenLeftRight = r2.Right - r1.Left;
-		        int withNew = withSum - distBetweenLeftRight;
+                //int withSum = r1.Width + r2.Width;
+                //int distBetweenLeftRight = r2.Right - r1.Left;
+                //int withNew = withSum - distBetweenLeftRight;
 
-		        return heightNew*withNew;
+                //return heightNew * withNew;
+
+		        int withNew = (Math.Max(r1.Left, r2.Left) - Math.Min(r1.Right, r2.Right));
+                int heightNew = (Math.Max(r1.Top,r2.Top) - Math.Min(r1.Bottom,r2.Bottom));
+
+		        return heightNew * withNew;
+
 		    }
 		    else if (AreIntersected(r1, r2) && IndexOfInnerRectangle(r1, r2) == 0)
 		    {
@@ -70,7 +76,7 @@ namespace Rectangles
 		// Если прямоугольники совпадают, можно вернуть номер любого из них.
 		public static int IndexOfInnerRectangle(Rectangle r1, Rectangle r2)
 		{
-		    if (r1.Left < r2.Left && r1.Top < r2.Top && r1.Bottom > r2.Bottom && r1.Right > r2.Right)
+		    if (r1.Left <= r2.Left && r1.Top <= r2.Top && r1.Bottom >= r2.Bottom && r1.Right >= r2.Right)
 		        return 1;
             else if (r1.Left >= r2.Left && r1.Top >= r2.Top && r1.Bottom <= r2.Bottom && r1.Right <= r2.Right)
                 return 0;
