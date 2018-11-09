@@ -1,0 +1,124 @@
+Log: Log file open, 01/21/18 09:34:10
+Log: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+Log: Version: 8636
+Log: Compiled (32-bit): Jul  7 2015 19:06:48
+Log: Changelist: 1055782
+Log: Command line: 
+Log: Base directory: D:\Games\SteamLibrary\steamapps\common\Borderlands_2_RU\binaries\win32\
+[0005.23] Log: CPU Page size=4096, Processors=8
+[0005.23] Log: High frequency timer resolution =2.338345 MHz
+[0005.23] Log: Memory total: Physical=7.9GB Pagefile=11.3GB Virtual=4.0GB
+[0005.31] Log: STEAMWORKS initialized 1
+[0005.32] Log: Presizing for 0 objects not considered by GC, pre-allocating 0 bytes.
+[0005.34] Log: Presizing GObjAvailable to 262144 slots (~1048576 bytes)
+[0005.82] Log: Object subsystem initialized
+[0005.85] Log:   Steamworks-provided language string: russian
+[0006.65] Log: OS stats:
+[0006.65] Log: 	Windows 7 
+[0006.65] Log: 	RemoteDesktop=0
+[0006.65] Log: Memory stats:
+[0006.65] Log: 	Physical: 8075MB
+[0006.65] Log: 	Virtual: 4095MB
+[0006.65] Log: 	PageFile: 11531MB
+[0006.65] Log: CPU stats:
+[0006.65] Log: 	MeasuredPerformanceTime: 132.545 (stored result)
+[0006.65] Log: 	Hyperthreaded: 1
+[0006.65] Log: 	NumProcessorsPerCPU: 1
+[0006.65] Log: 	NumLogicalProcessors: 8
+[0006.65] Log: 	NumPhysicalProcessors: 8
+[0006.65] Log: 	MaxSpeed: 2401
+[0006.65] Log: 	CurrentSpeed: 2401
+[0006.65] Log: 	CoresPerProcessor: 8
+[0006.65] Log: 	IsOnBattery: 0
+[0006.65] Log: 	BatteryLevel: 99
+[0006.65] Log: 	Manufacturer: Intel
+[0006.65] Log: 	CPUName: Unknown INTEL CPU
+[0006.65] Log: 	L1CacheSize: -1
+[0006.65] Log: 	L2CacheSize: -1
+[0006.65] Log: 	Architecture: x86
+[0006.65] Log: GPU stats:
+[0006.65] Log: 	VendorID: 000010DE
+[0006.65] Log: 	DeviceID: 00001391
+[0006.65] Log: 	DriverVersion: 21.21.13.6909
+[0006.65] Log: 	DeviceName: NVIDIA GeForce GTX 850M
+[0006.65] Log: 	DriverName: nvd3dum.dll
+[0006.65] Log: 	PixelShaderVersion: 3
+[0006.65] Log: 	VertexShaderVersion: 3
+[0006.65] Log: 	VRAMQuantity: 128
+[0006.65] Log: 	DedicatedVRAM: 112
+[0006.65] Log: 	AdapterCount: 2
+[0006.65] Log: 	SupportsHardwareTnL: 1
+[0006.65] Log: 	IsLowMemoryXPMachine: 0
+[0006.68] Log: Machine  detected compatibility level: Composite: 1. CPU: 5. GPU: 1.
+[0006.68] Log: Previous detected compatibility level: Composite: 1. CPU: 5. GPU: 1.
+[0006.79] Log: Shader platform (RHI): PC-D3D-SM3
+[0013.22] Log: PhysX GPU Support: DISABLED
+[0013.48] Log: Initializing FaceFX...
+[0013.54] Log: FaceFX 1.7.4 initialized.
+[0041.94] Log: Finished loading startup packages in 27.54 seconds
+[0041.95] Log: 154600 objects as part of root set at end of initial load.
+[0041.95] Log: Initializing Engine...
+[0042.02] Log: UEngine initialized
+[0042.74] Log: AK Audio Device initialized.
+[0042.89] Log: Client initialized
+[0044.89] Log: Initializing Steamworks
+[0046.61] Log: Primary PhysX scene will be in software.
+[0046.61] Log: Creating Primary PhysX Scene.
+[0046.91] Log: Bringing World menumap.TheWorld up for play (0) at 2018.01.21-09.34.52
+[0047.13] Log: Bringing up level for play took: 0.775441
+[0047.39] Log: Game engine initialized
+[0047.45] Log: Initializing Engine Completed
+[0056.20] Log: >>>>>>>>>>>>>> Initial startup: 56.20s <<<<<<<<<<<<<<<
+[0148.61] Log: Primary PhysX scene will be in software.
+[0148.61] Log: Creating Primary PhysX Scene.
+[0148.63] Log: Bringing World menumap.TheWorld up for play (90) at 2018.01.21-09.36.33
+[0148.64] Log: Bringing up level for play took: 0.036947
+[0149.90] Log: Using cached profile data instead of reading
+[0149.90] Log: Using cached profile data instead of reading
+[0153.83] Log: Primary PhysX scene will be in software.
+[0153.83] Log: Creating Primary PhysX Scene.
+[0153.85] Log: Bringing World ExampleEntry.TheWorld up for play (90) at 2018.01.21-09.36.38
+[0153.85] Log: Bringing up level for play took: 0.050564
+[0154.59] Log: Primary PhysX scene will be in software.
+[0154.59] Log: Creating Primary PhysX Scene.
+[0154.64] Log: Bringing World Loader.TheWorld up for play (90) at 2018.01.21-09.36.39
+[0154.64] Log: Bringing up level for play took: 0.103830
+[0154.80] Log: Using cached profile data instead of reading
+[0154.80] Log: Using cached profile data instead of reading
+[0558.24] Log: Primary PhysX scene will be in software.
+[0558.24] Log: Creating Primary PhysX Scene.
+[0648.54] Log: Primary PhysX scene will be in software.
+[0648.54] Log: Creating Primary PhysX Scene.
+[0729.28] Log: Primary PhysX scene will be in software.
+[0729.28] Log: Creating Primary PhysX Scene.
+[1334.95] Log: Wrote profile (512 bytes) to disk.
+[1366.06] Log: Primary PhysX scene will be in software.
+[1366.06] Log: Creating Primary PhysX Scene.
+[1603.89] Log: Primary PhysX scene will be in software.
+[1603.89] Log: Creating Primary PhysX Scene.
+[2618.23] Log: Wrote profile (513 bytes) to disk.
+[2728.83] Log: Primary PhysX scene will be in software.
+[2728.83] Log: Creating Primary PhysX Scene.
+[3040.53] Log: Wrote profile (513 bytes) to disk.
+[3041.98] Log: Primary PhysX scene will be in software.
+[3041.98] Log: Creating Primary PhysX Scene.
+[3042.02] Log: Bringing World menumap.TheWorld up for play (0) at 2018.01.21-10.24.47
+[3042.04] Log: Bringing up level for play took: 0.866564
+[3042.05] Log: Using cached profile data instead of reading
+[3042.10] Log: Using cached profile data instead of reading
+[3050.81] Log: Primary PhysX scene will be in software.
+[3050.81] Log: Creating Primary PhysX Scene.
+[3050.83] Log: Bringing World menumap.TheWorld up for play (0) at 2018.01.21-10.24.55
+[3050.85] Log: Bringing up level for play took: 0.878748
+[3050.85] Log: Using cached profile data instead of reading
+[3050.86] Log: Using cached profile data instead of reading
+[3056.35] Log: Closing by request
+[3056.41] Log: Preparing to exit.
+[3057.05] Log: Game engine shut down
+[3057.21] Log: Windows client shut down
+[3057.22] Log: AK Audio shut down.
+[3057.62] Log: Object subsystem successfully closed.
+[3057.70] Log: Shutting down FaceFX...
+[3057.71] Log: FaceFX shutdown.
+[3058.05] Log: Exiting.
+[3058.09] Log: Log file closed, 01/21/18 10:25:03

@@ -1,0 +1,180 @@
+Log: Log file open, 03/09/18 12:33:10
+Log: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+Log: Version: 8636
+Log: Compiled (32-bit): Jul  7 2015 19:06:48
+Log: Changelist: 1055782
+Log: Command line: 
+Log: Base directory: D:\Games\SteamLibrary\steamapps\common\Borderlands_2_RU\binaries\win32\
+[0005.49] Log: CPU Page size=4096, Processors=8
+[0005.49] Log: High frequency timer resolution =2.338346 MHz
+[0005.49] Log: Memory total: Physical=7.9GB Pagefile=10.9GB Virtual=4.0GB
+[0005.67] Log: STEAMWORKS initialized 1
+[0005.68] Log: Presizing for 0 objects not considered by GC, pre-allocating 0 bytes.
+[0005.70] Log: Presizing GObjAvailable to 262144 slots (~1048576 bytes)
+[0006.35] Log: Object subsystem initialized
+[0006.48] Log:   Steamworks-provided language string: russian
+[0008.40] Log: OS stats:
+[0008.40] Log: 	Windows 7 
+[0008.40] Log: 	RemoteDesktop=0
+[0008.40] Log: Memory stats:
+[0008.40] Log: 	Physical: 8075MB
+[0008.40] Log: 	Virtual: 4095MB
+[0008.40] Log: 	PageFile: 11147MB
+[0008.40] Log: CPU stats:
+[0008.40] Log: 	MeasuredPerformanceTime: 132.545 (stored result)
+[0008.40] Log: 	Hyperthreaded: 1
+[0008.40] Log: 	NumProcessorsPerCPU: 1
+[0008.40] Log: 	NumLogicalProcessors: 8
+[0008.40] Log: 	NumPhysicalProcessors: 8
+[0008.40] Log: 	MaxSpeed: 2401
+[0008.40] Log: 	CurrentSpeed: 2401
+[0008.40] Log: 	CoresPerProcessor: 8
+[0008.40] Log: 	IsOnBattery: 0
+[0008.40] Log: 	BatteryLevel: 100
+[0008.40] Log: 	Manufacturer: Intel
+[0008.40] Log: 	CPUName: Unknown INTEL CPU
+[0008.40] Log: 	L1CacheSize: -1
+[0008.40] Log: 	L2CacheSize: -1
+[0008.40] Log: 	Architecture: x86
+[0008.40] Log: GPU stats:
+[0008.40] Log: 	VendorID: 000010DE
+[0008.40] Log: 	DeviceID: 00001391
+[0008.40] Log: 	DriverVersion: 21.21.13.6909
+[0008.40] Log: 	DeviceName: NVIDIA GeForce GTX 850M
+[0008.40] Log: 	DriverName: nvd3dum.dll
+[0008.40] Log: 	PixelShaderVersion: 3
+[0008.40] Log: 	VertexShaderVersion: 3
+[0008.40] Log: 	VRAMQuantity: 128
+[0008.40] Log: 	DedicatedVRAM: 112
+[0008.40] Log: 	AdapterCount: 2
+[0008.40] Log: 	SupportsHardwareTnL: 1
+[0008.40] Log: 	IsLowMemoryXPMachine: 0
+[0008.43] Log: Machine  detected compatibility level: Composite: 1. CPU: 5. GPU: 1.
+[0008.43] Log: Previous detected compatibility level: Composite: 1. CPU: 5. GPU: 1.
+[0008.56] Log: Shader platform (RHI): PC-D3D-SM3
+[0014.92] Log: PhysX GPU Support: DISABLED
+[0015.12] Log: Initializing FaceFX...
+[0015.17] Log: FaceFX 1.7.4 initialized.
+[0026.40] Log: Finished loading startup packages in 10.58 seconds
+[0026.42] Log: 154600 objects as part of root set at end of initial load.
+[0026.42] Log: Initializing Engine...
+[0026.47] Log: UEngine initialized
+[0027.24] Log: AK Audio Device initialized.
+[0027.49] Log: Client initialized
+[0030.87] Log: Initializing Steamworks
+[0031.97] Log: Primary PhysX scene will be in software.
+[0031.97] Log: Creating Primary PhysX Scene.
+[0032.05] Log: Bringing World menumap.TheWorld up for play (0) at 2018.03.09-12.33.37
+[0032.22] Log: Bringing up level for play took: 0.448217
+[0032.40] Log: Game engine initialized
+[0032.46] Log: Initializing Engine Completed
+[0049.39] Log: >>>>>>>>>>>>>> Initial startup: 49.39s <<<<<<<<<<<<<<<
+[0136.69] Log: Primary PhysX scene will be in software.
+[0136.69] Log: Creating Primary PhysX Scene.
+[0136.75] Log: Bringing World Loader.TheWorld up for play (90) at 2018.03.09-12.35.21
+[0136.75] Log: Bringing up level for play took: 0.069482
+[0136.90] Log: Using cached profile data instead of reading
+[0136.91] Log: Using cached profile data instead of reading
+[0436.60] Log: Wrote profile (512 bytes) to disk.
+[0796.48] Log: Wrote profile (516 bytes) to disk.
+[1190.94] Log: Primary PhysX scene will be in software.
+[1190.94] Log: Creating Primary PhysX Scene.
+[1288.22] Log: Wrote profile (516 bytes) to disk.
+[1655.46] Log: Wrote profile (516 bytes) to disk.
+[2242.13] Log: Wrote profile (516 bytes) to disk.
+[2259.70] Log: Primary PhysX scene will be in software.
+[2259.70] Log: Creating Primary PhysX Scene.
+[2286.67] Log: Wrote profile (517 bytes) to disk.
+[2427.22] Log: Wrote profile (521 bytes) to disk.
+[2884.26] Log: Primary PhysX scene will be in software.
+[2884.26] Log: Creating Primary PhysX Scene.
+[2981.19] Log: Primary PhysX scene will be in software.
+[2981.19] Log: Creating Primary PhysX Scene.
+[3202.19] Log: Wrote profile (522 bytes) to disk.
+[3392.12] Log: Primary PhysX scene will be in software.
+[3392.12] Log: Creating Primary PhysX Scene.
+[4031.63] Warning: Warning, FPhysXParticleSystem FX_Fluid_Rock_px failed to be created in PhysX Sdk!
+[4233.44] Log: Wrote profile (520 bytes) to disk.
+[4388.43] Log: Primary PhysX scene will be in software.
+[4388.43] Log: Creating Primary PhysX Scene.
+[5146.55] Log: Wrote profile (532 bytes) to disk.
+[5631.13] Log: Primary PhysX scene will be in software.
+[5631.13] Log: Creating Primary PhysX Scene.
+[5636.81] Log: Wrote profile (532 bytes) to disk.
+[6066.20] Log: Wrote profile (532 bytes) to disk.
+[6653.04] Log: Primary PhysX scene will be in software.
+[6653.04] Log: Creating Primary PhysX Scene.
+[6672.57] Log: Wrote profile (532 bytes) to disk.
+[6957.15] Log: Primary PhysX scene will be in software.
+[6957.15] Log: Creating Primary PhysX Scene.
+[6962.53] Log: Wrote profile (532 bytes) to disk.
+[7039.67] Log: Wrote profile (533 bytes) to disk.
+[7342.64] Log: Wrote profile (533 bytes) to disk.
+[7508.69] Log: Wrote profile (532 bytes) to disk.
+[7837.62] Log: Wrote profile (532 bytes) to disk.
+[8576.27] Log: Wrote profile (532 bytes) to disk.
+[8706.56] Log: Wrote profile (532 bytes) to disk.
+[8724.57] Log: Primary PhysX scene will be in software.
+[8724.57] Log: Creating Primary PhysX Scene.
+[8851.89] Log: Wrote profile (535 bytes) to disk.
+[8941.96] Log: Wrote profile (536 bytes) to disk.
+[9694.88] Log: Primary PhysX scene will be in software.
+[9694.88] Log: Creating Primary PhysX Scene.
+[9701.66] Log: Wrote profile (538 bytes) to disk.
+[9868.08] Log: Wrote profile (538 bytes) to disk.
+[10376.24] Log: Wrote profile (539 bytes) to disk.
+[10446.50] Log: Primary PhysX scene will be in software.
+[10446.50] Log: Creating Primary PhysX Scene.
+[11010.13] Log: Primary PhysX scene will be in software.
+[11010.13] Log: Creating Primary PhysX Scene.
+[11859.99] Log: Primary PhysX scene will be in software.
+[11859.99] Log: Creating Primary PhysX Scene.
+[12469.99] Log: Primary PhysX scene will be in software.
+[12469.99] Log: Creating Primary PhysX Scene.
+[12476.36] Log: Wrote profile (539 bytes) to disk.
+[12773.56] Log: Primary PhysX scene will be in software.
+[12773.56] Log: Creating Primary PhysX Scene.
+[12917.25] Log: Primary PhysX scene will be in software.
+[12917.25] Log: Creating Primary PhysX Scene.
+[13242.49] Log: Primary PhysX scene will be in software.
+[13242.49] Log: Creating Primary PhysX Scene.
+[13363.35] Log: Primary PhysX scene will be in software.
+[13363.35] Log: Creating Primary PhysX Scene.
+[13643.00] Log: Wrote profile (539 bytes) to disk.
+[13701.73] Log: Primary PhysX scene will be in software.
+[13701.73] Log: Creating Primary PhysX Scene.
+[13853.24] Log: Primary PhysX scene will be in software.
+[13853.24] Log: Creating Primary PhysX Scene.
+[13853.27] Log: Bringing World menumap.TheWorld up for play (0) at 2018.03.09-16.23.58
+[13853.29] Log: Bringing up level for play took: 0.870024
+[13853.29] Log: Using cached profile data instead of reading
+[13853.30] Log: Using cached profile data instead of reading
+[13900.97] Log: GObjObjects !!GROWING!! from 289000 to 397391 - Presize this array better in [Core.System]BaseObjObjectSize
+[13901.62] Log: Primary PhysX scene will be in software.
+[13901.62] Log: Creating Primary PhysX Scene.
+[13901.65] Log: Bringing World Loader.TheWorld up for play (90) at 2018.03.09-16.24.46
+[13901.65] Log: Bringing up level for play took: 0.038745
+[13903.97] Log: Using cached profile data instead of reading
+[13903.97] Log: Using cached profile data instead of reading
+[13934.14] Log: Primary PhysX scene will be in software.
+[13934.14] Log: Creating Primary PhysX Scene.
+[13934.18] Log: Bringing World menumap.TheWorld up for play (0) at 2018.03.09-16.25.19
+[13934.20] Log: Bringing up level for play took: 0.801082
+[13934.20] Log: Using cached profile data instead of reading
+[13934.21] Log: Using cached profile data instead of reading
+[13939.27] Log: Primary PhysX scene will be in software.
+[13939.27] Log: Creating Primary PhysX Scene.
+[13939.30] Log: Bringing World menumap.TheWorld up for play (0) at 2018.03.09-16.25.24
+[13939.32] Log: Bringing up level for play took: 0.794383
+[13939.33] Log: Using cached profile data instead of reading
+[13939.33] Log: Using cached profile data instead of reading
+[13945.14] Log: Closing by request
+[13945.20] Log: Preparing to exit.
+[13945.77] Log: Game engine shut down
+[13945.92] Log: Windows client shut down
+[13945.93] Log: AK Audio shut down.
+[13946.33] Log: Object subsystem successfully closed.
+[13946.37] Log: Shutting down FaceFX...
+[13946.37] Log: FaceFX shutdown.
+[13946.68] Log: Exiting.
+[13946.73] Log: Log file closed, 03/09/18 16:25:31
