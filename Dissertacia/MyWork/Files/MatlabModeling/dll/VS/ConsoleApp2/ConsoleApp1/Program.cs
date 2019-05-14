@@ -15,10 +15,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-
-
-           // planeClass testClass = new planeClass();
-            
+            // planeClass testClass = new planeClass();
+            Console.WindowWidth = 240;
+            Console.WindowHeight = 50;
             CalcFunctionClass calcFunctionClass = new CalcFunctionClass();
 
             MWNumericArray input = null;
@@ -44,14 +43,12 @@ namespace ConsoleApp1
             MWNumericArray checkTime = null;
             MWArray[] result = null;
             // var a = Convert.ToInt32(Console.ReadLine());
-
             // MWArray[] res = testClass.Testdll(a);
-
             input = 10;
             input2 = 10;
             input3 = 15;
             velocityInsertion = 0.03f;
-            velocityRotation = 100f;
+            velocityRotation = 4;//229.183f;
             DateTime info = new DateTime();
             int check = 0;
             double softWareTime = 0;
@@ -61,7 +58,7 @@ namespace ConsoleApp1
             {
                 var softWareTimeStep = (DateTime.Now.Millisecond) * 0.0001;
                 softWareTime = softWareTime + softWareTimeStep;
-                result = calcFunctionClass.CalcFunction_v_0(9, softWareTime, velocityInsertion,velocityRotation);
+                result = calcFunctionClass.CalcFunction_v_1(9, softWareTime, velocityInsertion, velocityRotation,0);
                 offset = (MWNumericArray)result[0];
                 angleOffset = (MWNumericArray)result[1];
                 x = (MWNumericArray)result[2];
@@ -77,46 +74,6 @@ namespace ConsoleApp1
                 output2 = (MWNumericArray) result[8];
                 check = output2.ToScalarInteger();
             } while (check == 0);
-           
-
-
-
-            //output = (MWNumericArray) result[0];
-            //output2 = (MWNumericArray) result[1];
-            //output3 = (MWNumericArray) result[2];
-
-            //Console.WriteLine(output + "\n");
-            //Console.WriteLine(output2 + "\n");
-            //Console.WriteLine(output3 + "\n");
-
-
-            //Console.WriteLine((MWNumericArray)result[3] + "\n");
-
-
-            //outputArray = (MWNumericArray) result[4];
-            //Console.WriteLine(outputArray +"\n");
-
-            //var stringarr = outputArray.ToString();
-            //var stringarr1 = outputArray.ToArray();
-
-            //Console.WriteLine( stringarr1.GetValue(0,0) + "\n");
-            //Console.WriteLine( stringarr1.GetValue(0,1) + "\n");
-            //Console.WriteLine( stringarr1.GetValue(0,2) + "\n");
-
-            //output4 = (MWNumericArray) result[3];
-            //Console.WriteLine(output4 + "\n");
-
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    result = testClass.Testdll(6, input, input2, input3);
-
-            //    output4 = (MWNumericArray)result[3];
-            //    Console.WriteLine(output4 + "\n");
-            //}
-            //result = testClass.Testdll(6, input, input2, input3);
-
-            //output4 = (MWNumericArray)result[3];
-            //Console.WriteLine(output4 + "\n");
 
             Console.ReadLine();
         }

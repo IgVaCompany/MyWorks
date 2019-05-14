@@ -30,9 +30,9 @@ NOTE: You will need administrator rights to run MCRInstaller.
 
 2. Files to Deploy and Package
 
--CalcFunction_v_0.dll
+-CalcFunction_v_1.dll
    -contains the generated component using MWArray API. 
--CalcFunction_v_0Native.dll
+-CalcFunction_v_1Native.dll
    -contains the generated component using native API.
 -This readme file
 
@@ -49,16 +49,16 @@ MWArray.xml - This file contains the code comments for the MWArray data conversi
               distrib directory or in
               <mcr_root>*\toolbox\dotnetbuilder\bin\win64\v2.0
 
-CalcFunction_v_0_overview.html - HTML overview documentation file for the generated 
+CalcFunction_v_1_overview.html - HTML overview documentation file for the generated 
                                  component. It contains the requirements for accessing 
                                  the component and for generating arguments using the 
                                  MWArray class hierarchy.
 
-CalcFunction_v_0.xml - This file contains the code comments for the CalcFunction_v_0 
+CalcFunction_v_1.xml - This file contains the code comments for the CalcFunction_v_1 
                                  component classes and methods. Using a third party 
                                  documentation tool, this file can be combined with 
                                  either or both of the previous files to generate online 
-                                 documentation for the CalcFunction_v_0 component.
+                                 documentation for the CalcFunction_v_1 component.
 
                  
 

@@ -9,8 +9,8 @@
             The CalcFunctionClass class provides a CLS compliant, MWArray interface to the
             MATLAB functions contained in the files:
             <newpara></newpara>
-            C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\Cal
-            cFunction_v_0.m
+            C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\Sec
+            ond_step\CalcFunction_v_1.m
             </summary>
             <remarks>
             @Version 4.0
@@ -41,9 +41,9 @@
             Internal dispose function
             </summary>
         </member>
-        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_0">
+        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_1">
              <summary>
-             Provides a single output, 0-input MWArrayinterface to the CalcFunction_v_0 MATLAB
+             Provides a single output, 0-input MWArrayinterface to the CalcFunction_v_1 MATLAB
              function.
              </summary>
              <remarks>
@@ -54,9 +54,9 @@
              <returns>An MWArray containing the first output argument.</returns>
             
         </member>
-        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_0(MathWorks.MATLAB.NET.Arrays.MWArray)">
+        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_1(MathWorks.MATLAB.NET.Arrays.MWArray)">
              <summary>
-             Provides a single output, 1-input MWArrayinterface to the CalcFunction_v_0 MATLAB
+             Provides a single output, 1-input MWArrayinterface to the CalcFunction_v_1 MATLAB
              function.
              </summary>
              <remarks>
@@ -68,9 +68,9 @@
              <returns>An MWArray containing the first output argument.</returns>
             
         </member>
-        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_0(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_1(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
              <summary>
-             Provides a single output, 2-input MWArrayinterface to the CalcFunction_v_0 MATLAB
+             Provides a single output, 2-input MWArrayinterface to the CalcFunction_v_1 MATLAB
              function.
              </summary>
              <remarks>
@@ -83,9 +83,25 @@
              <returns>An MWArray containing the first output argument.</returns>
             
         </member>
-        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_0(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_1(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
              <summary>
-             Provides a single output, 3-input MWArrayinterface to the CalcFunction_v_0 MATLAB
+             Provides a single output, 3-input MWArrayinterface to the CalcFunction_v_1 MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             CALCFUNCTION_V_0 Summary of this function goes here
+             Detailed explanation goes here
+             </remarks>
+             <param name="time">Input argument #1</param>
+             <param name="velocityInsertion">Input argument #2</param>
+             <param name="velocityRotation">Input argument #3</param>
+             <returns>An MWArray containing the first output argument.</returns>
+            
+        </member>
+        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_1(MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+             <summary>
+             Provides a single output, 4-input MWArrayinterface to the CalcFunction_v_1 MATLAB
              function.
              </summary>
              <remarks>
@@ -96,12 +112,13 @@
              <param name="time">Input argument #1</param>
              <param name="velocityInsertion">Input argument #2</param>
              <param name="velocityRotation">Input argument #3</param>
+             <param name="clcFlag">Input argument #4</param>
              <returns>An MWArray containing the first output argument.</returns>
             
         </member>
-        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_0(System.Int32)">
+        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_1(System.Int32)">
              <summary>
-             Provides the standard 0-input MWArray interface to the CalcFunction_v_0 MATLAB
+             Provides the standard 0-input MWArray interface to the CalcFunction_v_1 MATLAB
              function.
              </summary>
              <remarks>
@@ -114,9 +131,9 @@
              arguments.</returns>
             
         </member>
-        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_0(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray)">
+        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_1(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray)">
              <summary>
-             Provides the standard 1-input MWArray interface to the CalcFunction_v_0 MATLAB
+             Provides the standard 1-input MWArray interface to the CalcFunction_v_1 MATLAB
              function.
              </summary>
              <remarks>
@@ -130,9 +147,9 @@
              arguments.</returns>
             
         </member>
-        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_0(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_1(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
              <summary>
-             Provides the standard 2-input MWArray interface to the CalcFunction_v_0 MATLAB
+             Provides the standard 2-input MWArray interface to the CalcFunction_v_1 MATLAB
              function.
              </summary>
              <remarks>
@@ -147,9 +164,9 @@
              arguments.</returns>
             
         </member>
-        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_0(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
+        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_1(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
              <summary>
-             Provides the standard 3-input MWArray interface to the CalcFunction_v_0 MATLAB
+             Provides the standard 3-input MWArray interface to the CalcFunction_v_1 MATLAB
              function.
              </summary>
              <remarks>
@@ -165,9 +182,28 @@
              arguments.</returns>
             
         </member>
-        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_0(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray[]@,MathWorks.MATLAB.NET.Arrays.MWArray[])">
+        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_1(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray,MathWorks.MATLAB.NET.Arrays.MWArray)">
              <summary>
-             Provides an interface for the CalcFunction_v_0 function in which the input and
+             Provides the standard 4-input MWArray interface to the CalcFunction_v_1 MATLAB
+             function.
+             </summary>
+             <remarks>
+             M-Documentation:
+             CALCFUNCTION_V_0 Summary of this function goes here
+             Detailed explanation goes here
+             </remarks>
+             <param name="numArgsOut">The number of output arguments to return.</param>
+             <param name="time">Input argument #1</param>
+             <param name="velocityInsertion">Input argument #2</param>
+             <param name="velocityRotation">Input argument #3</param>
+             <param name="clcFlag">Input argument #4</param>
+             <returns>An Array of length "numArgsOut" containing the output
+             arguments.</returns>
+            
+        </member>
+        <member name="M:CalcFunction_v_0.CalcFunctionClass.CalcFunction_v_1(System.Int32,MathWorks.MATLAB.NET.Arrays.MWArray[]@,MathWorks.MATLAB.NET.Arrays.MWArray[])">
+             <summary>
+             Provides an interface for the CalcFunction_v_1 function in which the input and
              output
              arguments are specified as an array of MWArrays.
              </summary>

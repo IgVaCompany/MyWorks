@@ -1,11 +1,11 @@
 /*
 * MATLAB Compiler: 6.4 (R2017a)
-* Date: Fri Jan 04 19:16:53 2019
+* Date: Mon Jan 07 10:36:39 2019
 * Arguments:
-* "-B""macro_default""-W""dotnet:CalcFunction_v_0,CalcFunctionClass,4.0,private""-T""link:
+* "-B""macro_default""-W""dotnet:CalcFunction_v_1,CalcFunctionClass,4.0,private""-T""link:
 * lib""-d""C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModelin
 * g\dll\dll\V_0""-v""class{CalcFunctionClass:C:\Users\Vasilii\Documents\MyWorks\trunk\Diss
-* ertacia\MyWork\Files\MatlabModeling\CalcFunction_v_0.m}"
+* ertacia\MyWork\Files\MatlabModeling\Second_step\CalcFunction_v_1.m}"
 */
 using System;
 using System.Reflection;
@@ -17,15 +17,15 @@ using MathWorks.MATLAB.NET.Utility;
 [assembly: System.Reflection.AssemblyKeyFile(@"")]
 #endif
 
-namespace CalcFunction_v_0
+namespace CalcFunction_v_1
 {
 
   /// <summary>
   /// The CalcFunctionClass class provides a CLS compliant, MWArray interface to the
   /// MATLAB functions contained in the files:
   /// <newpara></newpara>
-  /// C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\Cal
-  /// cFunction_v_0.m
+  /// C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\Sec
+  /// ond_step\CalcFunction_v_1.m
   /// </summary>
   /// <remarks>
   /// @Version 4.0
@@ -51,7 +51,7 @@ namespace CalcFunction_v_0
 
           ctfFilePath= ctfFilePath.Remove(lastDelimiter, (ctfFilePath.Length - lastDelimiter));
 
-          string ctfFileName = "CalcFunction_v_0.ctf";
+          string ctfFileName = "CalcFunction_v_1.ctf";
 
           Stream embeddedCtfStream = null;
 
@@ -140,127 +140,165 @@ namespace CalcFunction_v_0
     #region Methods
 
     /// <summary>
-    /// Provides a single output, 0-input MWArrayinterface to the CalcFunction_v_0 MATLAB
+    /// Provides a single output, 0-input MWArrayinterface to the CalcFunction_v_1 MATLAB
     /// function.
     /// </summary>
     /// <remarks>
     /// M-Documentation:
     /// CALCFUNCTION_V_0 Summary of this function goes here
     /// Detailed explanation goes here
+    /// cd('C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeli
+    /// ng\dll\Vusual\New\Assets');
     /// </remarks>
     /// <returns>An MWArray containing the first output argument.</returns>
     ///
-    public MWArray CalcFunction_v_0()
+    public MWArray CalcFunction_v_1()
     {
-      return mcr.EvaluateFunction("CalcFunction_v_0", new MWArray[]{});
+      return mcr.EvaluateFunction("CalcFunction_v_1", new MWArray[]{});
     }
 
 
     /// <summary>
-    /// Provides a single output, 1-input MWArrayinterface to the CalcFunction_v_0 MATLAB
+    /// Provides a single output, 1-input MWArrayinterface to the CalcFunction_v_1 MATLAB
     /// function.
     /// </summary>
     /// <remarks>
     /// M-Documentation:
     /// CALCFUNCTION_V_0 Summary of this function goes here
     /// Detailed explanation goes here
+    /// cd('C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeli
+    /// ng\dll\Vusual\New\Assets');
     /// </remarks>
     /// <param name="time">Input argument #1</param>
     /// <returns>An MWArray containing the first output argument.</returns>
     ///
-    public MWArray CalcFunction_v_0(MWArray time)
+    public MWArray CalcFunction_v_1(MWArray time)
     {
-      return mcr.EvaluateFunction("CalcFunction_v_0", time);
+      return mcr.EvaluateFunction("CalcFunction_v_1", time);
     }
 
 
     /// <summary>
-    /// Provides a single output, 2-input MWArrayinterface to the CalcFunction_v_0 MATLAB
+    /// Provides a single output, 2-input MWArrayinterface to the CalcFunction_v_1 MATLAB
     /// function.
     /// </summary>
     /// <remarks>
     /// M-Documentation:
     /// CALCFUNCTION_V_0 Summary of this function goes here
     /// Detailed explanation goes here
+    /// cd('C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeli
+    /// ng\dll\Vusual\New\Assets');
     /// </remarks>
     /// <param name="time">Input argument #1</param>
     /// <param name="velocityInsertion">Input argument #2</param>
     /// <returns>An MWArray containing the first output argument.</returns>
     ///
-    public MWArray CalcFunction_v_0(MWArray time, MWArray velocityInsertion)
+    public MWArray CalcFunction_v_1(MWArray time, MWArray velocityInsertion)
     {
-      return mcr.EvaluateFunction("CalcFunction_v_0", time, velocityInsertion);
+      return mcr.EvaluateFunction("CalcFunction_v_1", time, velocityInsertion);
     }
 
 
     /// <summary>
-    /// Provides a single output, 3-input MWArrayinterface to the CalcFunction_v_0 MATLAB
+    /// Provides a single output, 3-input MWArrayinterface to the CalcFunction_v_1 MATLAB
     /// function.
     /// </summary>
     /// <remarks>
     /// M-Documentation:
     /// CALCFUNCTION_V_0 Summary of this function goes here
     /// Detailed explanation goes here
+    /// cd('C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeli
+    /// ng\dll\Vusual\New\Assets');
     /// </remarks>
     /// <param name="time">Input argument #1</param>
     /// <param name="velocityInsertion">Input argument #2</param>
     /// <param name="velocityRotation">Input argument #3</param>
     /// <returns>An MWArray containing the first output argument.</returns>
     ///
-    public MWArray CalcFunction_v_0(MWArray time, MWArray velocityInsertion, MWArray 
+    public MWArray CalcFunction_v_1(MWArray time, MWArray velocityInsertion, MWArray 
                               velocityRotation)
     {
-      return mcr.EvaluateFunction("CalcFunction_v_0", time, velocityInsertion, velocityRotation);
+      return mcr.EvaluateFunction("CalcFunction_v_1", time, velocityInsertion, velocityRotation);
     }
 
 
     /// <summary>
-    /// Provides the standard 0-input MWArray interface to the CalcFunction_v_0 MATLAB
+    /// Provides a single output, 4-input MWArrayinterface to the CalcFunction_v_1 MATLAB
     /// function.
     /// </summary>
     /// <remarks>
     /// M-Documentation:
     /// CALCFUNCTION_V_0 Summary of this function goes here
     /// Detailed explanation goes here
+    /// cd('C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeli
+    /// ng\dll\Vusual\New\Assets');
+    /// </remarks>
+    /// <param name="time">Input argument #1</param>
+    /// <param name="velocityInsertion">Input argument #2</param>
+    /// <param name="velocityRotation">Input argument #3</param>
+    /// <param name="clcFlag">Input argument #4</param>
+    /// <returns>An MWArray containing the first output argument.</returns>
+    ///
+    public MWArray CalcFunction_v_1(MWArray time, MWArray velocityInsertion, MWArray 
+                              velocityRotation, MWArray clcFlag)
+    {
+      return mcr.EvaluateFunction("CalcFunction_v_1", time, velocityInsertion, velocityRotation, clcFlag);
+    }
+
+
+    /// <summary>
+    /// Provides the standard 0-input MWArray interface to the CalcFunction_v_1 MATLAB
+    /// function.
+    /// </summary>
+    /// <remarks>
+    /// M-Documentation:
+    /// CALCFUNCTION_V_0 Summary of this function goes here
+    /// Detailed explanation goes here
+    /// cd('C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeli
+    /// ng\dll\Vusual\New\Assets');
     /// </remarks>
     /// <param name="numArgsOut">The number of output arguments to return.</param>
     /// <returns>An Array of length "numArgsOut" containing the output
     /// arguments.</returns>
     ///
-    public MWArray[] CalcFunction_v_0(int numArgsOut)
+    public MWArray[] CalcFunction_v_1(int numArgsOut)
     {
-      return mcr.EvaluateFunction(numArgsOut, "CalcFunction_v_0", new MWArray[]{});
+      return mcr.EvaluateFunction(numArgsOut, "CalcFunction_v_1", new MWArray[]{});
     }
 
 
     /// <summary>
-    /// Provides the standard 1-input MWArray interface to the CalcFunction_v_0 MATLAB
+    /// Provides the standard 1-input MWArray interface to the CalcFunction_v_1 MATLAB
     /// function.
     /// </summary>
     /// <remarks>
     /// M-Documentation:
     /// CALCFUNCTION_V_0 Summary of this function goes here
     /// Detailed explanation goes here
+    /// cd('C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeli
+    /// ng\dll\Vusual\New\Assets');
     /// </remarks>
     /// <param name="numArgsOut">The number of output arguments to return.</param>
     /// <param name="time">Input argument #1</param>
     /// <returns>An Array of length "numArgsOut" containing the output
     /// arguments.</returns>
     ///
-    public MWArray[] CalcFunction_v_0(int numArgsOut, MWArray time)
+    public MWArray[] CalcFunction_v_1(int numArgsOut, MWArray time)
     {
-      return mcr.EvaluateFunction(numArgsOut, "CalcFunction_v_0", time);
+      return mcr.EvaluateFunction(numArgsOut, "CalcFunction_v_1", time);
     }
 
 
     /// <summary>
-    /// Provides the standard 2-input MWArray interface to the CalcFunction_v_0 MATLAB
+    /// Provides the standard 2-input MWArray interface to the CalcFunction_v_1 MATLAB
     /// function.
     /// </summary>
     /// <remarks>
     /// M-Documentation:
     /// CALCFUNCTION_V_0 Summary of this function goes here
     /// Detailed explanation goes here
+    /// cd('C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeli
+    /// ng\dll\Vusual\New\Assets');
     /// </remarks>
     /// <param name="numArgsOut">The number of output arguments to return.</param>
     /// <param name="time">Input argument #1</param>
@@ -268,21 +306,23 @@ namespace CalcFunction_v_0
     /// <returns>An Array of length "numArgsOut" containing the output
     /// arguments.</returns>
     ///
-    public MWArray[] CalcFunction_v_0(int numArgsOut, MWArray time, MWArray 
+    public MWArray[] CalcFunction_v_1(int numArgsOut, MWArray time, MWArray 
                                 velocityInsertion)
     {
-      return mcr.EvaluateFunction(numArgsOut, "CalcFunction_v_0", time, velocityInsertion);
+      return mcr.EvaluateFunction(numArgsOut, "CalcFunction_v_1", time, velocityInsertion);
     }
 
 
     /// <summary>
-    /// Provides the standard 3-input MWArray interface to the CalcFunction_v_0 MATLAB
+    /// Provides the standard 3-input MWArray interface to the CalcFunction_v_1 MATLAB
     /// function.
     /// </summary>
     /// <remarks>
     /// M-Documentation:
     /// CALCFUNCTION_V_0 Summary of this function goes here
     /// Detailed explanation goes here
+    /// cd('C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeli
+    /// ng\dll\Vusual\New\Assets');
     /// </remarks>
     /// <param name="numArgsOut">The number of output arguments to return.</param>
     /// <param name="time">Input argument #1</param>
@@ -291,15 +331,42 @@ namespace CalcFunction_v_0
     /// <returns>An Array of length "numArgsOut" containing the output
     /// arguments.</returns>
     ///
-    public MWArray[] CalcFunction_v_0(int numArgsOut, MWArray time, MWArray 
+    public MWArray[] CalcFunction_v_1(int numArgsOut, MWArray time, MWArray 
                                 velocityInsertion, MWArray velocityRotation)
     {
-      return mcr.EvaluateFunction(numArgsOut, "CalcFunction_v_0", time, velocityInsertion, velocityRotation);
+      return mcr.EvaluateFunction(numArgsOut, "CalcFunction_v_1", time, velocityInsertion, velocityRotation);
     }
 
 
     /// <summary>
-    /// Provides an interface for the CalcFunction_v_0 function in which the input and
+    /// Provides the standard 4-input MWArray interface to the CalcFunction_v_1 MATLAB
+    /// function.
+    /// </summary>
+    /// <remarks>
+    /// M-Documentation:
+    /// CALCFUNCTION_V_0 Summary of this function goes here
+    /// Detailed explanation goes here
+    /// cd('C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeli
+    /// ng\dll\Vusual\New\Assets');
+    /// </remarks>
+    /// <param name="numArgsOut">The number of output arguments to return.</param>
+    /// <param name="time">Input argument #1</param>
+    /// <param name="velocityInsertion">Input argument #2</param>
+    /// <param name="velocityRotation">Input argument #3</param>
+    /// <param name="clcFlag">Input argument #4</param>
+    /// <returns>An Array of length "numArgsOut" containing the output
+    /// arguments.</returns>
+    ///
+    public MWArray[] CalcFunction_v_1(int numArgsOut, MWArray time, MWArray 
+                                velocityInsertion, MWArray velocityRotation, MWArray 
+                                clcFlag)
+    {
+      return mcr.EvaluateFunction(numArgsOut, "CalcFunction_v_1", time, velocityInsertion, velocityRotation, clcFlag);
+    }
+
+
+    /// <summary>
+    /// Provides an interface for the CalcFunction_v_1 function in which the input and
     /// output
     /// arguments are specified as an array of MWArrays.
     /// </summary>
@@ -309,14 +376,16 @@ namespace CalcFunction_v_0
     /// M-Documentation:
     /// CALCFUNCTION_V_0 Summary of this function goes here
     /// Detailed explanation goes here
+    /// cd('C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeli
+    /// ng\dll\Vusual\New\Assets');
     /// </remarks>
     /// <param name="numArgsOut">The number of output arguments to return</param>
     /// <param name= "argsOut">Array of MWArray output arguments</param>
     /// <param name= "argsIn">Array of MWArray input arguments</param>
     ///
-    public void CalcFunction_v_0(int numArgsOut, ref MWArray[] argsOut, MWArray[] argsIn)
+    public void CalcFunction_v_1(int numArgsOut, ref MWArray[] argsOut, MWArray[] argsIn)
     {
-      mcr.EvaluateFunction("CalcFunction_v_0", numArgsOut, ref argsOut, argsIn);
+      mcr.EvaluateFunction("CalcFunction_v_1", numArgsOut, ref argsOut, argsIn);
     }
 
 

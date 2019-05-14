@@ -1,6 +1,6 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration build-checksum="1242390622" file="C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\dll\dll\CalcFunction_v_0.prj" location="C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\dll\dll" name="CalcFunction_v_0" preferred-package-location="C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\dll\dll\V_0" preferred-package-type="package.type.exe" target="target.ezdeploy.library" target-name="Library Compiler">
-    <param.appname>CalcFunction_v_0</param.appname>
+  <configuration build-checksum="2435499929" file="C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\dll\dll\CalcFunction_v_0.prj" location="C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\dll\dll" name="CalcFunction_v_0" preferred-package-location="C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\dll\dll\V_0" preferred-package-type="package.type.exe" target="target.ezdeploy.library" target-name="Library Compiler">
+    <param.appname>CalcFunction_v_1</param.appname>
     <param.icon />
     <param.icons />
     <param.version>1.0</param.version>
@@ -11,7 +11,7 @@
     <param.description />
     <param.screenshot />
     <param.guid />
-    <param.installpath.string>\CalcFunction_v_0\</param.installpath.string>
+    <param.installpath.string>\CalcFunction_v_1\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
     <param.logo />
     <param.install.notes />
@@ -63,7 +63,6 @@
       <param.logo />
       <param.target.install.notes />
       <param.enable.clean.build />
-      <param.user.defined.mcr.options />
       <param.support.packages />
       <param.namespace />
       <param.classorg />
@@ -90,25 +89,25 @@
       <param.net.saved.interface />
     </unset>
     <fileset.exports>
-      <file>C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\CalcFunction_v_0.m</file>
+      <file>C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\Second_step\CalcFunction_v_1.m</file>
     </fileset.exports>
     <fileset.classes>
       <entity.package name="">
         <entity.class name="CalcFunctionClass">
-          <file>C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\CalcFunction_v_0.m</file>
+          <file>C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\Second_step\CalcFunction_v_1.m</file>
         </entity.class>
       </entity.package>
     </fileset.classes>
     <fileset.resources />
     <fileset.depfun>
-      <file>C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\CalcY_Z.m</file>
+      <file>C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\Second_step\CalcY_Z.m</file>
     </fileset.depfun>
     <fileset.package />
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\V_0" name="CalcFunction_v_0.dll" optional="false">C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\dll\dll\V_0\CalcFunction_v_0.dll</file>
-      <file location="${PROJECT_ROOT}\V_0" name="CalcFunction_v_0_overview.html" optional="false">C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\dll\dll\V_0\CalcFunction_v_0_overview.html</file>
+      <file location="${PROJECT_ROOT}\V_0" name="CalcFunction_v_1_overview.html" optional="false">C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\dll\dll\V_0\CalcFunction_v_1_overview.html</file>
+      <file location="${PROJECT_ROOT}\V_0" name="CalcFunction_v_1.dll" optional="false">C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\dll\dll\V_0\CalcFunction_v_1.dll</file>
       <file location="${PROJECT_ROOT}\V_0" name="readme.txt" optional="true">C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\dll\dll\V_0\readme.txt</file>
-      <file location="${PROJECT_ROOT}\V_0" name="CalcFunction_v_0Native.dll" optional="false">C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\dll\dll\V_0\CalcFunction_v_0Native.dll</file>
+      <file location="${PROJECT_ROOT}\V_0" name="CalcFunction_v_1Native.dll" optional="false">C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\dll\dll\V_0\CalcFunction_v_1Native.dll</file>
     </build-deliverables>
     <workflow />
     <matlab>
