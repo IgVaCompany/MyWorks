@@ -84,7 +84,7 @@ if isempty(zP)
 end
 
 
-alfaG = 45;
+alfaG = 30;
 gammaG = 90-alfaG;
 gammaR = (gammaG*pi)/180;
 alfaR = (alfaG*pi)/180;
@@ -102,7 +102,7 @@ cF = 0.82;%0.82;%1.15;
 
 L0 = 0.005;
 K = 0.000027;
-H = 0.0005;
+H = 0.00025;
 
 if (time<=maxTime) % && dT_outOfModel>dT time<=maxTime qtyOfNumPoints <= numPoint
     stopCalc = 0;
@@ -111,7 +111,8 @@ if (time<=maxTime) % && dT_outOfModel>dT time<=maxTime qtyOfNumPoints <= numPoin
         insertionL = insertionL + dT*velocityInsertion;
         rotationL = rotationL + angleForCalc;
         s = ((pi*rOut*rOut)*insertionL)^(2/3);
-        envF  = cF*s*((rho*velocityInsertion*velocityInsertion)/2  );%K*(d - L0) + H*velocityInsertion;   
+        %envF  = cF*s*((rho*velocityInsertion*velocityInsertion)/2  );%K*(d - L0) + H*velocityInsertion;   
+        envF  = K*(d - L0) + H*velocityInsertion;   
         envFp = envF*cos(gammaR);
         iIx   = (pi*(DD^3)*thick)/8;
         offsetP = offsetP + 1000*(envFp*((insertionL)^3))/(3*E*iIx(1,1)); %product on 1000 for convert m to mm      
