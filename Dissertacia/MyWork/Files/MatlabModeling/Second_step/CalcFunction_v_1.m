@@ -110,9 +110,10 @@ if (time<=maxTime) % && dT_outOfModel>dT time<=maxTime qtyOfNumPoints <= numPoin
         envF  = cF*s*((rho*velocityInsertion*velocityInsertion)/2  );  
         envFp = envF*cos(gammaR);
         iIx   = (pi*(DD^3)*thick)/8;
-        offsetP = offsetP + 1000*(envFp*((insertionL)^3))/(3*E*iIx(1,1)); %product on 1000 for convert m to mm      
+        offsetLocal =  1000*(envFp*((insertionL)^3))/(3*E*iIx(1,1)); %product on 1000 for convert m to mm
+        offsetP = offsetP + offsetLocal; %product on 1000 for convert m to mm      
         xP = insertionL;
-        offsetLocal =  1000*(envFp*((insertionL)^3))/(3*E*iIx(1,1)); %product on 1000 for convert m to mm 
+        %offsetLocal =  1000*(envFp*((insertionL)^3))/(3*E*iIx(1,1)); %product on 1000 for convert m to mm 
         [yP,zP] = CalcY_Z(rotationL,offsetLocal,clcFlag);
         offset_YZ = sqrt(yP*yP +zP*zP);
     end         

@@ -1,5 +1,5 @@
 function [ offset,angleOffset,x,y,z,insL,qtyCalcPoints,checkTime,stopCalc ] =...
-    CalcFunction_v_2( time, velocityInsertion, velocityRotation,clcFlag)
+    CalcFunction_v_2( time, velocityInsertion, velocityRotation,clcFlag,cF)
 %CALCFUNCTION_V_0 Summary of this function goes here
 %   Detailed explanation goes here
 %cd('C:\Users\Vasilii\Documents\MyWorks\trunk\Dissertacia\MyWork\Files\MatlabModeling\dll\Vusual\New\Assets');
@@ -97,8 +97,8 @@ rIn  = dIn/2;
 thick = rOut-rIn;
 DD = 2*(rIn+thick);
 %s = pi*(d/2)*(d/2);
-rho = 1000;%1500;
-cF = 0.82;%0.82;%1.15;
+rho = 800;%1500;
+%cF = 1;%0.82;%1.15;
 
 L0 = 0.005;
 K = 0.000027;
@@ -111,8 +111,8 @@ if (time<=maxTime) % && dT_outOfModel>dT time<=maxTime qtyOfNumPoints <= numPoin
         insertionL = insertionL + dT*velocityInsertion;
         rotationL = rotationL + angleForCalc;
         s = ((pi*rOut*rOut)*insertionL)^(2/3);
-        %envF  = cF*s*((rho*velocityInsertion*velocityInsertion)/2  );%K*(d - L0) + H*velocityInsertion;   
-        envF  = K*(d - L0) + H*velocityInsertion;   
+        envF  = cF*s*((rho*velocityInsertion*velocityInsertion)/2  );%K*(d - L0) + H*velocityInsertion;   
+        %envF  = K*(d - L0) + H*velocityInsertion;   
         envFp = envF*cos(gammaR);
         iIx   = (pi*(DD^3)*thick)/8;
         offsetP = offsetP + 1000*(envFp*((insertionL)^3))/(3*E*iIx(1,1)); %product on 1000 for convert m to mm      
