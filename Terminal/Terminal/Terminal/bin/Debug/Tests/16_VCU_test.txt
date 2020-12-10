@@ -1,0 +1,36 @@
+rt setvcu16defstop
+sa
+
+rt setvcu16defmove
+sa
+
+rt setvcuf1
+sa
+rt setvcu16defmove
+sa
+rt setvcuf2
+sa
+rt setvcu16defmove
+sa
+rt setvcuf3
+sa
+rt setvcu16defstop
+sa
+rt setvcuf4
+sa
+rt setvcu16defstop
+sa
+rt setvcuf5
+sa
+rt setvcu16defstop
+sa
+rt setvcuf6
+sa
+rt setvcu16defstop
+sa
+rt setvcuf7
+sa
+rt setvcu16defstop
+sa
+rt setvcuf8
+sa

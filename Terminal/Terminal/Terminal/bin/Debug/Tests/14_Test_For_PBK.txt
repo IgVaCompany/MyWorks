@@ -1,0 +1,10 @@
+rt setpbkmdef
+sa
+rt setpbkmf1
+sa
+rt setpbkmdef
+sa
+rt setpbkmf2
+sa
+rt setpbkmdef
+sa

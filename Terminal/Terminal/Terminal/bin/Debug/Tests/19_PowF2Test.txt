@@ -1,0 +1,22 @@
+rt setpowdef
+sa
+sr cur 100
+sr vol 100
+
+rt setpow2
+sa
+rt setpowdef
+sa
+sr cur 200
+sr vol 200
+
+rt setpow2
+sa
+
+rt setpowdef
+sa
+sr cur 800
+sr vol 400
+
+rt setpow2
+sa

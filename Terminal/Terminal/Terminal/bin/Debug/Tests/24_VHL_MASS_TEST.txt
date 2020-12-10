@@ -1,0 +1,23 @@
+rt setvhlmassdef
+sa
+rt setvhlmassf1
+sa
+rt setvhlmassdef
+sa
+rt setvhlmassf2
+sa
+rt setvhlmassdef
+sa
+rt setvhlmassf3
+sa
+rt setvhlmassdef
+sa
+rt setvhlmassdef
+sa
+rt setvhlmassf4
+sa
+rt setvhlmassdef
+sa
+rt setvhlmassf5
+sa
+rt setvhlmassdef

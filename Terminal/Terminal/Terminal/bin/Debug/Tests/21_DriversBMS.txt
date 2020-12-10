@@ -1,0 +1,34 @@
+rt setbmsdef
+sa
+
+sr cur 200
+sr vol 400
+
+rt setvolbms
+sa
+rt setcurbms
+sa
+
+rt setbmsdef
+sa
+
+sr cur 250
+sr vol 450
+
+rt setvolbms
+sa
+rt setcurbms
+sa
+
+rt setbmsdef
+sa
+
+sr cur 100
+sr vol 100
+
+rt setvolbms
+sa
+rt setcurbms
+sa
+rt setbmsdef
+sa

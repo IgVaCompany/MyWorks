@@ -1,0 +1,10 @@
+C:\Users\Vasilii\Documents\MyWorks\trunk\Terminal\Terminal\Terminal\bin\Debug\Terminal.exe.config
+C:\Users\Vasilii\Documents\MyWorks\trunk\Terminal\Terminal\Terminal\bin\Debug\Terminal.exe
+C:\Users\Vasilii\Documents\MyWorks\trunk\Terminal\Terminal\Terminal\bin\Debug\Terminal.pdb
+C:\Users\Vasilii\Documents\MyWorks\trunk\Terminal\Terminal\Terminal\obj\Debug\Terminal.csprojAssemblyReference.cache
+C:\Users\Vasilii\Documents\MyWorks\trunk\Terminal\Terminal\Terminal\obj\Debug\Terminal.Properties.Resources.resources
+C:\Users\Vasilii\Documents\MyWorks\trunk\Terminal\Terminal\Terminal\obj\Debug\Terminal.csproj.GenerateResource.cache
+C:\Users\Vasilii\Documents\MyWorks\trunk\Terminal\Terminal\Terminal\obj\Debug\Terminal.csproj.CoreCompileInputs.cache
+C:\Users\Vasilii\Documents\MyWorks\trunk\Terminal\Terminal\Terminal\obj\Debug\Terminal.exe
+C:\Users\Vasilii\Documents\MyWorks\trunk\Terminal\Terminal\Terminal\obj\Debug\Terminal.pdb
+C:\Users\Vasilii\Documents\MyWorks\trunk\Terminal\Terminal\Terminal\obj\Debug\Terminal.TerminalForTesting.resources

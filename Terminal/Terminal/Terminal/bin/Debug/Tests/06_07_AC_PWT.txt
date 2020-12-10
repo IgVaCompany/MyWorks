@@ -1,0 +1,18 @@
+ch SubSystem06
+
+rt setacpwtdef
+sa
+rt setacpwtf1
+sa
+rt setacpwtdef
+sa
+rt setacpwtf2
+sa
+rt setacpwtdef
+sa
+rt setshgrdr
+sa
+rt setshgrpr
+sa
+rt setshgrrv
+sa
