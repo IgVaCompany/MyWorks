@@ -80,6 +80,7 @@ namespace Terminal
             {
                 worker.SendToSerialPort(Tests[testsComboBox.SelectedIndex].commands[testCommandsView.SelectedIndex]);
             });
+            ChoseNextCommandInList();
 
         }
 

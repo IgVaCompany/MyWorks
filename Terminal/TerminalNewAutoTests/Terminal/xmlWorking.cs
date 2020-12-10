@@ -9,8 +9,10 @@ namespace Terminal
 {
     public class xmlWorking
     {
-       public SpreadsheetDocument document =
+        public SpreadsheetDocument document =
             SpreadsheetDocument.Create("TestReport.xlsx", SpreadsheetDocumentType.Workbook);
+
+        public SheetData sheetData;
         public void CreateFile(string nameFile, string nameOfSheet)
         {
           //  using (SpreadsheetDocument document =
@@ -23,7 +25,7 @@ namespace Terminal
                 WorksheetPart worksheetPart = workbookPart.AddNewPart<WorksheetPart>();
 
                 FileVersion fv = new FileVersion();
-                fv.ApplicationName = "Microsoft Office Excel";
+                //fv.ApplicationName = "Microsoft Office Excel";
                 worksheetPart.Worksheet = new Worksheet(new SheetData());
                 WorkbookStylesPart wbsp = workbookPart.AddNewPart<WorkbookStylesPart>();
 
@@ -57,7 +59,7 @@ namespace Terminal
                 Sheet sheet = new Sheet() { Id = workbookPart.GetIdOfPart(worksheetPart), SheetId = 1, Name = nameOfSheet };
                 sheets.Append(sheet);
 
-                SheetData sheetData = worksheetPart.Worksheet.GetFirstChild<SheetData>();
+                sheetData = worksheetPart.Worksheet.GetFirstChild<SheetData>();
 
                 //Добавим заголовки в первую строку
                 Row row = new Row() { RowIndex = 1 };
@@ -66,7 +68,22 @@ namespace Terminal
                 InsertCell(row, 1, "Time", CellValues.String, 5);
                 InsertCell(row, 2, "TestCaseName", CellValues.String, 5);
                 InsertCell(row, 3, "TestName", CellValues.String, 5);
-                InsertCell(row, 4, "ResultsOfTest", CellValues.String, 5);
+                InsertCell(row, 4, "TestCommand", CellValues.String, 5);
+                InsertCell(row, 5, "ResultsOfTest", CellValues.String, 5);
+                InsertCell(row, 6, "DataFromFile", CellValues.String, 5);
+                InsertCell(row, 7, "DataFromBoard", CellValues.String, 5);
+                InsertCell(row, 8, "nameOfCAN", CellValues.String, 5);
+                InsertCell(row, 9, "TX_msg_cnt", CellValues.String, 5);
+                InsertCell(row, 10, "RX_msg_cnt", CellValues.String, 5);
+                InsertCell(row, 11, "Error_Count", CellValues.String, 5);
+                InsertCell(row, 12, "Lost_RX_q", CellValues.String, 5);
+                InsertCell(row, 13, "Lost_RX_o", CellValues.String, 5);
+                InsertCell(row, 14, "Lost_TX_q", CellValues.String, 5);
+                InsertCell(row, 15, "RX_queue", CellValues.String, 5);
+                InsertCell(row, 16, "TX_queue", CellValues.String, 5);
+                InsertCell(row, 17, "B_O", CellValues.String, 5);
+                InsertCell(row, 18, "UsedRX", CellValues.String, 5);
+                InsertCell(row, 19, "UsedTX", CellValues.String, 5);
                 //InsertCell(row, 5, "Стиль 5", CellValues.String, 5);
                 //InsertCell(row, 6, "Стиль 6", CellValues.String, 5);
                 //InsertCell(row, 7, "Стиль 7", CellValues.String, 5);
@@ -103,7 +120,7 @@ namespace Terminal
 
         }
 
-        static string ReplaceHexadecimalSymbols(string txt)
+        public string ReplaceHexadecimalSymbols(string txt)
         {
             string r = "[\x00-\x08\x0B\x0C\x0E-\x1F\x26]";
             return Regex.Replace(txt, r, "", RegexOptions.Compiled);

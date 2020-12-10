@@ -14,6 +14,8 @@ namespace Terminal
         public ConnectionWoker iMWorker;
         public ConnectionWoker DcuWorker;
 
+        public xmlWorking XmlWorking;
+
 
         public ListBox TestCaseForAutoTests;
         public ListBox TestForAutoTests;

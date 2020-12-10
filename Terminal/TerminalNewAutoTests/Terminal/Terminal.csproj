@@ -114,6 +114,7 @@
     <Compile Include="AutoTest.Designer.cs">
       <DependentUpon>AutoTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="CANStatus.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="ConnectionWoker.cs" />
     <Compile Include="DataPort.cs" />

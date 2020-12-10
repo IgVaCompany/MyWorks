@@ -9,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 
 namespace Terminal
@@ -25,13 +26,15 @@ namespace Terminal
             mMainForm = mainForm;
 
             pathLineAutoTextBox.Text = mainForm.ParseAutoTests.GetWorkingPath();
+            SendDataToInterface();
             mainForm.ParseAutoTests.pathline = pathLineAutoTextBox.Text;
+            mainForm.SubSystemCheker.PrepareValidater(mainForm.testInterfaceData);
 
            // TerminalForTesting mainForm = (TerminalForTesting)this.Owner;
             var testsCases = mainForm.TestsCasesAuto;
             mainForm.ParseAutoTests.GetAvailableAutoTests(testsCases,listBox1TestCases);          
                      
-            SendDataToInterface();
+            
         }
 
         public void SendDataToInterface()
@@ -40,6 +43,7 @@ namespace Terminal
             mMainForm.testInterfaceData.TestForAutoTests = listBox1Tests;
             mMainForm.testInterfaceData.CommandForAutoTests = listBox1Command;
             mMainForm.testInterfaceData.ValidParam = listBox2ValidParam;
+
 
             listBox1Command.Enabled = false;
             listBox1TestCases.Enabled = false;
@@ -80,6 +84,8 @@ namespace Terminal
             listBox2ValidParam.SelectedIndex =0;
         }
 
+        
+
         private void button1_Click(object sender, EventArgs e)
         {
             mMainForm.testPusher.StartSend = true;
@@ -89,7 +95,9 @@ namespace Terminal
             mMainForm.testPusher.PrepareTestPusher(mMainForm.testInterfaceData);
             mMainForm.testPusher.AutoTestStart();
             AutoTestStartValidate();
+            //mMainForm.XmlWorking = new xmlWorking();
             mMainForm.XmlWorking.CreateFile("TestReport","TestReport");
+            mMainForm.XmlWorking.document.Save();
 
         }
 
@@ -100,6 +108,7 @@ namespace Terminal
             button1StopButton.Enabled = false;
             mMainForm.testPusher.StopAutoTest();
             loadAutoTestThreadValidate.Abort();
+            mMainForm.XmlWorking.document.Close();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -125,7 +134,7 @@ namespace Terminal
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            SendRequest();
+            SendRequest("sub");
         }
 
 
@@ -139,29 +148,50 @@ namespace Terminal
 
         private void CheckFromBoard()
         {
+            string currentCommand = "";
+            string beforeCommand = "";
+
             while (mMainForm.testPusher.StartSend)
             {
+               
                 int index = 0;
                 listBox1Command.Invoke((ThreadStart) delegate
                 {
+                    currentCommand = listBox1Command.SelectedItem.ToString();
                     index = listBox1Command.SelectedIndex - 1;
                 });
-                
-                if (index >0 && listBox1Command.Items[index].ToString().Contains("rt"))
+
+                //if (index > 0 && listBox1Command.Items[index].ToString().Contains("rt"))
+                if (currentCommand.Contains("sa") && beforeCommand.Contains("rt"))
                 {
-                    SendRequest();
-                    Thread.Sleep(1000);
+                    SendRequest("ci");
+                    Thread.Sleep(500);
+                    SendRequest("sub");
+                    //Thread.Sleep(1000);
                 }
-                
+                beforeCommand = currentCommand;
             }
                       
         }
 
-        private void SendRequest()
+        private void SendRequest(string command)
         {
-            mMainForm.SubSystemCheker.SendComandToFromValidater();
-            mMainForm.SubSystemCheker.CatchDataFromUart(mMainForm.dcuRichTextBox, listBox1, listBox2ValidParam, label1);
+            if (command == "sub")
+            {
+                mMainForm.SubSystemCheker.SendComandToFromValidater();
+                mMainForm.SubSystemCheker.CatchDataFromUartForSubSustem(mMainForm.dcuRichTextBox, listBox1, listBox2ValidParam, label1);
+            } else if (command == "ci")
+            {
+                mMainForm.SubSystemCheker.SendCommandToCheckCAN();
+                mMainForm.SubSystemCheker.CatchDataFromUartForCANStatu(mMainForm.dcuRichTextBox);
+            }
+            else
+            {
+                return;
+            }
+           
         }
 
+        
     }
 }

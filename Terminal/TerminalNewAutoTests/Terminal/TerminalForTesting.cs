@@ -37,8 +37,10 @@ namespace Terminal
         public TestsFileWorkerBase ParseTest = new TestsFileWorkerBase();
         public FileWorkerManualTests ParseManualTests  = new FileWorkerManualTests();
         public FileWorkerAutoTests ParseAutoTests  = new FileWorkerAutoTests();
-        
-       // public xmlWorking XmlWorking = new xmlWorking();
+
+        public xmlWorking XmlWorking = new xmlWorking();
+
+        // public xmlWorking XmlWorking = new xmlWorking();
 
 
         public TerminalForTesting()
@@ -76,20 +78,33 @@ namespace Terminal
             dataPusher.testsComboBox = testsComboBox;
             dataPusher.timeForWaitBox3 = timeForWaitBox3;
 
+
             dataPusher.DcuWorker = DcuSer;
+
+            dataPusher.XmlWorking = XmlWorking;
         }
 
         private void ConnectButtonClick(object sender, EventArgs e)
+        {
+            ConnectStart();
+        }
+
+        public void ConnectStart()
         {
             ImitatorPortParam.bandRateOfPOrt = textBox1.Text;
             ImitatorPortParam.nameOfPort = comPortsCombo.Text;
             ImitatorSer.ConnectSer(ImitatorPortParam);
             connectBtn.Enabled = false;
             closeBtn.Enabled = true;
-            sendButton.Enabled = true;            
-        }      
+            sendButton.Enabled = true;
+        }
 
         private void CloseButtonClick(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        public void Close()
         {
             ImitatorSer.CloseSer(ImitatorPortParam);
             connectBtn.Enabled = true;
@@ -98,6 +113,33 @@ namespace Terminal
             messageTextBox.Clear();
             sendButton.Enabled = false;
         }
+
+        private void DcuConnectClick(object sender, EventArgs e)
+        {
+            DcuPortParam.bandRateOfPOrt = textBox2.Text;
+            DcuPortParam.nameOfPort = dcuComPortsCombo.Text;
+            DcuSer.ConnectSer(DcuPortParam);
+            closeDcuButton.Enabled = true;
+            dcuSendButton.Enabled = true;
+            connectDcuButton.Enabled = false;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DcuSer.CloseSer(DcuPortParam);
+            connectDcuButton.Enabled = true;
+            closeDcuButton.Enabled = false;
+            dcuRichTextBox.Clear();
+            DcuTextBox.Clear();
+            dcuSendButton.Enabled = false;
+        }
+
+        private void dcuSendButton_Click(object sender, EventArgs e)
+        {
+            DcuSer.SendToSerialPort(DcuTextBox.Text);
+            DcuTextBox.Clear();
+        }
+
 
         private void SendButtonClick(object sender, EventArgs e)
         {
@@ -128,7 +170,9 @@ namespace Terminal
 
         private void SendOneCommandClick(object sender, EventArgs e)
         {         
-            testPusher.SendComand(ImitatorSer);              
+            testPusher.SendComand(ImitatorSer);
+
+
         }
 
         private void SaClick(object sender, EventArgs e)
@@ -156,31 +200,7 @@ namespace Terminal
 
         }
 
-        private void DcuConnectClick(object sender, EventArgs e)
-        {
-            DcuPortParam.bandRateOfPOrt = textBox2.Text;
-            DcuPortParam.nameOfPort = dcuComPortsCombo.Text;
-            DcuSer.ConnectSer(DcuPortParam);
-            closeDcuButton.Enabled = true;
-            dcuSendButton.Enabled = true;
-            connectDcuButton.Enabled = false;
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            DcuSer.CloseSer(DcuPortParam);
-            connectDcuButton.Enabled = true;
-            closeDcuButton.Enabled = false;
-            dcuRichTextBox.Clear();
-            DcuTextBox.Clear();
-            dcuSendButton.Enabled = false;
-        }
-
-        private void dcuSendButton_Click(object sender, EventArgs e)
-        {
-            DcuSer.SendToSerialPort(DcuTextBox.Text);
-            DcuTextBox.Clear();
-        }
+       
 
         private void button10_Click(object sender, EventArgs e)
         {
@@ -207,37 +227,31 @@ namespace Terminal
             //formNewTh.Start();
         }
 
-      
 
         private void TerminalForTesting_Load(object sender, EventArgs e)
         {
 
         }
 
-        public xmlWorking XmlWorking;
-        private int i = 3;
+        
         private void button8_Click_1(object sender, EventArgs e)
-        {
-           
-            XmlWorking = new xmlWorking();
-            XmlWorking.CreateFile("TestFile","TestShhet");   
+        {                              
             
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Row row = new Row() { RowIndex = Convert.ToUInt32(i) };
-            TimeSpan curTime = new TimeSpan();
-            string curTimeStr = curTime.ToString();
-            XmlWorking.InsertCell(row, 1, curTimeStr, CellValues.String, 5);
-            XmlWorking.document.Save();
-            //XmlWorking.document.Close();
-            i++;
+           
+           
+            
+           
+
+
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-           XmlWorking.document.Close();
+
         }
     }
 }
