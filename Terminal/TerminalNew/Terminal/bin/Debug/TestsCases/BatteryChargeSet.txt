@@ -1,0 +1,30 @@
+sr btch 10
+rt setbtch
+sa
+
+sr btch 20
+rt setbtch
+sa
+
+sr btch 30
+rt setbtch
+sa
+
+sr btch 70
+rt setbtch
+sa
+
+sr btch 90
+rt setbtch
+sa
+
+sr btch 100
+rt setbtch
+sa
+
+rt setbtchz
+sa
+
+sr btch 10
+rt setbtch
+sa

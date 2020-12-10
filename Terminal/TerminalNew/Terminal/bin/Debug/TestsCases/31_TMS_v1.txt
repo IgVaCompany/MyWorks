@@ -1,0 +1,32 @@
+sa
+rt settmsdef
+sa
+sr temp 84
+rt settmstemp
+sa
+sr temp 85
+rt settmstemp
+sa
+sr temp 86
+rt settmstemp
+sa
+sr temp 87
+rt settmstemp
+sa
+sr temp 90
+rt settmstemp
+sa
+sr temp 50
+rt settmstemp
+sa
+sr cur 99
+rt settmscur
+sa
+sr cur 100
+rt settmscur
+sa
+sr cur 101
+rt settmscur
+sa
+rt settmsdef
+sa

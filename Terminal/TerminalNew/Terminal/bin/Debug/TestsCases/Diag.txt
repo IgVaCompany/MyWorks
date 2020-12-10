@@ -1,0 +1,32 @@
+sa
+rt SS0_0
+sa
+rt SS0_1
+sa
+rt SS0_0
+sa
+
+sa
+rt NOT1_0
+sa
+rt NOT1_1
+sa
+rt NOT1_0
+sa
+
+sa
+rt NOT_SPN_0
+sa
+rt NOT_SPN_1
+sa
+rt NOT_SPN_0
+sa
+
+sa
+rt SS0_0
+sa
+rt SS0_1
+sa
+rt SS0_0
+sa
+

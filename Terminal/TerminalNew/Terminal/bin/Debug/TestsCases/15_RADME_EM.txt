@@ -1,0 +1,5 @@
+sa
+rt setvtsfail
+sa
+rt setvtsdef
+sa

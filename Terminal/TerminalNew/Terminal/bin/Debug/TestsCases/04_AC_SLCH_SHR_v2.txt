@@ -1,0 +1,19 @@
+sa
+rt setshdef
+sa
+rt setshf1
+sa
+rt setshdef
+sa
+rt setshf2
+sa
+rt setshdef
+sa
+rt setshf3
+sa
+rt setshdef
+sa
+rt setshf4
+sa
+rt setshdef
+sa

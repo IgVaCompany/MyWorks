@@ -1,0 +1,47 @@
+ch SubSystem01
+
+sr ap1 1100
+sr ap2 1100
+rt setap12
+sa
+
+sr ap1 1000
+sr ap2 1000
+rt setap12
+sa
+
+
+sr ap1 1300
+sr ap2 1300
+rt setap1
+sa
+rt setap2
+sa
+
+sr ap1 1100
+sr ap2 1100
+rt setap1
+sa
+rt setap2
+sa
+
+sr ap1 500
+sr ap2 500
+rt setap1
+sa
+rt setap2
+sa
+
+sr ap1 390
+sr ap2 390
+rt setap1
+sa
+rt setap2
+sa
+
+sr ap1 200
+sr ap2 200
+rt setap1
+sa
+rt setap2
+sa

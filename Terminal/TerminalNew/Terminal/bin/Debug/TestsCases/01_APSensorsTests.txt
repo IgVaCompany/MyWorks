@@ -1,0 +1,16 @@
+ch SubSystem01
+
+sr ap1 1100
+sr ap2 1100
+rt setap12
+sa
+rt setsensf1
+sa
+rt setsensf2
+sa
+sr ap1 1100
+sr ap2 1100
+rt setap12
+sa
+rt setsensfboth
+sa

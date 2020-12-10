@@ -1,0 +1,15 @@
+sa
+rt sethmireqoff
+sa
+rt setpredcacnohmist1
+sa
+rt setpredcacnohmist2
+sa
+rt setacch
+sa
+rt setbtchauto
+sa
+rt setacchoff
+sa
+rt setpredcacnohmist1
+sa

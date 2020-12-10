@@ -1,0 +1,46 @@
+sa
+sr ms1 0
+sr ms2 0
+rt setms12
+sa
+
+sa
+sr ms1 9899
+sr ms2 9899
+rt setms1
+sa
+rt setms2
+sa
+
+sa
+sr ms1 0
+sr ms2 0
+rt setms12
+sa
+
+a
+sr ms1 9901
+sr ms2 9901
+rt setms1
+sa
+rt setms2
+sa
+
+sa
+sr ms1 0
+sr ms2 0
+rt setms12
+sa
+
+a
+sr ms1 10901
+sr ms2 10901
+rt setms1
+sa
+rt setms2
+sa
+sa
+sr ms1 0
+sr ms2 0
+rt setms12
+sa
