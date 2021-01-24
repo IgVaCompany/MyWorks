@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.21)  28 NOV 2020 19:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.21)  24 JAN 2021 19:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -368,30 +368,27 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count189
 \l__pdf_internal_box=\box47
 )
-(./DruzhininVG_MorozovVA.aux
-
-LaTeX Warning: Label `eq14' multiply defined.
-
-)
+(./DruzhininVG_MorozovVA.aux)
 \openout1 = `DruzhininVG_MorozovVA.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
- (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+
+(/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count190
 \scratchdimen=\dimen147
@@ -416,13 +413,13 @@ e
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -431,53 +428,52 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <Pic/n1.jpg, id=9, 374.39874pt x 131.49126pt>
 File: Pic/n1.jpg Graphic file (type jpg)
 <use Pic/n1.jpg>
-Package pdftex.def Info: Pic/n1.jpg  used on input line 67.
+Package pdftex.def Info: Pic/n1.jpg  used on input line 70.
 (pdftex.def)             Requested size: 299.5194pt x 105.19313pt.
  [2 <./Pic/n1.jpg>]
 <Pic/n2.jpg, id=16, 728.2407pt x 446.6286pt>
 File: Pic/n2.jpg Graphic file (type jpg)
 <use Pic/n2.jpg>
-Package pdftex.def Info: Pic/n2.jpg  used on input line 112.
+Package pdftex.def Info: Pic/n2.jpg  used on input line 115.
 (pdftex.def)             Requested size: 364.11946pt x 223.31375pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3] [4 <./Pic/n2.jpg>]
-Overfull \hbox (16.01881pt too wide) in paragraph at lines 185--194
-[][] 
- []
-
-[5] [6] (./DruzhininVG_MorozovVA.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[3] [4 <./Pic/n2.jpg>] [5]
+<Pic/n3.png, id=30, 542.9886pt x 369.0588pt>
+File: Pic/n3.png Graphic file (type png)
+<use Pic/n3.png>
+Package pdftex.def Info: Pic/n3.png  used on input line 215.
+(pdftex.def)             Requested size: 271.49364pt x 184.52895pt.
+ [6 <./Pic/n3.png>] [7] [8]
+(./DruzhininVG_MorozovVA.aux) ) 
 Here is how much of TeX's memory you used:
- 3456 strings out of 480608
- 47679 string characters out of 5903629
- 296190 words of memory out of 5000000
- 19310 multiletter control sequences out of 15000+600000
- 541828 words of font info for 48 fonts, out of 8000000 for 9000
+ 3492 strings out of 480608
+ 48031 string characters out of 5903629
+ 301255 words of memory out of 5000000
+ 19343 multiletter control sequences out of 15000+600000
+ 543527 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,7n,27p,834b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
-}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/t
-exlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/tex
-live/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on DruzhininVG_MorozovVA.pdf (6 pages, 406914 bytes).
+ 30i,14n,27p,834b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dv
+ips/cm-super/cm-super-t2a.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-sup
+er/sfbx1200.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super
+/sfbx1440.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/s
+frm0900.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfr
+m1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1
+200.pfb>
+Output written on DruzhininVG_MorozovVA.pdf (8 pages, 470481 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
