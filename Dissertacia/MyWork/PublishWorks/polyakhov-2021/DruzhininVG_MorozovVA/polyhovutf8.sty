@@ -1,0 +1,306 @@
+﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Стилевой файл тезисов международной научной конференции по механике      %%
+%%                    «Девятые Поляховские чтения»                           %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{}
+
+% Опция draft: выводить замечания, доп.информацию в оглавлении, статистику
+\newif\ifdraft\draftfalse
+\DeclareOption{draft}{\drafttrue}
+
+\ProcessOptions
+
+%\RequirePackage[cp1251]{inputenc}
+\RequirePackage[russian]{babel}
+\RequirePackage[T2A]{fontenc}
+\RequirePackage[utf8]{inputenc}
+
+\RequirePackage{amssymb}
+\RequirePackage{amsmath}
+\RequirePackage{mathrsfs}
+\RequirePackage{euscript}
+\RequirePackage{array}
+\RequirePackage{theorem}
+\RequirePackage[ruled]{algorithm}
+\RequirePackage[noend]{algorithmic}
+\RequirePackage[all]{xy}
+\RequirePackage{graphicx}
+\RequirePackage{color}
+%\RequirePackage[footnotesize]{caption2}
+\RequirePackage{ifthen}
+\RequirePackage{url}
+%\RequirePackage{html}
+%\RequirePackage[colorlinks,urlcolor=blue]{hyperref}
+\RequirePackage{makeidx}
+\RequirePackage{pb-diagram}
+
+\renewcommand{\baselinestretch}{1}
+%\renewcommand{\baselinestretch}{1.1} %для печати с большим интервалом
+\textheight=175mm
+\headsep=5mm
+\textwidth=127mm
+\topmargin=25mm
+\oddsidemargin=15mm
+\evensidemargin=15mm
+\marginparwidth=36pt
+\parindent=3.5ex
+\tolerance=3000
+\hbadness=2000
+%\flushbottom
+\raggedbottom
+% подавить эффект "висячих стpок"
+\clubpenalty=10000
+\widowpenalty=10000
+
+% Печать во весь лист
+% INTERFACE
+\def\MinMargins{
+    \textheight=257mm
+    \textwidth=257mm
+    \oddsidemargin=5mm
+    \evensidemargin=5mm
+    \marginparwidth=36pt
+    \topmargin=-10mm
+    \footnotesep=3ex
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Оформление заголовков статей
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newlength\vskipBeforeTitle
+\newlength\vskipAfterTitle
+
+% Настройки заголовка статьи
+% INTERFACE
+\setlength\vskipBeforeTitle{3ex}
+\setlength\vskipAfterTitle{1ex}
+\newcommand\typeTitle[1]{\Large\rmfamily\bfseries #1}
+\newcommand\typeAuthor[1]{\itshape\bfseries #1}
+\newcommand\typeOrganization[1]{\small #1}
+\newcommand\typeEmail[1]{\slshape #1}
+\newcommand\typeTocAuthorTitle[2]{{\unstretchspaces\itshape #1}\\ #2}
+
+% сделать неразрывные пробелы ещё и нерастяжимыми (например между фамилией и инициалами авторов)
+\newcommand\unstretchspaces{\catcode`~=\active\def~{\;}}
+
+% Вывод заголовка
+\def\maketitle{%
+    \@BeginDocument
+    \vskip\vskipBeforeTitle\noindent
+    \parbox{\textwidth}{%
+        \begin{center}%
+            \vskip-1.5ex%
+            {\typeTitle\@title}\\[3mm]
+            {\typeAuthor\@author}%
+            \ifthenelse{\equal{\@email}{}}{}{\\{\typeEmail\@email}}%
+            \ifthenelse{\equal{\@organization}{}}{}{\\{\typeOrganization\@organization}}%
+        \end{center}%
+        \vskip-1.5ex\vskip\vskipAfterTitle
+    }%
+    % обработать список фамилий авторов, занести каждую в алфавитный указатель
+    %\newcommand\@trim[1]{\@ifnextchar\ \@gobble\relax#1}%
+    \@for\@indx@elem:=\@author\do{%
+        \index{\@indx@elem}%
+    }%
+    % в чистовом режиме записать в оглавление только авторов и название
+    \addcontentsline{toc}{mmrotitle}{%
+        \typeTocAuthorTitle{\@author}{\@title}%
+    }%
+    % в черновом режиме дописать в оглавление:
+    % имя файла, имена рецензентов, отметки о прохождении корректуры и рецензирования
+    \ifdraft{%
+        \addtocontents{toc}{%
+            \protect\par\protect\url{\@paper@name.TeX}%
+            \protect\ifthenelse{\protect\equal{\@reviewers@list}{}}%
+                {}%
+                {\quad(рецензенты и корректоры: \texttt{\@reviewers@list})%
+            }%
+        }%
+    }
+    \fi
+    % сформировать колонтитулы
+    \markboth{\@author@short}{\@author@short}%
+    \par\nobreak\@afterheading
+}
+\def\@clear@title{%
+    \gdef\@author@short{}%
+    \gdef\@title@short{}%
+    \gdef\@author{}%
+    \gdef\@title{}%
+    \gdef\@organization{}%
+    \gdef\@email{}%
+}
+\renewcommand{\title}[2][]{\@clear@title
+    \gdef\@title{#2}%    {\uppercase{#2}}
+    \ifthenelse{\equal{#1}{}}%
+        {\gdef\@title@short{{#2}}}%
+        {\gdef\@title@short{{#1}}}%
+}
+\renewcommand{\author}[2][]{
+    \gdef\@author{#2}
+    \ifthenelse{\equal{#1}{}}%
+        {\gdef\@author@short{{#2}}}%
+        {\gdef\@author@short{{#1 и~др.}}}%
+}
+\newcommand{\organization}[1]{\gdef\@organization{{#1}}}
+\newcommand{\email}[1]{\gdef\@email{{#1}}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Переопределение колонтитулов
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand\type@chapter@code{%
+    \ifthenelse{\equal{\@chapter@code}{}}{}{\typeChapterCode{\@chapter@code}}
+}
+\renewcommand{\ps@headings}{%
+    \renewcommand{\@oddfoot}{}%
+    \renewcommand{\@oddhead}{\parbox{\textwidth}{\footnotesize
+        \rightmark\hfill\type@chapter@code\quad\thepage\\[-2ex]\hrule}}%
+    \renewcommand{\@evenfoot}{}%
+    \renewcommand{\@evenhead}{\parbox{\textwidth}{\footnotesize
+        \thepage\quad\type@chapter@code\hfill\leftmark\\[-2ex]\hrule}}%
+}
+%\renewcommand{\ps@empty}{%
+%    \renewcommand{\@oddfoot}{}%
+%    \renewcommand{\@oddhead}{}%
+%    \renewcommand{\@evenfoot}{}%
+%    \renewcommand{\@evenhead}{}%
+%}
+%\let\ps@plain=\ps@empty
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Оформление разделов
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Настройка разделов
+% INTERFACE
+\newcommand\typeSection[1]{%
+    \medskip\hangindent=3.5ex\hangafter=-3\noindent
+    {\large\rmfamily\bfseries #1}%
+    \par\nobreak\smallskip
+}
+% INTERFACE
+\newcommand\typeParagraph[1]{%
+    \smallskip{\normalfont\rmfamily\bfseries #1 }%
+}
+% INTERFACE
+\newcommand\typeChapter[3]{%
+    \hrule\vskip1pt\hrule height2pt\vskip4ex\noindent
+    {\normalfont\LARGE\sffamily\bfseries #3\raggedright\par}
+    \vskip2ex\hrule height2pt\vskip1pt\hrule\vskip-1ex
+    {\footnotesize\flushright Код раздела: #1 (#2)\par}
+    \vskip6ex
+}
+% INTERFACE
+\newcommand\typeChapterCode[1]{({\tiny Ninth Polyahov’s Reading})}
+
+% Разделы
+\renewcommand\section[1]{\par\typeSection{#1}\@afterheading}
+
+% Начало новой главы
+\def\newchapterpage{%
+    \pagestyle{headings}
+    \ifthenelse{\isodd{\thepage}}%s
+        {\newpage~\thispagestyle{empty}\newpage}    % \renewcommand{\@evenhead}{}
+        {\newpage}%
+    \thispagestyle{empty}%
+}
+\def\chaptercode#1{\gdef\@chapter@code{#1}}
+\chaptercode{??}
+% INTERFACE
+\def\chapter#1#2#3{%
+    \newchapterpage
+    \typeChapter{#1}{#2}{#3}
+    \addcontentsline{toc}{mmrochapter}{{\normalfont\sffamily\bfseries #3}\protect\chaptercode{#1}}%
+    \addtocontents{toc}{\protect\nopagebreak}%
+    \addcontentsline{tos}{mmrochapter}{#3}% для краткого оглавления
+    \markboth{#3}{#3}%
+    \chaptercode{#1}%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Оформление библиографии, в каждой статье отдельно
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Оформление элементов пункта библиографии
+% INTERFACE
+%\def\BibUrl#1{\\{\footnotesize\url{http://#1}}}
+\def\BibAuthor#1{\emph{#1}}
+\def\BibTitle#1{#1}
+%\def\BibTitle#1{}  % Возможно, названия потом уберут везде
+\def\BibUrl#1{{\small\url{#1}}}
+\def\BibHttp#1{{\small\url{http://#1}}}
+\def\BibFtp#1{{\small\url{ftp://#1}}}
+\def\typeBibItem{\small\sloppy}
+
+% Переопределение горизонтальных и вертикальных промежутков в списке литературы
+\renewenvironment{thebibliography}[1]
+    {\section{\bibname}%
+        \list{\@biblabel{\@arabic\c@enumiv}}{%
+            \settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin by 1ex%
+            \topsep=0pt\parsep=3pt\itemsep=0ex%
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}%
+        }%
+        \typeBibItem
+%        \clubpenalty4000%
+%        \@clubpenalty\clubpenalty
+%        \widowpenalty4000%
+%        \sfcode`\.\@m%
+    }{%
+        \def\@noitemerr{\@latex@warning{Empty `thebibliography' environment}}%
+        \endlist
+    }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Действия, которые делаются в начале каждой статьи
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\@BeginDocument}{
+    \pagestyle{headings}%
+    % Переопределение списков с меньшими интервалами (слегка экономим бумагу)
+    \renewcommand{\@listi}{%
+        \topsep=\smallskipamount % вокруг списка
+        \parsep=0pt% между абзацами внутри пункта
+        \parskip=0pt% между абзацами
+        \itemsep=0pt% между пунктами
+        \itemindent=0pt% абзацный выступ
+        \labelsep=1.5ex% расстояние до метки
+        \leftmargin=3.5ex% отступ слева
+        \rightmargin=0pt} % отступ справа
+    \renewcommand{\@listii}{\@listi\topsep=0pt}%
+    \renewcommand{\@listiii}{\@listii}%
+    \renewcommand{\@listiv}{\@listii}%
+    \renewcommand{\labelitemi}{---}%
+    \renewcommand{\labelitemii}{---}%
+    \renewcommand{\labelitemiii}{---}%
+    \renewcommand{\labelitemiv}{---}%
+    \renewcommand{\theenumii}{\asbuk{enumii}}%
+    % Обнуление счётчиков
+    \setcounter{equation}{0}%
+    \setcounter{footnote}{0}%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Поддержка рецензирования и корректуры
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcounter{mmroReviewerNote}
+\newcounter{mmroTotalReviewedPapers}
+\newcounter{mmroTotalReviewerNotes}
+\newcounter{mmroFinalReviewerNotes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Некоторые переопределения для унификации математики
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\le}{\leqslant}
