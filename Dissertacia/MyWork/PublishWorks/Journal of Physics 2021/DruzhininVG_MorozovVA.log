@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.21)  27 FEB 2021 00:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.21)  4 APR 2021 18:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -195,57 +195,86 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18.06749> not available
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <18.06749> not available
 (Font)              size <17.28> substituted on input line 8.
 
+LaTeX Font Info:    Calculating math sizes for size <18.06749> on input line 8.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <12.64719> not available
+(Font)              size <12> substituted on input line 8.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <18.06749> not available
+(Font)              size <17.28> substituted on input line 8.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <12.64719> not available
+(Font)              size <12> substituted on input line 8.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <18.06749> not available
+(Font)              size <17.28> substituted on input line 8.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <12.64719> not available
+(Font)              size <12> substituted on input line 8.
+
+
+LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <18.06749> not available
+(Font)              size <17.28> substituted on input line 8.
+
+
+LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <12.64719> not available
+(Font)              size <12> substituted on input line 8.
+
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<Pic/n1.jpg, id=14, 374.39874pt x 131.49126pt>
+<Pic/n1.jpg, id=18, 374.39874pt x 131.49126pt>
 File: Pic/n1.jpg Graphic file (type jpg)
 <use Pic/n1.jpg>
-Package pdftex.def Info: Pic/n1.jpg  used on input line 35.
+Package pdftex.def Info: Pic/n1.jpg  used on input line 39.
 (pdftex.def)             Requested size: 299.5194pt x 105.19313pt.
 
 [2 <./Pic/n1.jpg>]
-<Pic/n2.jpg, id=21, 728.2407pt x 446.6286pt>
+<Pic/n2.jpg, id=24, 728.2407pt x 446.6286pt>
 File: Pic/n2.jpg Graphic file (type jpg)
 <use Pic/n2.jpg>
-Package pdftex.def Info: Pic/n2.jpg  used on input line 77.
+Package pdftex.def Info: Pic/n2.jpg  used on input line 81.
 (pdftex.def)             Requested size: 364.11946pt x 223.31375pt.
- [3 <./Pic/n2.jpg>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4] [5] [6] (./DruzhininVG_MorozovVA.aux)
+ [3 <./Pic/n2.jpg>] [4] [5] [6] (./DruzhininVG_MorozovVA.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 2463 strings out of 480608
- 33413 string characters out of 5903629
- 286705 words of memory out of 5000000
- 18334 multiletter control sequences out of 15000+600000
- 538850 words of font info for 47 fonts, out of 8000000 for 9000
+ 2488 strings out of 480608
+ 33805 string characters out of 5903629
+ 286714 words of memory out of 5000000
+ 18357 multiletter control sequences out of 15000+600000
+ 541172 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,14n,29p,2510b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,14n,29p,2525b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
 usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
 sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
-020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on DruzhininVG_MorozovVA.pdf (6 pages, 406087 bytes).
+r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on DruzhininVG_MorozovVA.pdf (6 pages, 434856 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 93 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

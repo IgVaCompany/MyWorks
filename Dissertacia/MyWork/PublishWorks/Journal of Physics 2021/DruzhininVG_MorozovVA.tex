@@ -5,7 +5,7 @@
 \newcommand{\specialcell}[2][c]{%
   \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 \begin{document}
-\title{3d model of deflection of an asymmetrical needle during motion in soft tissues}
+\title{$3D$ model of deflection of an asymmetrical needle during motion in soft tissues}
 
 \author{V.G. Druzhinin $^1$, V.A. Morozov$^1$}
 
@@ -15,11 +15,15 @@
 \ead{vasily.dr.mob@gmail.com, v.morozov@spbu.ru}
 
 \begin{abstract}
-This study describes a mathematical model of deflection of a steel medical injection needle during its motion in the soft tissue phantom (imitation of human tissues). This model is necessary for adjustment of robotically assisted systems during brachytherapy procedures or similar operations where high precision needle tip positioning is prerequisite. Since the needle tip is asymmetrical, the needle will deform when moving in human tissues and consequently deflect from the rectirectilinear motion. Thus, by inserting and rotating the needle around its axis the needle tip can be led along the predetermined path. This study adopts a new approach to describe an external impact on the needle when it moves inside human tissues and also describes 2D and 3D models, a process of selection of coefficients for 3D models, and provides simulation results.
+This study describes a mathematical model of deflection of a steel medical injection needle during its motion in the soft tissue phantom (imitation of human tissues). This model is necessary for adjustment of robotically assisted systems during brachytherapy procedures or similar operations where high precision needle tip positioning is prerequisite. Since the needle tip is asymmetrical, the needle will deform when moving in human tissues and consequently deflect from the rectirectilinear motion. Thus, by inserting and rotating the needle around its axis the needle tip can be led along the predetermined path. This study adopts a new approach to describe an external impact on the needle when it moves inside human tissues and also describes $2D$ and $3D$ models, a process of selection of coefficients for 3D models, and provides simulation results.
 \end{abstract}
 
 \section{Introduction}
-Nowadays, robots have been increasingly replacing human manual labour. Not only can machines perform monotonous shop-floor actions but also relieve a human of more complex operations. Minimal invasive and full scale medical operations may serve as an example. This study addresses brachytherapy procedures for prostate cancer. As of today, we have developed a robotically assisted system ``OncoROBOT" in the Central Research Institute of Robotic And Technical Cybernetics to conduct such operations ~\cite{one, two}. This procedure is conducted by insertion of radiation micro-sources into the prostate gland as close as possible to the tumor.  The major challenge is to lead the needle tip to the target point (a tumor) during an operation. The advantages of employing robots as compared to traditional methods are that a robotically assisted manipulator can deliver higher accuracy when aiming a tool than a human, as well as control the acting force which allows not only for enhancement of the quality of the currently utilised operations but also for laying the groundwork for radically new surgical technology. Another crucial advantage is that there is no direct contact between a doctor and a radiation source which will advance safety of medical personnel against associated radiation exposure. During an operation a needle gets deformed due to its geometrical features which results in deflection from the rectilinear motion. The study ~\cite{Model} illustrates development stages  of model, highlights existing methods and approaches, and shows a 2D model describing deflection of a needle when it is moving inside human soft tissues. This research will solve the task of needle positioning within coordinates Oxyz and address enhancement of model accuracy. The needle moves by rotating around its axis. In this case, the needle tip rotates together with the plane of arc curvature thereby controlling the direction of its further motion. When the needle is being inserted along the rectilinear path it shall be constantly rotating. The developed model may be used for developing ``MPC-controllers" i.e. systems based on model predictive control. For instance, the study ~\cite{four} shows a development process of such a system, however, the authors used another approach to simulation. They ~\cite{four} used the Lagrange equation to position the needle tip. Besides, experiment conditions and the needle itself were quite different from those described herein.
+Nowadays, robots have been increasingly replacing human manual labour. Not only can machines perform monotonous shop-floor actions but also relieve a human of more complex operations. Minimal invasive and full scale medical operations may serve as an example. This study addresses brachytherapy procedures for prostate cancer. As of today, we have developed a robotically assisted system ``OncoROBOT" in the Central Research Institute of Robotic And Technical Cybernetics to conduct such operations ~\cite{one, two}. This procedure is conducted by insertion of radiation micro-sources into the prostate gland as close as possible to the tumor.  The major challenge is to lead the needle tip to the target point (a tumor) during an operation. The advantages of employing robots as compared to traditional methods are that a robotically assisted manipulator can deliver higher accuracy when aiming a tool than a human, as well as control the acting force which allows not only for enhancement of the quality of the currently utilised operations but also for laying the groundwork for radically new surgical technology. Another crucial advantage is that there is no direct contact between a doctor and a radiation source which will advance safety of medical personnel against associated radiation exposure. During an operation a needle gets deformed due to its geometrical features which results in deflection from the rectilinear motion. The study ~\cite{Model} illustrates development stages  of model, highlights existing methods and approaches, and shows a $2D$ model describing deflection of a needle when it is moving inside human soft tissues. This research will solve the task of needle positioning within coordinates $Oxyz$ and address enhancement of model accuracy. The needle moves by rotating around its axis. In this case, the needle tip rotates together with the plane of arc curvature thereby controlling the direction of its further motion. When the needle is being inserted along the rectilinear path it shall be constantly rotating. The developed model may be used for developing ``MPC-controllers" i.e. systems based on model predictive control. For instance, the study ~\cite{four} shows a development process of such a system, however, the authors used another approach to simulation. They ~\cite{four} used the Lagrange equation to position the needle tip. Besides, experiment conditions and the needle itself were quite different from those described herein.
+
+The study ~\cite{five} illustrated  propose a finite-dimensional mathematical model of a mechatronic system using a piezoelectric drive to move a needle along a given straight line. The study ~\cite{six} , a similar approach is used, the force of external influence is modeled in a different way.
+
+The study ~\cite{seven} illustrated the series of experiments are performed to explore the effect of influence factors  on the insertion force. Different tissues such as skin, muscle, fat, liver capsule and vessel are proved to generate various force cures, which can contribute to the judgement of the needle position and provide efficient insertion strategy.
 
 \section{Model}
 \subsection{2D model}
@@ -52,7 +56,7 @@ y_{n} = Fl(t)^3 / 3EJ_{x},
 \theta = Fl(t)^2 / 2EJ_{x},
 \end{equation}
 where  $n$ is the current iteration of simulation, $y_{n}$ is the deflection of the needle tip at the current time step,
-$F$  is the force acting on the needle tip, $J_{x}$  is the axial moment of inertia, 
+$F$  is the force acting on the needle tip (Fig.  \ref{n1}), $J_{x}$  is the axial moment of inertia, 
 $l(t)$  is the length of the needle in human tissues, $t$  is the time, $E$  is the Young's modulus, $\theta$  is the deflection angle.
 
 To simulate external force $F$ acting on the needle when it moves inside the human tissues we will use the head drag force:
@@ -60,9 +64,9 @@ To simulate external force $F$ acting on the needle when it moves inside the hum
 \begin{equation} \label{eq5}
 F = C (\rho v^2/2) S, 
 \end{equation}
-where  $C$  is the drag coefficient, $\rho$  is the density, $v$  is the velocity of the needle motion, $S$  is the reference area of the body, $S = V^{(2/3)}$, where $V$- is the body volume.
+where  $C$  is the drag coefficient, $\rho$  is the density of tissue, $v$  is the velocity of the needle motion, $S$  is the reference area of the body, $S = V^{(2/3)}$, where $V = (\pi d^2/4)l$ is the needle volume  in human tissues, $d$ is needle diameter, $l$ is the length of the needle in human tissues.
 
-To calculate the needle deflection using equations \eqref{eq3} and \eqref{eq4} we should consider the projection of force F on the needle axis. In this formulation of the problem according to proposed equations \eqref{eq3}, \eqref{eq4} and \eqref{eq5}, we will calculate the deflection iteratively summing up its previous steps. Thus we shall retain the deflection at each step of simulation:
+To calculate the needle deflection using equations \eqref{eq3} and \eqref{eq4} we should consider the projection of force F on the perpendicular to the needle axis. In this formulation of the problem according to proposed equations \eqref{eq3}, \eqref{eq4} and \eqref{eq5}, we will calculate the deflection iteratively summing up its previous steps. Thus we shall retain the deflection at each step of simulation:
 
 \begin{equation} \label{eq6}
 y_{all} = \sum\limits_{1}^{n-1} y_{n},
@@ -71,7 +75,7 @@ where $n$  is the current iteration of simulation, $y_{all}$  is the total defle
 
 \subsection{3D model}
 
-For the 3D model we will use a system of coordinates given in Figure  \ref{n2}. In this case, the rotation angle is the value by which the needle shear plane rotates.
+For the $3D$ model we will use a system of coordinates given in Figure  \ref{n2}. In this case, the rotation angle is the value by which the needle shear plane rotates.
 
 \begin{figure}[h]
 \center{\includegraphics[scale=0.5]{n2.jpg}}
@@ -108,19 +112,18 @@ y_{k} =
 \begin{equation} \label{eq10}
 y_{all} = \sum\limits_{1}^{k} y_{k},
 \end{equation}
-where  $\gamma$  is the angle by which the needle has rotated during simulation, $z_{all} $  is the deflection component along axis Oz, $y_{all}$  is the deflection component along axis Oy, $y_{n}$  is the deflection per 1 simulation time step.
+where  $\gamma$  is the angle by which the needle rotated around its axis in 1 simulation step., $z_{all} $  is the deflection component along axis $Oz$, $y_{all}$  is the deflection component along axis $Oy$, $y_{n}$  is the deflection per 1 simulation time step.
 
-To calculate the deflection from axis Ox we will use the following equation:
+To calculate the total deflection from axis $Ox$ we will use the following equation:
 
 \begin{equation} \label{eq11}
-d_{all} = \sqrt{y_{all}^2  +  z_{all} ^2},
+d_{all} = \sqrt{y_{all}^2  +  z_{all} ^2}.
 \end{equation}
-where  $d$  is the total deflection of the needle from axis Ox.
 
-Thus, at each step of simulation, the angle by which the needle has rotated will be analysed. Then the deflection will be calculated at each given step and converted into coordinates and from the given coordinates y and z the total deflection from axis Ox will be calculated. Further, we will investigate the simulation results and compare it with the experimental evidence.
+Thus, at each step of simulation, the angle by which the needle has rotated will be analysed. Then the deflection will be calculated at each given step and converted into coordinates and from the given coordinates $y$ and $z$ the total deflection from axis $Ox$ will be calculated. Further, we will investigate the simulation results and compare it with the experimental evidence.
 
 \subsection{Calculation of drag coefficients}
-The problem to be solved is a multi-parameter one and depends on several variables, namely, translational and rotational velocities of a needle inside tissues. It is necessary to find a solution which provides minimal difference between the experimental and predicted data. 2D model simulation results with constant coefficient C adopted from the book of reference outlined rather significant errors.
+The problem to be solved is a multi-parameter one and depends on several variables, namely, translational and rotational velocities of a needle inside tissues. It is necessary to find a solution which provides minimal difference between the experimental and predicted data. $2D$ model simulation results with constant coefficient $C$ adopted from the book of reference outlined rather significant errors.
 
 Therefore, this coefficient will be introduced as some functional dependence on needle velocity of travel developed on experimental data. This approach ensured minimal errors during simulation. 
 
@@ -153,7 +156,7 @@ Table \ref{table1}  shows the results of calculated coefficients for various tra
 \begin{center}
 \begin{tabular}{ | c | c | c | c | c | }
 \hline
- & \multicolumn{4}{c|}{Coefficients C}   \\ 
+ & \multicolumn{4}{c|}{Coefficients $C$}   \\ 
  \cline{2-5}
  \raisebox{1.5ex}[0cm][0cm] {\specialcell{Linear \\ velocity, mm/s }} & 0 rad/s & 2 rad/s & 4 rad/s & rad/s \\ \hline
 3   &  2.664938602	& 97.13340693	& 114.2592189	& 247.5463059 \\ \hline
@@ -198,22 +201,25 @@ The simulation was run for different initial values. The following translational
 \end{center}
 \end{table}
 
-The errors in simulation using the selected drag coefficients do not exceed 0.01 mm.
+When we using the coefficients $C$ in the form of polynomials, the difference between the results of modeling the deflection of the needle from the $Ox$ axis and the experimental data does not exceed 0.01 mm
 
 \section{Conclusion}
-In the course of this research, we have developed 2D and 3D models which describe the deflection of the medical injection needle from the linear motion when moving inside human tissues. To achieve the maximum possible approximation between the predicted and experimental data, we have calculated and selected the head drag coefficients for simulation. The model was simulated at different initial conditions. The simulation results using the calculated coefficients reflect that the given model can be used in robotic systems to predict the movement or to design ``MPC-controllers". This model can also be used for virtual operations involving injections.
+In the course of this research, we have developed $2D$ and $3D$ models which describe the deflection of the medical injection needle from the linear motion when moving inside human tissues. To achieve the maximum possible approximation between the predicted and experimental data, we have calculated and selected the head drag coefficients for simulation. The model was simulated at different initial conditions. The simulation results using the calculated coefficients reflect that the given model can be used in robotic systems to predict the movement or to design ``MPC-controllers". This model can also be used for virtual operations involving injections.
 
 
 \section{References}
 \bigskip
 \begin{thebibliography}{99}
 \small
-
-\bibitem{one}{N.A. Gryaznov, G.S. Kireeva, V.V. Kharlamov, K, Yu. Senchik, D.V. Novitsky, S.A. Nikitin. Control of robot for brachytherapy based on ultrasonic sensor data
-// Robotics and Technical Cybernetics. 1 (10). 2016. pp. 67-71}
-\bibitem{two}{N.A. Gryaznov, G.S. Kireeva, V.V. Kharlamov, K, Yu. Senchik, D.V. Novitsky, S.A. Nikitin. Prospects of application of original multirobotic system for brachytherapy of prostate cancer // Grekov's Bulletin of Surgery   Vol. 176, Ed. 1 2017. pp. 107-111}
-\bibitem{Model}{V.G. Druzhinin, V.A. Morozov, S.A. Nikitin, V.V. Kharlamov. Model of the deviation of the medical needle during the movement in human tissue //Russian Journal of Biomechanics 4 2018 pp. 459-472.}
-\bibitem{four}{Fichtinger G. System for robotically assisted prostate biopsy and therapy with intraoperative CT guidance // Acad. Radiol. – 2002. – Vol. 9. – P. 60–74.}
+\bibitem{one}{Gryaznov N.A., Kireeva G.S., Kharlamov V.V., Nikitin  S.A. 2016 {\it Control of robot for brachytherapy based on ultrasonic sensor data} (St. Petersburg Robotics and Technical Cybernetics) pp. 67-71.}
+\bibitem{two}{Gryaznov N.A., Kireeva G.S., Kharlamov V.V., Nikitin  S.A. 2017 {\it Prospects of application of original multirobotic system for brachytherapy of prostate cancer} Vol. 176, pp. 107-111.}
+\bibitem{Model}{Druzhinin V.G., Morozov V.A., Nikitin S.A., Kharlamov V.V. 2018 { \it Model of the deviation of the medical needle during the movement in human tissue} (Perm, Russian Journal of Biomechanics)  pp. 459-472.}
+\bibitem{four}{Fichtinger G. 2002 {\it System for robotically assisted prostate biopsy and therapy with intraoperative CT guidance} Vol. 9. pp. 60–74.}
+\bibitem{five} {Goryacheva I.G., Dosaev M.Z., Selyutskiy Y.V., Yakovenko A.A., Hsiao C., Huang C., Ju M., Yeh C. 2020 { \it Control of Insertion of Indenter into Viscoelastic Tissue using a Piezoelectric Drive} pp. 304-311.}
+\bibitem{six}{Khadem M., Fallahi B., Rossa  C., Sloboda  R. S.,  Usmani N. and Tavakoli M., 2015 { \it A mechanics-based model for simulation and control of flexible needle insertion in soft tissue} pp. 2264-2269.}
+\bibitem{seven}{Shan Jiang, Pan Li, Yan Yu, Jun Liu, Zhiyong Yang, 2014 {\it Experimental study of
+needle–tissue interaction forces: Effect of needle geometries, insertion
+methods and tissue characteristics},Vol. 47, pp 3344-3353. }
 
 
 \end{thebibliography}

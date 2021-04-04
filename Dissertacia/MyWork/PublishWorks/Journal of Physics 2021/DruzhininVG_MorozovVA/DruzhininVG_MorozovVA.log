@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.21)  3 APR 2021 12:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.21)  4 APR 2021 18:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -240,54 +240,18 @@ File: Pic/n2.jpg Graphic file (type jpg)
 <use Pic/n2.jpg>
 Package pdftex.def Info: Pic/n2.jpg  used on input line 81.
 (pdftex.def)             Requested size: 364.11946pt x 223.31375pt.
- [3 <./Pic/n2.jpg>] [4] [5]
-Underfull \hbox (badness 2237) in paragraph at lines 220--221
-[]\OT1/cmr/m/n/10 Goryacheva I.G., Dosaev M.Z., Se-lyut-skiy Y.V., Yakovenko A.
-A., Hsiao C., Huang C.,
- []
-
-
-Underfull \hbox (badness 1038) in paragraph at lines 220--221
-\OT1/cmr/m/n/10 Ju M., Yeh C. Con-trol of In-ser-tion of In-den-ter into Vis-co
-elas-tic Tis-sue us-ing a Piezo-
- []
-
-
-Underfull \hbox (badness 1755) in paragraph at lines 220--221
-\OT1/cmr/m/n/10 elec-tric Drive. Mekha-tron-ika, Av-tom-a-ti-zat-siya, Up-ravle
--nie. 2020;21(5):304-311. (In Russ.)
- []
-
-
-Underfull \hbox (badness 3965) in paragraph at lines 226--231
-[]\OT1/cmr/m/n/10 Shan Jiang, Pan Li, Yan Yu, Jun Liu, Zhiy-ong Yang, Ex-per-i-
-men-tal study of nee-
- []
-
-
-Underfull \hbox (badness 1817) in paragraph at lines 226--231
-\OT1/cmr/m/n/10 dle{tissue in-ter-ac-tion forces: Ef-fect of nee-dle ge-ome-tri
-es, in-ser-tion meth-ods and tis-sue
- []
-
-
-Underfull \hbox (badness 2020) in paragraph at lines 226--231
-\OT1/cmr/m/n/10 char-ac-ter-is-tics, Jour-nal of Biome-chan-ics, Vol-ume 47, Is
--sue 13, 2014, Pages 3344-3353,
- []
-
-[6] (./DruzhininVG_MorozovVA.aux)
+ [3 <./Pic/n2.jpg>] [4] [5] [6] (./DruzhininVG_MorozovVA.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 2487 strings out of 480608
- 33790 string characters out of 5903629
+ 2488 strings out of 480608
+ 33805 string characters out of 5903629
  286714 words of memory out of 5000000
- 18356 multiletter control sequences out of 15000+600000
- 540826 words of font info for 54 fonts, out of 8000000 for 9000
+ 18357 multiletter control sequences out of 15000+600000
+ 541172 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,14n,29p,2525b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -307,7 +271,7 @@ ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
 0/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on DruzhininVG_MorozovVA.pdf (6 pages, 430379 bytes).
+Output written on DruzhininVG_MorozovVA.pdf (6 pages, 434856 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream
